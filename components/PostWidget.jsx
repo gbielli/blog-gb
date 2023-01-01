@@ -44,7 +44,7 @@ useEffect(
             
           </div>
           <div className='mt-4'>{relatedPost.categories.map((category, index) => (
-            <span key={index} className='border-2 w-fit px-2 py-1 rounded-lg border-primary mr-3 text-primary'>{category.name}</span>
+            <span key={index} className='border-2 w-fit px-2 py-1 rounded-lg border-primary mr-3 text-primary r'>{category.name}</span>
           ))}</div>
           </div>
           </Link>
