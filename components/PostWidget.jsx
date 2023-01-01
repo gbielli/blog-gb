@@ -24,11 +24,11 @@ useEffect(
       <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
         {slug ? 'Les articles similaires' : 'Les articles récents' }
       </h3>
-      <div className='flex gap-6 justify-center'>
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
       {relatedPosts.map(relatedPost => (
-                    <Link href={`/post/${relatedPost.slug}`} key={relatedPost.title}>
+                    <Link className='flex-1' href={`/post/${relatedPost.slug}`} key={relatedPost.title}>
 
-        <div key={relatedPost.title} className='flex flex-col w-[368px] items center w-full'>
+        <div key={relatedPost.title} className='flex flex-col items center w-full'>
           <div className='h-[235px]'>
             <img 
             alt={relatedPost.title}
@@ -43,7 +43,7 @@ useEffect(
             
             
           </div>
-          <div className='mt-4'>{relatedPost.categories.map((category, index) => (
+          <div className='mt-4 flex flex-wrap'>{relatedPost.categories.map((category, index) => (
             <span key={index} className='border-2 w-fit px-2 py-1 rounded-lg border-primary mr-3 text-primary r'>{category.name}</span>
           ))}</div>
           </div>

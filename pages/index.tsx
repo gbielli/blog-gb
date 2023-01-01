@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Key } from 'react';
-import { PostCard, Categories, PostWidget } from '../components'
+import { PostCard, Categories, PostWidget, BlogTitle } from '../components'
 import { getPosts } from '../services';
 
 
@@ -13,6 +13,8 @@ export default function Home({ posts }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <BlogTitle />
 
       <PostWidget categories={undefined} slug={undefined} />
 
