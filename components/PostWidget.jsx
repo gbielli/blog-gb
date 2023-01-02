@@ -21,18 +21,18 @@ useEffect(
 
   return (
     <div className='p-8 mb-8 font-heading'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
-        {slug ? 'Les articles similaires' : 'Les articles récents' }
+      <h3 className='text-2xl mb-8 font-semibold pb-4'>
+        {slug ? 'Les articles similaires' : 'Les articles à la une' }
       </h3>
-      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
       {relatedPosts.map(relatedPost => (
                     <Link className='flex-1' href={`/post/${relatedPost.slug}`} key={relatedPost.title}>
 
         <div key={relatedPost.title} className='flex flex-col items center w-full'>
-          <div className='h-[235px]'>
+          <div className='h-[400px]'>
             <img 
             alt={relatedPost.title}
-            className='align-middle object-cover h-full w-full rounded-lg'
+            className='align-middle object-cover h-full w-full'
             src={relatedPost.featuredImage.url}
             ></img>
           </div>

@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Key } from 'react';
-import { PostCard, Categories, PostWidget, BlogTitle } from '../components'
+import { PostCard, Categories, PostWidget, BlogTitle, FeaturedArticle } from '../components'
 import { getPosts } from '../services';
 
 
@@ -16,19 +16,16 @@ export default function Home({ posts }) {
 
       <BlogTitle />
 
-      <PostWidget categories={undefined} slug={undefined} />
+      <PostWidget />
 
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-8'>
+      
+          {posts.map((post: { node: any; title: Key | null | undefined; }) => 
+          
+            <PostCard post={post.node} key={post.title} /> 
+           )}
+      
 
-        <div className='lg:col-span-12 col-span-1'>
-          {posts.map((post: { node: any; title: Key | null | undefined; }) => <PostCard post={post.node} key={post.title} /> )}
-        </div>
-
-        <div className='lg:col-span-12 col-span-1'>
-          <div className='lg:sticky relative top-8'>
-            <Categories />
-          </div>
-        </div>
         
       </div>
 

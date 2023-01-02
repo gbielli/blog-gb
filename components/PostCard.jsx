@@ -4,13 +4,12 @@ import Link from 'next/link';
 
 
 const PostCard = ({post}) => {
-  console.log(post);
   return (
-    <div className='flex bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
-      <div className='overflow-hidden shadow-md mb-6'>
+    <div className='flex flex-col mx-auto w-[387px] sm:w-auto'>
+      <div className='overflow-hidden mb-6'>
         <img src={post.featuredImage.url}
           alt={post.title}
-          className='object-top h-80 w-[276px] h-[144px] object-cover shadow-lg rounded-t-lg lg:rounded-lg' />
+          className='object-top h-80 w-[387px] h-[225px] object-cover' />
       </div>
       <div>
         <span>{post.categories[0].name}</span>
