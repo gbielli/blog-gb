@@ -8,11 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mulish: ['Mulish', 'sans-serif']
+        mulish: ['Mulish', 'sans-serif'],
+        abril: ['Abril Fatface', 'cursive']
       },
       colors: {
         primary: '#3E7FF6',
-        secondary: '#E5EFFE'
+        secondary: '#E5EFFE',
+        titleColor:'#232529'
     },
   },
   plugins: [],

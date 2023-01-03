@@ -8,7 +8,7 @@ import { getPosts } from '../services';
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto md:px-10 mb-8">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,7 +18,9 @@ export default function Home({ posts }) {
 
       <PostWidget />
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-8'>
+      <h3 className='text-2xl font-abril'>Les articles du moment</h3>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
       
           {posts.map((post: { node: any; title: Key | null | undefined; }) => 
           

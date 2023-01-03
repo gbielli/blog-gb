@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const PostCard = ({post}) => {
   return (
-    <div className='flex flex-col mx-auto w-[387px] sm:w-auto'>
+    <article className='flex flex-col mx-auto w-[387px] sm:w-auto'>
       <div className='overflow-hidden mb-6'>
         <img src={post.featuredImage.url}
           alt={post.title}
@@ -13,7 +13,7 @@ const PostCard = ({post}) => {
       </div>
       <div>
         <span>{post.categories[0].name}</span>
-        <h3 className='text-lg font-bold cursor-pointer'>
+        <h3 className='text-lg font-bold cursor-pointer font-abril'>
           <Link href={`/post/${post.slug}`}>
             {post.title}
           </Link> 
@@ -22,7 +22,7 @@ const PostCard = ({post}) => {
 
       </div>
       
-    </div>
+    </article>
   )
 }
 

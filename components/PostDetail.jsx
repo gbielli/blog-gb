@@ -56,8 +56,8 @@ const PostDetail = ( {post} ) => {
       </div>
       <div className="px-4 lg:px-0">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
-          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-auto'>{post.title}</h1>
-        <h2 className='text-lg text-center'>{post.excerpt}</h2>
+          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril'>{post.title}</h1>
+        <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
         <span className='mx-auto text-gray-500'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
 
         <img 
@@ -68,7 +68,7 @@ const PostDetail = ( {post} ) => {
 
         </div>
 
-        <div className="flex flex-col items-start mx-auto mb-8 max-w-3xl">
+        <div className="flex flex-col items-start mx-auto mb-8 max-w-3xl text-xl font-mulish leading-8">
 
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) => 
