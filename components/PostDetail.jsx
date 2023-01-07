@@ -1,13 +1,14 @@
-import { type } from 'os';
 import React from 'react';
 import moment from 'moment';
+import { urlToHttpOptions } from 'url';
 
 const PostDetail = ( {post} ) => {
 
-  const getContentFragment = (index, text, obj, type) => {
+  const getContentFragment = (index, text, obj, type, code) => {
     let modifiedText = text;
 
     if (obj) {
+      console.log(obj);
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
       }
@@ -21,6 +22,14 @@ const PostDetail = ( {post} ) => {
       }
     }
 
+    switch (code) {
+      case 'true':
+        return <h2 key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+        default:
+          console.log('coucou')
+    }
+
+  
     switch (type) {
       case 'heading-two':
         return <h2 key={index} className="text-4xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
@@ -30,7 +39,7 @@ const PostDetail = ( {post} ) => {
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
-      case 'image':
+      case 'image': 
         return (
           <img
             key={index}
@@ -40,9 +49,11 @@ const PostDetail = ( {post} ) => {
             src={obj.src}
           />
         );
+        
       default:
         return modifiedText;
     }
+    
   };
 
   return (
@@ -74,7 +85,7 @@ const PostDetail = ( {post} ) => {
           const children = typeObj.children.map((item, itemIndex) => 
             getContentFragment(itemIndex, item.text, item))
 
-          return getContentFragment(index, children, typeObj, typeObj.type)
+          return getContentFragment(index, children, typeObj, typeObj.type, typeObj.code)
         })}
 
         </div>

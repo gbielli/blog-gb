@@ -14,8 +14,17 @@ module.exports = {
       colors: {
         primary: '#3E7FF6',
         secondary: '#E5EFFE',
-        titleColor:'#232529'
+        titleColor:'#232529',
+        secondary2:'#A3C5FF'
     },
+    container: {
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1240px',
+      }
+    }
   },
   plugins: [],
 }

@@ -21,7 +21,7 @@ useEffect(
 )
 
   return (
-    <div className='mb-8 font-heading'>
+    <div className='container mx-auto mb-8 font-heading'>
       <h3 className='text-2xl mb-8 font-semibold pb-4'>
         {slug ? 'Les articles similaires' : 'Les articles à la une' }
       </h3>

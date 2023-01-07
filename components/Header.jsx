@@ -6,17 +6,19 @@ const categories = [{name: 'React', slug: 'react' }, { name:'Matomo', slug:'mato
 
 const Header = () => {
   return (
-    <div className="mx-auto px-10 mb-8 bg-secondary">
+    <div className="bg-secondary">
+    <div className="container mx-auto px-10">
         <div className="container mx-auto border-blue-400 py-8 flex align-center">
           <div className="self-center">
-            <Link className="" href="/">
-                <img className="" width="120px" src='https://media.graphassets.com/output=format:jpg/resize=width:200,height:200/6wGaVx6Qf22iyoi4YGjd'/>
+            <Link className="text-lg" href="/">
+              <span className="text-secondary2">./</span>
+              <span className="font-abril">Guillaume Bielli</span>
             </Link>
           </div>
-        <div className="ml-auto flex align-center">
+        <div className="ml-auto flex align-center font-mulish text-lg">
           {categories.map((category) => (
-            <Link className="ml-3" key={category.slug} href={`/category/${category.slug}`}>
-              <span className="self-center md:float-right align-middle text-black font-semibold cursor-pointer">
+            <Link className="ml-8" key={category.slug} href={`/category/${category.slug}`}>
+              <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
               {category.name}
               </span>
             </Link>
@@ -24,6 +26,7 @@ const Header = () => {
         </div>
     </div>
 
+    </div>
     </div>
   )
 }
