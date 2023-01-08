@@ -27,7 +27,7 @@ useEffect(
       </h3>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
       {relatedPosts.map((relatedPost) => (
-                    <Link href={`/post/${relatedPost.slug}`} key={relatedPost.title}>
+                    <Link href={`/blog/post/${relatedPost.slug}`} key={relatedPost.title}>
 
         <article key={relatedPost.title} className='flex flex-col items center w-full'>
           <div className='h-[400px]'>
@@ -40,7 +40,7 @@ useEffect(
           <div className='pt-4'>
             <p > {moment(relatedPost.createdAt).format('DD MM YYYY')}</p>
             
-              <h3 className="font-abril text-2xl">{relatedPost.title}</h3>
+              <h3 className="font-mulish font-bold text-2xl">{relatedPost.title}</h3>
             
             
           </div>

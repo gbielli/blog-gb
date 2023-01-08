@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {getPosts, getPostDetails } from '../../services'
+import {getPosts, getPostDetails } from '../../../services'
 
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../components'
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components'
 
 const PostDetails = ({ post }) => {
 
