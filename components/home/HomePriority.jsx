@@ -1,8 +1,11 @@
 import React from 'react'
+import PriorityItem from '../PriorityItem'
 
 const HomePriority = () => {
   return (
-    <div>HomePriority</div>
+    <div>
+      <PriorityItem />
+    </div>
   )
 }
 
