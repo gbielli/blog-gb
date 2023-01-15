@@ -22,9 +22,9 @@ const Dropdown = ({title, subtitle, children}) => {
 
   return (
     <div>
-        <div className='mb-5'>
+        <div className='mb-10 cursor-pointer'  onClick={handleDropdown}>
             <div className='flex items-center'>
-                <div className='flex flex-col cursor-pointer select-none' onClick={handleDropdown} >
+                <div className='flex flex-col cursor-pointer select-none'>
                     <h1 className='text-2xl font-bold font-abril'>{title}</h1>
                     <span className='font-mulish'>{subtitle}</span>
                 </div>

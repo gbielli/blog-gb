@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DropdownItem = ({src, title, percentage}) => {
+const DropdownItem = ({src, title, percentage, ratio}) => {
 
   return (
     <div className=''>
@@ -11,9 +11,12 @@ const DropdownItem = ({src, title, percentage}) => {
                 <span className='ml-auto'>{percentage}</span>
             </div>
         </div>
-        <div className='block bg-secondary h-[8px] rounded-lg'>
-                <span className={`block bg-primary h-[8px] w-[${percentage}] rounded-lg`}>
+        <div className='bg-secondary h-[8px] rounded-lg'>
+          <div className={``}>
+          <span className={`block bg-primary h-[8px] w-[${ratio}] rounded-lg`}>
                 </span>
+          </div>
+              
         </div>
     </div>
   )

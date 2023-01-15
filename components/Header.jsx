@@ -1,15 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Logo from '../public/gb-logo.png'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
+import Form from '../components/home/form'
 
 
 const categories = [{name: 'React', slug: 'react' }, { name:'Matomo', slug:'matomo'}]
 const menu = [{name: 'mon ku·ri·ku·lom'}, { name:'get in touch'}]
 
 
-const Header = () => {
+const Header = ({click}) => {
   const router = useRouter();
+
   return (
     <div className="bg-secondary">
       <div className="container mx-auto">
@@ -22,8 +24,7 @@ const Header = () => {
           </div>
           <div className="ml-auto flex align-center font-mulish text-lg">
             {router.pathname === '/' ?
-              menu.map((item) =>
-              <Link  className='ml-8' id="underline" href="/">{item.name}</Link>) : 
+             <a id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a> : 
               categories.map((category) => (
               <Link className="ml-8" key={category.slug} href={`/category/${category.slug}`}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">

@@ -4,11 +4,10 @@ import { urlToHttpOptions } from 'url';
 
 const PostDetail = ( {post} ) => {
 
-  const getContentFragment = (index, text, obj, type, code) => {
+  const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
     if (obj) {
-      console.log(obj);
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
       }
@@ -20,14 +19,12 @@ const PostDetail = ( {post} ) => {
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
       }
+      if (obj.code) {
+        modifiedText = (<code key={index}>{text}</code>);
+      }
     }
+    
 
-    switch (code) {
-      case 'true':
-        return <h2 key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
-        default:
-          console.log('coucou')
-    }
 
   
     switch (type) {
@@ -86,7 +83,10 @@ const PostDetail = ( {post} ) => {
             getContentFragment(itemIndex, item.text, item))
 
           return getContentFragment(index, children, typeObj, typeObj.type, typeObj.code)
+          
         })}
+
+        {/* {console.log(getContentFragment)} */}
 
         </div>
 

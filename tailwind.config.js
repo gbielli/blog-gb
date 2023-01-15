@@ -15,7 +15,8 @@ module.exports = {
         primary: '#3E7FF6',
         secondary: '#E5EFFE',
         titleColor:'#232529',
-        secondary2:'#A3C5FF'
+        secondary2:'#A3C5FF',
+        black: '#232529'
     },
     container: {
       screens: {
