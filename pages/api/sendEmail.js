@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-var data = JSON.stringify({
+const data = JSON.stringify({
   "Messages": [
     {
       "From": {
@@ -21,7 +21,7 @@ var data = JSON.stringify({
   ]
 });
 
-var config = {
+const config = {
   method: 'post',
   url: 'https://api.mailjet.com/v3.1/send',
   headers: { 
