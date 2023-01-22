@@ -1,8 +1,42 @@
-import React from 'react'
+import React, { use } from 'react'
 import ButtonBlock from './ButtonBlock'
-
+import { useState } from 'react';
 
 const Form = ({ close }) => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('sending');
+
+        let data = {
+            name,
+            email
+        }
+
+        fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json, text/plain, */*',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+          
+          .then((res) => {
+            console.log('Response received')
+            if(res.status === 200) {
+              console.log('Response succeeded!')
+              setSubmitted(true)
+              setName('')
+              setEmail('')
+            }
+          })
+    }
+
   return (
     <>
     <div className='mx-auto fixed w-full h-full flex items-center' id="form">
@@ -15,11 +49,11 @@ const Form = ({ close }) => {
                         <div className='my-4 flex flex-col gap-3'>
                             <div className="form-element flex flex-col">
                             <label className='font-mulish' for="prenom">Prenom</label>
-                            <input className='py-3 border border-black rounded-sm font-mulish text-md px-2' type="text" id="prenom" name="prenom" placeholder="ton prenom" required />
+                            <input  onChange={(e) => setName(e.target.value)} className='py-3 border border-black rounded-sm font-mulish text-md px-2' type="text" id="prenom" name="prenom" placeholder="ton prenom" required />
                             </div>
                             <div className="form-element flex flex-col">
                                 <label className='font-mulish' for="email">Email</label>
-                                <input className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
+                                <input onChange={(e) => setEmail(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
                             </div>
                         </div>
                         
@@ -28,8 +62,8 @@ const Form = ({ close }) => {
                             <input type="checkbox" id="checkbox" />
                             <label className='font-mulish' for="checkbox">Je consent consentir à recevoir par email le ku·ri·ku·lom de Guillaume Bielli </label>
                         </div>
-                        
-                        <ButtonBlock  text="Envoyer"/>
+
+                        <ButtonBlock  text="Envoyer" click={(e) => {handleSubmit(e)}}/>
                         
 
                     

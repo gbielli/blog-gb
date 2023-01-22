@@ -1,43 +1,51 @@
+import Mailjet from "node-mailjet";
 
-import axios from "axios";
+export default function (req, res) {
+    console.log(req.body)
 
-const data = JSON.stringify({
-  "Messages": [
-    {
-      "From": {
-        "Email": "hello@guillaumebielli.fr",
-        "Name": "Mailjet Pilot"
-      },
-      "To": [
-        {
-          "Email": "guillaume.bielli@gmail.com",
-          "Name": "passenger 1"
-        }
-      ],
-      "Subject": "Your email flight plan!",
-      "TextPart": "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-      "HTMLPart": ">Dear passenger 1, welcome to Mailjet! May the delivery force be with you!"
-    }
-  ]
-});
+    const mailjet = Mailjet.apiConnect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE,);
 
-const config = {
-  method: 'post',
-  url: 'https://api.mailjet.com/v3.1/send',
-  headers: { 
-    'Content-Type': 'application/json', 
-    'Authorization': process.env.MJ_BASIC_KEY
-  },
-  data : data
-};
+    const request = mailjet
+	.post("send", {'version': 'v3.1'})
+	.request({
+        Messages: [
+            {
+              From: {
+                Email: 'hello@guillaumebielli.fr',
+                Name: 'Guillaume',
+              },
+              To: [
+                {
+                  Email: req.body.email,
+                  Name: req.body.name,
+                },
+              ],
+              TemplateID: 4388766,
+              TemplateLanguage: true,
+              Subject: `🚀  Tadam ${req.body.name}, Voilà mon CV.`,
+            },
+          ],
+        SandboxMode: true
+	})
 
-export async function sendEmail() {
-return await axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
-}
+    request
+	.then((result) => {
+			var obj = JSON.stringify(result.body);
+			console.log(obj)
+			var json =  JSON.parse(obj);
+			var messages = json['Messages'];
+
+			for (const message of messages) {
+				var mess = message.Status;
+				console.log(mess);
+			};
+		}
+	)
+	.catch((err) => {
+		console.log(err.statusCode)
+	})
+
+    res.send('success')
+
+  };
 
