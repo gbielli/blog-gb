@@ -5,23 +5,7 @@ import ButtonFit from './ButtonFit'
 import { useEffect, useState } from 'react'
 import { sendEmail } from '../../pages/api/emailNode'
 
-const HomeHeader = ({getStaticProps }) => {
-
-  const [data, setData] = useState(getStaticProps);
-
-  const fetchData = async () => {
-    req = await fetch('../../pages/api/emailNode');
-    res = await req.json();
-
-    return <div>EMAIL OK</div>
-  }
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    fetchData()
-  }
-  
-
+const HomeHeader = () => {
 
   return (
       <section className="home_container bg-secondary">
@@ -30,7 +14,6 @@ const HomeHeader = ({getStaticProps }) => {
             <h1 className='text-5xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume</span></h1>
             <h3 className='text-xl font-mulish mb-3'>Growth Hacker & Frontend Lover</h3>
             <p className='font-mulish'> Passionné par le web avec quatre années d'expérience dans le digital, le produit, le web analytics et l'experience utilisateur.</p>
-            <button type="submit" onClick={handleClick}>toto</button>
             <ButtonFit text="ça m'intéresse"/>
           </div>
           <div className='home_img col-span-4 self-center justify-self-end'>

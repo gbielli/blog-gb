@@ -13,8 +13,8 @@ const HomeSkills = () => {
       <div className='container mx-auto pb-20'>
         <HomeTitle title="Mes skills" description="Mes compétences" />
         <Dropdown  title="Web analytics" subtitle="Plus de 4ans">
-        <DropdownItem  src="/ga.svg" title="Google analytics" percentage="90%" />
-        <DropdownItem  src="/gtm.svg" title="Google tag manager" percentage="90%" />
+        <DropdownItem  src="/ga.svg" title="Google analytics" percentage="50%" />
+        <DropdownItem  src="/gtm.svg" title="Google tag manager" percentage="90%"  />
         <DropdownItem  src="/gds.svg" title="Google data studio" percentage="80%" />
         <DropdownItem  src="" title="Matomo" percentage="85%" />
         </Dropdown>
@@ -27,7 +27,7 @@ const HomeSkills = () => {
         </Dropdown>
 
         <Dropdown  title="Developpement front" subtitle="Plus de 4ans">
-        <DropdownItem  src="/ga.svg" title="HTML" percentage="2/3" />
+        <DropdownItem  src="/ga.svg" title="HTML" percentage="80%" />
         <DropdownItem  src="/gtm.svg" title="CSS" percentage="90%" />
         <DropdownItem  src="/gds.svg" title="Javascript" percentage="80%" />
         <DropdownItem  src="" title="React" percentage="85%" />
@@ -37,7 +37,7 @@ const HomeSkills = () => {
         <Dropdown  title="Web design" subtitle="Plus de 4ans">
         <DropdownItem  src="/ga.svg" title="Figma" percentage="90%" />
         <DropdownItem  src="/gtm.svg" title="Adobe XD" percentage="90%" />
-        <DropdownItem  src="/gds.svg" title="Illustrator" percentage="8 %" />
+        <DropdownItem  src="/gds.svg" title="Illustrator" percentage="8%" />
         <DropdownItem  src="" title="Photoshop" percentage="85%" />
         </Dropdown>
       </div>

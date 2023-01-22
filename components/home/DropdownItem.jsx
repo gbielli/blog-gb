@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DropdownItem = ({src, title, percentage, ratio}) => {
+const DropdownItem = ({ src, title, percentage }) => {
 
   return (
     <div className=''>
@@ -12,9 +12,7 @@ const DropdownItem = ({src, title, percentage, ratio}) => {
             </div>
         </div>
         <div className='bg-secondary h-[8px] rounded-lg'>
-          <div className={``}>
-          <span className={`block bg-primary h-[8px] w-[${ratio}] rounded-lg`}>
-                </span>
+          <div className={`bg-primary h-[8px] rounded-lg`}  style={{width:`${percentage}`}}>
           </div>
               
         </div>
