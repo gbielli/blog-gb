@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^1.6.3",
     "axios": "^1.2.3",
     "graphql": "^16.6.0",
     "graphql-request": "^5.1.0",

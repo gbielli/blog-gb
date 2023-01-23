@@ -37,7 +37,7 @@ const HomeSkills = () => {
         <Dropdown  title="Web design" subtitle="Plus de 4ans">
         <DropdownItem  src="/ga.svg" title="Figma" percentage="90%" />
         <DropdownItem  src="/gtm.svg" title="Adobe XD" percentage="90%" />
-        <DropdownItem  src="/gds.svg" title="Illustrator" percentage="8%" />
+        <DropdownItem  src="/gds.svg" title="Illustrator" percentage="8 %" />
         <DropdownItem  src="" title="Photoshop" percentage="85%" />
         </Dropdown>
       </div>

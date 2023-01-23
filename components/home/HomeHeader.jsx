@@ -11,7 +11,7 @@ const HomeHeader = () => {
       <section className="home_container bg-secondary">
         <div className="container mx-auto home_content grid grid-cols-9 py-20">
         <div className='home_data col-span-4 self-center'>
-            <h1 className='text-5xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume</span></h1>
+            <h1 className='text-5xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume.</span></h1>
             <h3 className='text-xl font-mulish mb-3'>Growth Hacker & Frontend Lover</h3>
             <p className='font-mulish'> Passionné par le web avec quatre années d'expérience dans le digital, le produit, le web analytics et l'experience utilisateur.</p>
             <ButtonFit text="ça m'intéresse"/>

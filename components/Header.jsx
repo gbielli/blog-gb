@@ -26,9 +26,9 @@ const Header = ({click}) => {
             {router.pathname === '/' ?
             <>
              <a id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a>
-             <Link className="ml-8" key={category.slug} href={`/category/${category.slug}`}>
+             <Link className="ml-8" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
-                  {category.name}
+                  blog
                   </span>
               </Link>
              </> : 
