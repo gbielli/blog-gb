@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@lottiefiles/lottie-player": "^1.6.3",
     "axios": "^1.2.3",
     "graphql": "^16.6.0",
@@ -14,6 +15,7 @@
     "moment": "^2.29.4",
     "next": "latest",
     "node-mailjet": "^6.0.1",
+    "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.2",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "18.11.3",
+    "@types/prismjs": "^1.26.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.12",

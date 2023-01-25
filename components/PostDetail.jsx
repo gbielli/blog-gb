@@ -1,8 +1,16 @@
 import React from 'react';
 import moment from 'moment';
-import { urlToHttpOptions } from 'url';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+
 
 const PostDetail = ( {post} ) => {
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
@@ -19,13 +27,8 @@ const PostDetail = ( {post} ) => {
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
       }
-      if (obj.code) {
-        modifiedText = (<code key={index}>{text}</code>);
-      }
+
     }
-    
-
-
   
     switch (type) {
       case 'heading-two':
@@ -33,9 +36,11 @@ const PostDetail = ( {post} ) => {
       case 'heading-three':
         return <h3 key={index} className="text-3xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
-        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return <div key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</div>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+        case 'code-block':
+        return <pre key={index} className={`line-numbers language-${text.includes('</div>') ? "html" : "javascript"} w-full pl-3 rounded-lg`} > {modifiedText.map((item, i) => <code key={i}>{item}</code>)}</pre>;
       case 'image': 
         return (
           <img
@@ -81,12 +86,13 @@ const PostDetail = ( {post} ) => {
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) => 
             getContentFragment(itemIndex, item.text, item))
+       
 
           return getContentFragment(index, children, typeObj, typeObj.type, typeObj.code)
           
         })}
 
-        {/* {console.log(getContentFragment)} */}
+       
 
         </div>
 

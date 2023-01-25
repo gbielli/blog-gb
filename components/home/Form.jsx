@@ -13,11 +13,6 @@ const Form = ({ close }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
-    const [anim, setAnim] = useState({lottie : null});
-
-    const handleAnim = (e) => {
-      setAnim({lottie: e})
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +22,8 @@ const Form = ({ close }) => {
             name,
             email
         }
+
+        
 
         fetch('/api/sendEmail', {
             method: 'POST',
