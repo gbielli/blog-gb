@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/themes/prism-perso.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 
