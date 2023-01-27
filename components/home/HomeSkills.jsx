@@ -10,7 +10,7 @@ const carret = <svg class="carret carret-active" id="carret" xmlns="http://www.w
 const HomeSkills = () => {
   return (
     <div>
-      <div className='container mx-auto pb-20'>
+      <div className='container mx-auto pb-20 px-4'>
         <HomeTitle title="Mes skills" description="Mes compétences" />
         <Dropdown  title="Web analytics" subtitle="Plus de 4ans">
         <DropdownItem  src="/ga.svg" title="Google analytics" percentage="50%" />

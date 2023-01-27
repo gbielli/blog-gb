@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-perso.css';
+import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 
@@ -40,7 +40,7 @@ const PostDetail = ( {post} ) => {
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'code-block':
-        return <pre key={index} className={`line-numbers language-${text.includes('</div>') ? "html" : "javascript"} w-full pl-3 rounded-lg`} > {modifiedText.map((item, i) => <code key={i}>{item}</code>)}</pre>;
+        return <pre key={index} className={`line-numbers language-${text.includes('</div>') ? "html" : "javascript"} w-full rounded-lg`} > {modifiedText.map((item, i) => <code key={i}>{item}</code>)}</pre>;
       case 'image': 
         return (
           <img

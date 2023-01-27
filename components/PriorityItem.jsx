@@ -42,7 +42,7 @@ return (
                     {svgIcon}
                     <h3 className='font-mulish font-bold text-2xl'>{item.title}</h3>
                 </div>
-                <div className='flex gap-3'>
+                <div className='flex flex-wrap gap-3'>
                 
                     {item.tags.map((tag) => (
                     <span className='px-2 py-0.5 bg-secondary2 font-mulish text-sm'>{tag}</span>

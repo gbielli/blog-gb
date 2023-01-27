@@ -14,7 +14,7 @@ const Header = ({click}) => {
 
   return (
     <div className="bg-secondary">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="container mx-auto border-blue-400 py-6 flex align-center">
           <div className="self-center">
             <Link className="text-lg" href="/">
