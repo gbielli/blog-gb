@@ -9,7 +9,7 @@ const HomeHeader = () => {
 
   return (
       <section className="home_container bg-secondary">
-        <div className="container px-4 md:px-0 mx-auto home_content grid  grid-cols-header md:grid-cols-9 py-20">
+        <div className="container px-6 mx-auto home_content grid  grid-cols-header md:grid-cols-9 py-20">
         <div className='home_data col-start-1 col-span-4 self-center'>
             <h1 className='lg:text-5xl text-4xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume.</span></h1>
             <h3 className='lg:text-xl text-lg font-mulish mb-3'>Growth Hacker & Frontend Lover</h3>

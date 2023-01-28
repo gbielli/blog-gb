@@ -20,9 +20,9 @@ module.exports = {
     },
     container: {
       screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
+        // sm: '750px',
+        // md: '820px',
+        // lg: '984px',
         xl: '1200px',
       }
     },

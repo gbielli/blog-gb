@@ -22,7 +22,7 @@ const items = [
         text:"Une bonne décision provient d'une bonne vision analytique (plan de marquage, définition des Key Performance Indicator, mise en place des balises de suivi, dashboarding)",
     },
     {
-        title: "User experience & interface",
+        title: "User experience",
         tags: ['UX','UI','Web design'],
         text:"Développer l'innovation digitale la plus aboutie sur le marché ne suffit plus aujourd'hui, je suis convaincu de l'importance du dévéloppement de l'expérience utilisateur.",
     },
@@ -35,17 +35,17 @@ const items = [
 
 const PriorityItem = () => {
 return (
-    items.map((item) => {
+    items.map((item, index) => {
         return (
-            <div className='flex flex-col p-7 border border-2 gap-2 border-black'>
+            <div key={index} className='flex flex-col p-5 border border-2 gap-2 border-black'>
                 <div className='flex items-center gap-2'>
                     {svgIcon}
                     <h3 className='font-mulish font-bold text-2xl'>{item.title}</h3>
                 </div>
                 <div className='flex flex-wrap gap-3'>
                 
-                    {item.tags.map((tag) => (
-                    <span className='px-2 py-0.5 bg-secondary2 font-mulish text-sm'>{tag}</span>
+                    {item.tags.map((tag, index) => (
+                    <span key={index} className='px-2 py-0.5 bg-secondary2 font-mulish text-sm'>{tag}</span>
                 ))}
                 </div>
                 <div>

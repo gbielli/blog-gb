@@ -1,12 +1,11 @@
 import { useContext, useState } from "react";
-import Logo from '../public/gb-logo.png'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import Form from '../components/home/form'
 
 
 const categories = [{name: 'React', slug: 'react' }, { name:'Matomo', slug:'matomo'}]
 const menu = [{name: 'mon ku·ri·ku·lom'}, { name:'get in touch'}]
+
 
 
 const Header = ({click}) => {
@@ -14,7 +13,7 @@ const Header = ({click}) => {
 
   return (
     <div className="bg-secondary">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="container mx-auto border-blue-400 py-6 flex align-center">
           <div className="self-center">
             <Link className="text-lg" href="/">

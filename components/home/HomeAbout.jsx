@@ -4,7 +4,7 @@ import AboutItem from './AboutItem';
 
 const HomeAbout = () => {
   return (
-    <section className='container mx-auto px-4'>
+    <section className='container mx-auto px-6'>
       <HomeTitle
       title='À propos'
       description="Mon introduction" />
