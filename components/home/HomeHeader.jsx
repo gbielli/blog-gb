@@ -1,9 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import autoprefixer from 'autoprefixer'
 import ButtonFit from './ButtonFit'
-import { useEffect, useState } from 'react'
-import { sendEmail } from '../../pages/api/emailNode'
 
 const HomeHeader = () => {
 

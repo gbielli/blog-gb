@@ -16,29 +16,30 @@ const HomeSkills = () => {
         <DropdownItem  src="/image/ga.svg" title="Google analytics" percentage="50%" />
         <DropdownItem  src="/image/gtm.svg" title="Google tag manager" percentage="90%"  />
         <DropdownItem  src="/image/gds.svg" title="Google data studio" percentage="80%" />
-        <DropdownItem  src="/image/matomo.png" title="Matomo" percentage="85%" />
+        <DropdownItem  src="/image/matomo.svg" title="Matomo" percentage="85%" />
         </Dropdown>
 
         <Dropdown  title="Marketing digital" subtitle="Plus de 4ans">
         <DropdownItem  src="/image/semrush.png" title="SEO" percentage="90%" ratio="80%" />
         <DropdownItem  src="/image/Ads.svg" title="SEA" percentage="90%"  />
         <DropdownItem  src="/image/hubspot.svg" title="CRM" percentage="80%" />
+        <DropdownItem  src="/image/make.svg" title="Automation" percentage="90%" />
         <DropdownItem  src="/image/mailchimp.svg" title="Emailing" percentage="85%" />
         </Dropdown>
 
         <Dropdown  title="Developpement front" subtitle="Plus de 4ans">
-        <DropdownItem  src="/image/ga.svg" title="HTML" percentage="80%" />
-        <DropdownItem  src="/image/gtm.svg" title="CSS" percentage="90%" />
-        <DropdownItem  src="/image/gds.svg" title="Javascript" percentage="80%" />
+        <DropdownItem  src="/image/html.svg" title="HTML" percentage="80%" />
+        <DropdownItem  src="/image/css.svg" title="CSS" percentage="90%" />
+        <DropdownItem  src="/image/javascript.svg" title="Javascript" percentage="80%" />
         <DropdownItem  src="/image/react.svg" title="React" percentage="85%" />
         <DropdownItem  src="/image/tailwind.svg" title="Tailwind" percentage="85%" />
         </Dropdown>
 
         <Dropdown  title="Web design" subtitle="Plus de 4ans">
-        <DropdownItem  src="/image/ga.svg" title="Figma" percentage="90%" />
-        <DropdownItem  src="/image/gtm.svg" title="Adobe XD" percentage="90%" />
-        <DropdownItem  src="/image/gds.svg" title="Illustrator" percentage="8 %" />
-        <DropdownItem  src="" title="Photoshop" percentage="85%" />
+        <DropdownItem  src="/image/figma.svg" title="Figma" percentage="90%" />
+        <DropdownItem  src="/image/xd.svg" title="Adobe XD" percentage="90%" />
+        <DropdownItem  src="/image/illustrator.svg" title="Illustrator" percentage="8 %" />
+        <DropdownItem  src="/image/photoshop.svg" title="Photoshop" percentage="85%" />
         </Dropdown>
       </div>
     </div>
