@@ -27,7 +27,8 @@ module.exports = {
       }
     },
     gridTemplateColumns: {
-      'header': 'min-content 1fr'
+      'header': 'min-content 1fr',
+      'header-large': '1fr 1fr min-content'
     }
   },
   plugins: [],

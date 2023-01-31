@@ -1,9 +1,14 @@
 import React, { use } from 'react'
 import ButtonBlock from './ButtonBlock'
 import { useState, useRef } from 'react';
+import {donnee} from './donnee';
+
 
 
 const Form = ({ close }) => {
+
+  
+
 
   const ref = useRef(null);
   React.useEffect(() => {
@@ -58,15 +63,15 @@ const Form = ({ close }) => {
           ref={ref}
           autoplay
           mode="normal"
-          src="https://lottie.host/3d7d2c51-8936-4478-bfd1-655397e5a2ff/r3dE1ao7wp.json"
-          style={{ width: "200px", height: "200px", margin:"auto"}}
+          src='https://assets6.lottiefiles.com/packages/lf20_uirgo35g.json'
+          style={{ width: "150px", height: "150px", margin:"auto", marginBottom:"20px"}}
         ></lottie-player>
-            <h2 className='font-abril text-2xl text-center'>🚀 Bingo! L'email a été envoyé</h2>
+            <h2 className='font-abril text-2xl text-center'>🚀 Bingo ! L'email a été envoyé.</h2>
             <p className='text-center font-mulish'>Je viens de t'envoyer mon ku·ri·ku·lom par les internet, check l'onglet promotion ou indésirable si tu ne le vois pas ! </p>
         </div>     
          : 
         <> <div className='text-right cursor-pointer text-2xl' id="close-btn" onClick={close}>×</div>
-        <h2 className='text-2xl font-abril'>✋ Opopopopo ! Pas si vite !</h2>
+        <h2 className='text-2xl font-abril'>✋ Opopopopo ! Pas si vite ! </h2>
         <p id="toto" className='font-mulish'>un bon marketeux ne peut pas te laisser partir comme ça ! <span className="underline">Laisse moi ton email</span> et je te transfert mon CV, promis ! </p>
         
         <div className='my-4 flex flex-col gap-3'>
@@ -82,7 +87,7 @@ const Form = ({ close }) => {
         
 
         <div className="">
-            <input type="checkbox" id="checkbox" />
+            <input type="checkbox" id="checkbox" required/>
             <label className='font-mulish' for="checkbox">Je consent consentir à recevoir par email le ku·ri·ku·lom de Guillaume Bielli </label>
         </div>
         {/* <button  className='h-12 w-12 bg-primary' type='submit'>submit</button> */}
