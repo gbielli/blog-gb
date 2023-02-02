@@ -29,6 +29,9 @@ module.exports = {
     gridTemplateColumns: {
       'header': 'min-content 1fr',
       'header-large': '1fr 1fr min-content'
+    },
+    gridTemplateRows: {
+      'articles': '250px min-content'
     }
   },
   plugins: [],

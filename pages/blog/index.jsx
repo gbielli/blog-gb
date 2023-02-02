@@ -9,7 +9,7 @@ export default function Home({ posts }) {
   return (
     <div className="mx-auto mb-8">
       <Head>
-        <title>Create Next App</title>
+        <title>Le blog | les actualités sur le web analytics</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -18,9 +18,9 @@ export default function Home({ posts }) {
       <PostWidget />
 
       <div className='container mx-auto'>
-      <h3 className='text-2xl font-abril'>Les articles du moment</h3>
+      <h3 className='text-3xl font-abril px-6 mb-6 mt-20'>Les articles du moment</h3>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
+      <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-5 px-6'>
       
           {posts.map((post) =>  
           

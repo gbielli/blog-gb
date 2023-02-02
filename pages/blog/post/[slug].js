@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Head from 'next/head';
 import {getPosts, getPostDetails } from '../../../services'
 
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components'
@@ -7,6 +7,10 @@ import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } fr
 const PostDetails = ({ post }) => {
 
   return (
+    <> <Head>
+    <title>{post.title}</title>
+    <link rel="icon" href="/favicon.ico" />
+  </Head>
     <div className='container mx-auto px-10'>
       <div>
         <div>
@@ -23,6 +27,7 @@ const PostDetails = ({ post }) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

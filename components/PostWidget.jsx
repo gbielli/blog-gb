@@ -21,8 +21,8 @@ useEffect(
 )
 
   return (
-    <div className='container mx-auto mb-8 font-heading'>
-      <h3 className='text-2xl mb-8 font-semibold pb-4'>
+    <div className='container mx-auto px-6 mb-8 font-heading'>
+      <h3 className='text-3xl mt-8 mb-6 font-semibold font-abril'>
         {slug ? 'Les articles similaires' : 'Les articles à la une' }
       </h3>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>

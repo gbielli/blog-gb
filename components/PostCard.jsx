@@ -4,21 +4,29 @@ import Link from 'next/link';
 
 
 const PostCard = ({post}) => {
+
+  
+  const reducedExcerpt = post.excerpt.substring(0, 130);
+
+
   return (
-    <article className='flex flex-col mx-auto w-[387px] sm:w-auto'>
-      <div className='overflow-hidden mb-6'>
+    <article className='grid grid-cols-2 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
+      <div className='overflow-hidden  max-h-[175px] md:max-h-[250px] w-full'>
         <img src={post.featuredImage.url}
           alt={post.title}
-          className='object-top h-80 w-[387px] h-[225px] object-cover' />
+          className='w-full h-full object-cover rounded-sm' />
       </div>
       <div>
-        <span>{post.categories[0].name}</span>
+      <span className='font-mulish text-sm'> {moment(post.createdAt).format('DD MMM YYYY')}</span>
         <h3 className='text-lg font-bold cursor-pointer font-abril'>
-          <Link href={`/post/${post.slug}`}>
+          <Link href={`/post/${post.slug}`} className="font-mulish" >
             {post.title}
           </Link> 
         </h3>
-        <span> {moment(post.createdAt).format('DD MMM YYYY')} </span>
+        <div className='mt-1'>
+        <p className='border-2 w-fit px-2 py-1 rounded-md border-primary mr-3 font-mulish text-primary hover:no-underline text-sm'>{post.categories[0].name}</p>
+        </div>
+        {/* <p className='font-mulish'>{reducedExcerpt}...</p> */}
 
       </div>
       
