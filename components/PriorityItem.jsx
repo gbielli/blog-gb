@@ -37,7 +37,7 @@ const PriorityItem = () => {
 return (
     items.map((item, index) => {
         return (
-            <div key={index} className='flex flex-col p-5 border border-2 gap-2 border-black'>
+            <div key={index} className='flex flex-col p-5 border border-1 gap-2 border-black'>
                 <div className='flex items-center gap-2'>
                     {svgIcon}
                     <h3 className='font-mulish font-bold text-2xl'>{item.title}</h3>
