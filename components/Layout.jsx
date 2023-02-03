@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from './';
 import { Footer } from './';
 import { useState } from 'react';
-import Form from './home/form';
+import { Form } from './home/form';
 
 
 const  Layout  = ({ children }) => {
