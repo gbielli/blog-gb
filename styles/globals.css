@@ -86,3 +86,7 @@ article:hover h3 {
   display: inline;
   background: linear-gradient(to top, transparent 10%, hsl(218, 100%, 82%) 10.01%, hsl(218, 100%, 82%) 40%, transparent 40.01%) no-repeat;
 }
+
+#gradient {
+  background: linear-gradient(to top, transparent 10%, hsl(218, 100%, 82%) 10.01%, hsl(218, 100%, 82%) 40%, transparent 40.01%) no-repeat;
+}
