@@ -21,7 +21,7 @@ const HomeHeader = () => {
               </mask>
     
               <g mask="url(#mask1_202_37)">
-              <image className='w-full z-10' href="https://guillaumebielli.fr/assets/img/gb-contour.png" xlink="http://www.w3.org/1999/xlink"></image>
+              <image className='w-full z-10' href="/image/gb-contour.png" xlink="http://www.w3.org/1999/xlink"></image>
               </g>
             </svg>
           </div>
