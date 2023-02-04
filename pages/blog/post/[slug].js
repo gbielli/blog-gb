@@ -11,7 +11,7 @@ const PostDetails = ({ post }) => {
     <title>{post.title}</title>
     <link rel="icon" href="/favicon.ico" />
   </Head>
-    <div className='container mx-auto px-10'>
+    <div className='container mx-auto px-4 md:px-6'>
       <div>
         <div>
             <PostDetail post={post} />

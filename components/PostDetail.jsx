@@ -67,7 +67,7 @@ const PostDetail = ( {post} ) => {
         className='object-top h-full w-full rounded-t-lg'>
         </img> */}
       </div>
-      <div className="px-4 lg:px-0">
+      <div className="">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
           <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-mulish'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>

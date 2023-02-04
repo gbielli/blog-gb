@@ -13,8 +13,8 @@ const PostCard = ({post}) => {
   return (
     <Link href={`/blog/post/${post.slug}`} className="font-mulish" >
 
-    <article className='grid grid-cols-1 md:grid-cols-1 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
-      <div className='overflow-hidden  h-[250px]'>
+    <article className='grid grid-cols-1 sm:grid-cols-1 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
+      <div className='overflow-hidden h-[250px]'>
         <img src={post.featuredImage.url}
           alt={post.title}
           className='w-full h-full object-cover rounded-sm'/>
