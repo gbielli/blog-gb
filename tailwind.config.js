@@ -31,7 +31,7 @@ module.exports = {
       'header-large': '1fr 1fr min-content'
     },
     spacing: {
-      '60' : '60%',
+      'sixty' : '60%',
       '2/4' : '50%'
     },
     gridTemplateRows: {
