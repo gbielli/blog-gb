@@ -30,6 +30,10 @@ module.exports = {
       'header': 'min-content 1fr',
       'header-large': '1fr 1fr min-content'
     },
+    spacing: {
+      '60' : '60%',
+      '2/4' : '50%'
+    },
     gridTemplateRows: {
       'articles': '250px min-content'
     }

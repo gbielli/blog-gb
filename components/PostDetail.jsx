@@ -72,12 +72,14 @@ const PostDetail = ( {post} ) => {
           <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-mulish'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
         <span className='mx-auto text-gray-500'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
-
-        <img 
-        src={post.featuredImage.url}
-        alt={post.title}
-        className='object-cover object-center h-[500px] h-full w-full rounded-t-lg'>
-        </img>
+        <div className='relative bg-black pb-60 w-full'>
+          <img 
+          src={post.featuredImage.url}
+          alt={post.title}
+          className='absolute object-cover h-full w-full'>
+          </img>
+        </div>
+        
 
         </div>
 
