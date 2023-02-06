@@ -10,14 +10,12 @@ const [relatedPosts, setRelatedPosts] = useState([]);
 
 useEffect(
   () => {
-    if (slug) {
-      getSimilarPosts(categories, slug)
-      .then((result) => setRelatedPosts(result) )
-    } else {
+    // if (slug) {
+    //   getSimilarPosts(categories, slug)
+    //   .then((result) => setRelatedPosts(result) )
+    // } else {
       getRecentPosts()
       .then((result) => setRelatedPosts(result) )
-    }
-
   }, [slug]
 )
 

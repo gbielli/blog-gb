@@ -21,7 +21,7 @@ const PostDetails = ({ post }) => {
         </div>
         <div>
             <div>
-                <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/>
+                {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
                 <Categories />
             </div>
         </div>

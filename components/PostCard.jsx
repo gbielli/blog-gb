@@ -6,8 +6,6 @@ import Link from 'next/link';
 
 const PostCard = ({post}) => {
 
-  
-  const reducedExcerpt = post.excerpt.substring(0, 130);
 
 
   return (
