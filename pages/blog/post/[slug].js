@@ -3,6 +3,7 @@ import Head from 'next/head';
 import {getPosts, getPostDetails } from '../../../services'
 
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components'
+import SimilarPost from '../../../components/home/SimilarPost';
 
 const PostDetails = ({ post }) => {
 
@@ -21,6 +22,8 @@ const PostDetails = ({ post }) => {
         </div>
         <div>
             <div>
+            <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
+
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
                 <Categories />
             </div>

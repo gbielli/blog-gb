@@ -33,7 +33,7 @@ const Header = ({click}) => {
           <div className={`ml-auto flex align-center font-mulish text-lg gap-3`}>
             {router.pathname === '/' ?
             
-              <div className={`nav__menu ${menu}`}>
+              <div className={`${menu}`}>
              <a className="" id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a>
              <Link className="" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
@@ -51,11 +51,11 @@ const Header = ({click}) => {
               ))
             }
           </div>
-          <div className="nav__btns self-center">
+          {/* <div className="nav__btns self-center">
                 <div onClick={handleToggle} className={toggle ? 'nav__toggle active' : 'nav__toggle'} id="nav-toggle">
                     <span></span>
                 </div>
-                </div>
+                </div> */}
         </div>
       </div>
     </div>
