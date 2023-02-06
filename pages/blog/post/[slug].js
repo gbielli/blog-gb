@@ -16,16 +16,16 @@ const PostDetails = ({ post }) => {
       <div>
         <div>
             <PostDetail post={post} />
-            <Author author={post.author} /> 
+            {/* <Author author={post.author} /> 
             <CommentsForm slug={post.slug} />
-            <Comments slug={post.slug} />
+            <Comments slug={post.slug} /> */}
         </div>
         <div>
             <div>
             <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
 
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
-                <Categories />
+                
             </div>
         </div>
       </div>

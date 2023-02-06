@@ -33,9 +33,9 @@ const Header = ({click}) => {
           <div className={`ml-auto flex align-center font-mulish text-lg gap-3`}>
             {router.pathname === '/' ?
             
-              <div className={`${menu}`}>
-             <a className="" id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a>
-             <Link className="" href="/blog">
+              <div className={`flex align-center gap-6 ${menu}`}>
+             <a className="self-center" id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a>
+             <Link className="self-center" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>

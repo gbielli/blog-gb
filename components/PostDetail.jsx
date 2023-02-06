@@ -69,7 +69,7 @@ const PostDetail = ( {post} ) => {
       </div>
       <div className="">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
-          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-mulish'>{post.title}</h1>
+          <h1 className='text-center font-bold text-3xl sm:text-4xl text-stroke-8 text-fill-black font-mulish'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
         <span className='mx-auto text-gray-500'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
         <div className='relative bg-black pb-sixty w-full'>

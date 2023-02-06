@@ -14,12 +14,12 @@ const SimilarPost = ({categories, slug}) => {
     )
 
   return (
-    <div className='max-w-3xl mx-auto'>
+    <div className='max-w-3xl mx-auto pb-20'>
                     <h3 className='font-abril text-2xl mb-2'>sur le même thème</h3>
                     <div className='flex flex-col gap-3 justify-left'>
         {similarPosts.map((similarPost) => (
             <div className='max-w-3xl'>
-            <p className='text-xl font-bold text-primary underline'>{similarPost.title} {moment(similarPost.createdAt).format('DD MMMM')}</p>
+            <p className='text-xl font-mulish text-primary underline'>{similarPost.title}</p>
             
             
             </div>
