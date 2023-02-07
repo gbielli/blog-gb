@@ -25,7 +25,7 @@ export default function (req, res) {
               Subject: `🚀  Tadam ${req.body.name}, Voilà mon CV.`,
             },
           ],
-        SandboxMode: true
+        
 	})
 
     request

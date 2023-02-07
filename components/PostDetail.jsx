@@ -32,13 +32,13 @@ const PostDetail = ( {post} ) => {
   
     switch (type) {
       case 'heading-two':
-        return <h2 key={index} className="text-4xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+        return <h2 key={index} className="text-4xl font-semibold font-abril mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'heading-three':
-        return <h3 key={index} className="text-3xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+        return <h3 key={index} className="text-3xl font-semibold font-abril mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
         return <div key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</div>;
       case 'heading-four':
-        return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+        return <h4 key={index} className="text-md font-semibold mb-4 font-abril">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'code-block':
         return <pre key={index} className={`line-numbers language-${text.includes('</div>') ? "html" : "javascript"} w-full rounded-lg`} > {modifiedText.map((item, i) => <code key={i}>{item}</code>)}</pre>;
       case 'image': 
@@ -69,7 +69,7 @@ const PostDetail = ( {post} ) => {
       </div>
       <div className="">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
-          <h1 className='text-center font-bold text-3xl sm:text-4xl text-stroke-8 text-fill-black font-mulish'>{post.title}</h1>
+          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
         <span className='mx-auto text-gray-500'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
         <div className='relative bg-black pb-sixty w-full'>
