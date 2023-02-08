@@ -30,10 +30,10 @@ const Form = ({ close }) => {
 
         
 
-        fetch('/api/sendEmail', {
+        fetch('/api/simpleSendJs', {
             method: 'POST',
             headers: {
-              'Accept': 'application/json, text/plain, */*',
+              'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)

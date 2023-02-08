@@ -1,45 +1,66 @@
 
-export const sendEmail = async () => {
+export default function (req, res) {
 
-    const body = JSON.stringify({
-        "Messages": [
-            {
-            "From": {
-                "Email": "hello@guillaumebielli.fr",
-                "Name": "Mailjet Pilot"
-            },
-            "To": [
-                {
-                "Email": "guillaume.bielli@gmail.com",
-                "Name": "passenger 1"
-                }
-            ],
-            "Subject": "Your email flight plan!",
-            "TextPart": "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-            "HTMLPart": ">Dear passenger 1, welcome to Mailjet! May the delivery force be with you!"
-            }
-        ]
-        });
+  const data = JSON.stringify({
+    "Email": req.body.email,
+    "Name": req.body.name,
+  })
 
-          
-  const config = {
-    method: 'post',
-    headers: { 
-      'Content-Type': 'application/json', 
-      'Authorization': process.env.MJ_BASIC_KEY
-    },
-    body : body
-  };
+    const key = process.env.MAKE_WEBHOOK;
 
+    const config = {
+      method: 'post',
+      headers: { 
+        'Content-Type': 'application/json', 
+      },
+      body : data
+    };
 
-return (
-    await fetch('https://api.mailjet.com/v3.1/send', config)
-    .then(function(response) {
-            console.log(JSON.stringify(response.body));
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
-  )
+    const request = fetch(`https://hook.eu1.make.com/${key}`, config);
+
+request
+.then(function(response) {
+  console.log(response.body);
+})
+.catch(function (error) {
+  console.log(error);
+})
+
+res.send('success')
 
 };
+
+
+
+// sendEmail = async () => {
+
+//     const body = JSON.stringify({
+//                 "Email": "guillaume.bielli@gmail.com",
+//                 "Name": "Mailjet Pilot"
+//     })
+
+//     const key = process.env.MAKE_WEBHOOK;
+
+          
+//   const config = {
+//     method: 'post',
+//     headers: { 
+//       'Content-Type': 'application/json', 
+//     },
+//     body : body
+//   };
+
+
+
+
+// return (
+//     await fetch(`https://hook.eu1.make.com/lv8o9bwzdh24aiv7eew9lj9yv0ku5ds8`, config)
+//     .then(function(response) {
+//             console.log(JSON.stringify(response.body));
+//         })
+//         .catch(function (error) {
+//             console.log(error);
+//         })
+//   )
+
+// };
