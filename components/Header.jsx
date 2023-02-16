@@ -42,13 +42,24 @@ const Header = ({click}) => {
               </Link>
               </div>
              : 
-              categories.map((category) => (
-              <Link className="ml-8" key={category.slug} href={`/blog/category/${category.slug}`}>
-                  <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
-                  {category.name}
-                  </span>
-              </Link>
-              ))
+              // categories.map((category) => (
+              // <Link className="ml-8" key={category.slug} href={`/blog/category/${category.slug}`}>
+              //     <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
+              //     {category.name}
+              //     </span>
+              // </Link>
+              <>
+               <Link className="self-center" href="/">
+               <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer mr-6">
+               accueil
+               </span>
+           </Link>
+           <Link className="self-center" href="/blog">
+           <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
+           blog
+           </span>
+       </Link>
+        </>
             }
           </div>
           {/* <div className="nav__btns self-center">

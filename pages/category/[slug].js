@@ -1,7 +1,7 @@
 import React from 'react'
 import { getCategoryPost, getCategories } from '../../../services'
 import { useRouter } from 'next/router';
-import { BlogTitle, PostCard } from '../../../components';
+import { PostCard } from '../../../components';
 
 const matomo = ({posts}) => {
   const router = useRouter();
@@ -11,9 +11,8 @@ const matomo = ({posts}) => {
   }
 
   return (
-    <>
     <div className='container mx-auto'>
-    <h3 className='text-3xl font-abril px-6 mb-6 mt-10'>Les articles sur</h3>
+    <h3 className='text-3xl font-abril px-6 mb-6 mt-10'>Les articles du moment</h3>
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6'>
       
     {posts.map((post) =>  
@@ -22,7 +21,6 @@ const matomo = ({posts}) => {
      )}
 </div>
 </div>
-</>
 
     
 

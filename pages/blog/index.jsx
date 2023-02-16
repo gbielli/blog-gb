@@ -13,7 +13,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BlogTitle title={`Le blog sur <span id="underline">l'actualité du web</span> analytics, le SEO et l'expérience utilisateur`} />
+      <BlogTitle />
 
       <PostWidget />
 

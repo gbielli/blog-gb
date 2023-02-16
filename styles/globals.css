@@ -3,29 +3,24 @@
 
 
 @tailwind base;
+
+h1 {
+  @apply text-2xl
+}
+
 @tailwind components;
 @tailwind utilities;
 
 :root {
     /* FONT SIZE */
 
-    --big-font-size : 2rem;
-    --h1-font-size : 1.7rem;
-    --h2-font-size:1.25rem;
-    --h3-font-size:1.125rem;
-    --normal-font-size:0.938rem;
-    --small-font-size:.813rem;
-    --smaller-font-size: .75rem;
-
-
-    /* FONT WEIGHT */
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /* INDEX */
-    --z-tooltip: 10;
-    --z-fixed : 100; 
-    --z-modal : 1000;
+    --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
 
 }
@@ -56,9 +51,13 @@ body {
   color:#232529;
 }
 
+
 h1, h2, h3, h4 {
   font-family: 'Mulish', sans-serif;
-  font-size: 40px;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
 }
 
 .text-shadow{

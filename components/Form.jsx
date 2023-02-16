@@ -1,7 +1,6 @@
 import React, { use } from 'react'
 import ButtonBlock from './home/ButtonBlock'
 import { useState, useRef } from 'react';
-import {donnee} from './home/donnee';
 
 
 
