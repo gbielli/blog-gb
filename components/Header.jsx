@@ -43,7 +43,7 @@ const Header = ({click}) => {
               </div>
              : 
               categories.map((category) => (
-              <Link className="ml-8" key={category.slug} href={`/category/${category.slug}`}>
+              <Link className="ml-8" key={category.slug} href={`/blog/category/${category.slug}`}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   {category.name}
                   </span>
