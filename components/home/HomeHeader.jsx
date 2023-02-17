@@ -13,8 +13,8 @@ const HomeHeader = () => {
             <p className='font-mulish md:max-w-md'> Passionné par le web et le developpement front-end avec quatre années d'expérience dans le digital.</p>
             <ButtonFit text="ça m'intéresse"/>
           </div>
-          <div className='home_img h-full w-auto row-start-1 col-start-2  auto-cols-min self-center justify-self-center'>
-          <Image className='w-full h-[350px] object-contain' sizes='100vw' src='/image/gb3.png' alt='linkedin' width="0" height="0" />
+          <div className='home_img w-full row-start-1 col-start-2 h-[350px]  auto-cols-min self-center justify-self-center'>
+          <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb3.png' alt='linkedin' width="0" height="0" />
           </div>
           <div className='col-start-3 row-start-1 w-[30px] home_social justify-self-end self-center'>
           <Image className='w-full h-auto mb-5' sizes='100vw' src='/image/linkedin.svg' alt='linkedin' width="0" height="0" />

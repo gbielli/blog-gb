@@ -10,6 +10,7 @@ const BlogTitle = ({title, underline}) => {
             <p className='border-2 border-black rounded-lg px-3 py-1'>Matomo</p>
             <p className='border-2 border-black rounded-lg px-3 py-1'>Google tag manager</p>
             <p className='border-2 border-black rounded-lg px-3 py-1'>User Experience</p>
+            <p className='border-2 border-black rounded-lg px-3 py-1'>SEO</p>
             </div>
           
 
