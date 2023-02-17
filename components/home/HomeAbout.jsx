@@ -8,8 +8,8 @@ const HomeAbout = () => {
       <HomeTitle
       title='À propos'
       description="Mon introduction" />
-      <p className='text-center font-mulish'>
-      Le web est devenu une réelle passion pour moi, je ne cesse d'être animé par l'envie d'apprendre de nouvelles connaissances et de mettre en place ces apprentissages dans le cadre de mon travail.
+      <p className='text-center font-mulish md:max-w-3xl mx-auto'>
+      Aficionado du web et de ses nouveautés avec un solde capillaire négatif, je me suis spécialisé dans le web analytics, l'acquisition et l'expérience utilisateur.
       </p>
       <div className='grid grid-cols-3 pb-20 pt-10'>
         <AboutItem number='04+' subtitle="années d'expériences" />

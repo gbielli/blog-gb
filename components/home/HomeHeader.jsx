@@ -10,7 +10,7 @@ const HomeHeader = () => {
         <div className='home_data col-start-1 row-start-2 col-span-2  md:row-start-1 md:col-span-1 self-center'>
             <h1 className='lg:text-5xl text-4xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume.</span></h1>
             <h3 className='lg:text-xl text-lg font-mulish mb-3'>Growth Hacker & Frontend Lover</h3>
-            <p className='font-mulish'> Passionné par le web avec quatre années d'expérience dans le digital, le produit, le web analytics et l'experience utilisateur.</p>
+            <p className='font-mulish md:max-w-md'> Passionné par le web et le developpement front-end avec quatre années d'expérience dans le digital.</p>
             <ButtonFit text="ça m'intéresse"/>
           </div>
           <div className='home_img h-full w-auto row-start-1 col-start-2  auto-cols-min self-center justify-self-center'>
