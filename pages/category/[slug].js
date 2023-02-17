@@ -1,7 +1,7 @@
 import React from 'react'
-import { getCategoryPost, getCategories } from '../../../services'
+import { getCategoryPost, getCategories } from '../../services'
 import { useRouter } from 'next/router';
-import { PostCard } from '../../../components';
+import { PostCard } from '../../components';
 
 const matomo = ({posts}) => {
   const router = useRouter();
