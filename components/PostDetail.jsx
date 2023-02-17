@@ -44,6 +44,7 @@ const PostDetail = ( {post} ) => {
       case 'image': 
         return (
           <img
+            className='mb-8'
             key={index}
             alt={obj.title}
             height={obj.height}
