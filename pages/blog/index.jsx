@@ -10,7 +10,7 @@ export default function Home({ posts }) {
     <div className="mx-auto mb-8">
       <Head>
         <title>Le blog | les actualités sur le web analytics</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/image/gbico.ico" />
       </Head>
 
       <BlogTitle />

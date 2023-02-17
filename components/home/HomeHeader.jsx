@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonFit from './ButtonFit'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const HomeHeader = () => {
 
@@ -14,11 +15,15 @@ const HomeHeader = () => {
             <ButtonFit text="ça m'intéresse"/>
           </div>
           <div className='home_img w-full row-start-1 col-start-2 h-[350px]  auto-cols-min self-center justify-self-center'>
-          <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb3.png' alt='linkedin' width="0" height="0" />
+          <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb4.png' alt='linkedin' width="0" height="0" />
           </div>
           <div className='col-start-3 row-start-1 w-[30px] home_social justify-self-end self-center'>
+          <a target='_blank' href='https://www.linkedin.com/in/guillaume-bielli/' rel="noopener noreferrer">
           <Image className='w-full h-auto mb-5' sizes='100vw' src='/image/linkedin.svg' alt='linkedin' width="0" height="0" />
+          </a>
+          <a target='_blank' href='https://github.com/gbielli' rel="noopener noreferrer">
           <Image className='w-full h-auto' sizes='100vw' src='/image/github.svg' alt='linkedin' width="0" height="0" />
+          </a>
 
           </div>
         </div>

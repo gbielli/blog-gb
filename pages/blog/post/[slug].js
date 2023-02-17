@@ -8,9 +8,10 @@ import SimilarPost from '../../../components/home/SimilarPost';
 const PostDetails = ({ post }) => {
 
   return (
-    <> <Head>
+    <>
+    <Head>
     <title>{post.title}</title>
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/image/gbico.ico" />
   </Head>
     <div className='container mx-auto px-4 md:px-6'>
       <div>

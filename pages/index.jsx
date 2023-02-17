@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Guillaume Bielli | Growth Hacker & Frontend Lover</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/image/gbico.ico" />
             </Head>
             <div>
             <div>
