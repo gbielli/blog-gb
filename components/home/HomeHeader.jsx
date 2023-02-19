@@ -5,6 +5,10 @@ import Link from 'next/link'
 
 const HomeHeader = () => {
 
+  const redirect = () => {
+    <Link href='#title' />
+  }
+
   return (
       <section className="home_container bg-secondary">
         <div className="container px-6 mx-auto home_content grid grid-cols-header md:grid-cols-header-large py-20">
@@ -12,7 +16,9 @@ const HomeHeader = () => {
             <h1 className='lg:text-5xl text-4xl font-abril font-bold mb-1'>Hé, <span id='underline'>c'est Guillaume.</span></h1>
             <h3 className='lg:text-xl text-lg font-mulish mb-3'>Growth Hacker & Frontend Lover</h3>
             <p className='font-mulish md:max-w-md'> Passionné par le web et le developpement front-end avec quatre années d'expérience dans le digital.</p>
-            <ButtonFit text="ça m'intéresse"/>
+            <div>
+            <ButtonFit text="ça m'intéresse" />
+            </div>
           </div>
           <div className='home_img w-full row-start-1 col-start-2 h-[350px]  auto-cols-min self-center justify-self-center'>
           <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb4.png' alt='linkedin' width="0" height="0" />
