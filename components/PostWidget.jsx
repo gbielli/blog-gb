@@ -28,7 +28,6 @@ useEffect(
       {relatedPosts.map((relatedPost) => (
         
                     <Link href={`/blog/post/${relatedPost.slug}`} key={relatedPost.title}>
-        {console.log(relatedPost)}
         <article key={relatedPost.title} className='relative flex flex-col items center w-full'>
           <div className='h-[500px] w-full bg-black'>
             <img 

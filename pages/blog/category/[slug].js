@@ -1,7 +1,9 @@
 import React from 'react'
-import { getCategoryPost, getCategories } from '../../services'
+import { getCategoryPost, getCategories } from '../../../services'
 import { useRouter } from 'next/router';
-import { PostCard } from '../../components';
+import { Categories, PostCard, PostWidget } from '../../../components';
+import CategoryTitle from '../../../components/home/CategoryTitle';
+import Head from 'next/head';
 
 const matomo = ({posts}) => {
   const router = useRouter();
@@ -11,16 +13,20 @@ const matomo = ({posts}) => {
   }
 
   return (
+    <>
+
+    <CategoryTitle categoryName={router.query.slug}/>
     <div className='container mx-auto'>
-    <h3 className='text-3xl font-abril px-6 mb-6 mt-10'>Les articles du moment</h3>
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6'>
-      
-    {posts.map((post) =>  
-    
-      <PostCard post={post.node} key={post.title} /> 
-     )}
-</div>
-</div>
+      <h3 className='text-3xl font-abril px-6 mb-6 mt-10'>Les articles du moment</h3>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6'>
+        {posts.map((post) =>
+        <>
+          <PostCard post={post.node} key={post.title} />
+        </>
+        )}
+      </div>
+    </div>
+    </>
 
     
 

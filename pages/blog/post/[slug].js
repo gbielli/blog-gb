@@ -1,11 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import {getPosts, getPostDetails } from '../../../services'
-
+import { useRouter } from 'next/router';
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components'
 import SimilarPost from '../../../components/home/SimilarPost';
 
 const PostDetails = ({ post }) => {
+  const router = useRouter();
 
   return (
     <>

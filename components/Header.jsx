@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 
 
-const categories = [{name: 'React', slug: 'react' }, { name:'Matomo', slug:'matomo'}]
+const categories = { name:'Matomo', slug:'matomo'}
 const menu = [{name: 'mon ku·ri·ku·lom'}, { name:'get in touch'}]
 
 
@@ -42,24 +42,12 @@ const Header = ({click}) => {
               </Link>
               </div>
              : 
-              // categories.map((category) => (
-              // <Link className="ml-8" key={category.slug} href={`/blog/category/${category.slug}`}>
-              //     <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
-              //     {category.name}
-              //     </span>
-              // </Link>
-              <>
-               <Link className="self-center" href="/">
-               <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer mr-6">
-               accueil
-               </span>
-           </Link>
-           <Link className="self-center" href="/blog">
-           <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
-           blog
-           </span>
-       </Link>
-        </>
+             
+              <Link className="ml-8" key={categories.slug} href={`/blog/category/${categories.slug}`}>
+                  <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
+                  {categories.name}
+                  </span>
+              </Link>              
             }
           </div>
           {/* <div className="nav__btns self-center">
