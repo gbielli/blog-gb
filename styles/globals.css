@@ -17,11 +17,6 @@ body {
   min-width: 300px;
 }
 
-
-h1, h2, h3, h4 {
-  font-family: 'Mulish', sans-serif;
-}
-
 h1 {
   font-size: var(--font-size-xl);
 }
