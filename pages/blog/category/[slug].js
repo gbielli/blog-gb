@@ -14,8 +14,13 @@ const matomo = ({posts}) => {
 
   return (
     <>
+    <Head>
+    <title>
+    {`Les articles sur ${router.query.slug} - Blog`}
+    </title>
+    </Head>
 
-    <CategoryTitle categoryName={router.query.slug}/>
+    <CategoryTitle categoryName={router.query.slug} />
     <div className='container mx-auto mt-20 mb-20'>
       <h3 className='text-3xl font-abril px-6 mb-6 mt-10'>Les articles du moment</h3>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6'>

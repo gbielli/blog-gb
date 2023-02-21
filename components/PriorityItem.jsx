@@ -24,7 +24,7 @@ const items = [
     {
         title: "User experience",
         tags: ['UX','UI','Web design'],
-        text:"Développer l'innovation digitale la plus aboutie sur le marché ne suffit plus aujourd'hui, je suis convaincu de l'importance du dévéloppement de l'expérience utilisateur.",
+        text:"J'ai très vite compris que développer l'innovation digitale la plus aboutie sur le marché ne suffisait plus aujourd'hui, il faut sans cesse développer et optimiser son parcours client.",
     },
     {
         title: "Marketing digital",

@@ -15,11 +15,6 @@ const CategoryTitle = ({ categoryName }) => {
 
   return (
     <>
-    <Head>
-        <title>
-        Les articles sur {categoryName}
-        </title>
-    </Head>
     <div className='bg-secondary'>
         <div className='container text-center lg:w-3/5 mx-auto pt-40 pb-40 px-6 flex flex-col gap-2'>
             <h1 className='text-4xl font-abril'>Les articles sur  <span id="underline">{capitalizeWords(categoryName)}</span></h1>
