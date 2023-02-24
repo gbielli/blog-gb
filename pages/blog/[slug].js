@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import {getPosts, getPostDetails } from '../../../services'
+import {getPosts, getPostDetails } from '../../services'
 import { useRouter } from 'next/router';
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components'
-import SimilarPost from '../../../components/home/SimilarPost';
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../components'
+import SimilarPost from '../../components/home/SimilarPost';
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
+  const [tag, setTag] = useState([])
+
+  useEffect(() => {
+    const items = document.querySelectorAll('h3');
+    const itemsArray = [...items];
+    console.log(itemsArray)
+    }
+  , [post])
 
   return (
     <>
@@ -26,6 +34,7 @@ const PostDetails = ({ post }) => {
             <div>
             <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
 
+            {console.log(tag)}
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
                 
             </div>

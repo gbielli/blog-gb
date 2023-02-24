@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://guillaumebielli.fr</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/category/matomo</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/category/analytics</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/post/comment-integrer-matomo-avec-google-tag-manager</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/post/comment-creer-un-bon-data-studio</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/post/comment-activer-le-mode-e-commerce</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/post/comment-utiliser-les-custom-reports-sur-matomo</loc><lastmod>2023-02-22T20:53:47.396Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

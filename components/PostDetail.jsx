@@ -13,8 +13,12 @@ const PostDetail = ( {post} ) => {
     Prism.highlightAll();
   }, []);
 
-  // const getContentFragment = (index, text, obj, type) => {
-  //   let modifiedText = text;
+  // const listes = post.content.raw.children;
+  // console.log(listes)
+
+
+  const getContentFragment = (index, text, obj, type) => {
+    let modifiedText = text;}
 
   //   console.log(obj)
 
@@ -72,7 +76,7 @@ const PostDetail = ( {post} ) => {
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
           <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
-        <span className='mx-auto text-gray-500'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
+        <span className='mx-auto text-gray-500 font-mulish'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
         <div className='relative bg-black pb-sixty w-full'>
           <img 
           src={post.featuredImage.url}
@@ -103,6 +107,22 @@ const PostDetail = ( {post} ) => {
                   <code>{children}</code>
                 </pre>
               );
+            },
+
+            blockquote: ({children}) => {
+              return (
+                <blockquote class="sm:ml-4 border-l-4 pl-4 sm:pl-6 border-primary mb-8">
+                  <p class="text-2xl text-gray-600 ">
+                  {children}
+                  </p>
+                </blockquote>
+              )
+            },
+
+            class: ({ children, className }) => {
+              return (
+                <div className={className}>{children} </div>
+              )
             },
 
             a: ({ children, openInNewTab, href, rel, ...rest }) => {

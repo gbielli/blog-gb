@@ -1,2 +1,6 @@
 User-agent: *
 Disallow: /
+
+
+# Sitemaps
+Sitemap: https://guillaumebielli.fr/sitemap.xml # Index sitemap

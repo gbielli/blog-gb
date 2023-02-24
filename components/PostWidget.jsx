@@ -27,7 +27,7 @@ useEffect(
       <div className='grid grid-cols-1 gap-6'>
       {relatedPosts.map((relatedPost) => (
         
-                    <Link href={`/blog/post/${relatedPost.slug}`} key={relatedPost.title}>
+                    <Link href={`/blog/${relatedPost.slug}`} key={relatedPost.title}>
         <article key={relatedPost.title} className='relative flex flex-col items center w-full'>
           <div className='h-[500px] w-full bg-black'>
             <img 
