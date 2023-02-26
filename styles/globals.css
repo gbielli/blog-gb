@@ -15,6 +15,7 @@ body {
   font-family: 'abril', 'cursive';
   color:#232529;
   min-width: 300px;
+  scroll-behavior: smooth;
 }
 
 h1 {

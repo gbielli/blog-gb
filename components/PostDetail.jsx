@@ -13,12 +13,34 @@ const PostDetail = ( {post} ) => {
     Prism.highlightAll();
   }, []);
 
+  const slugify = (str) => {
+    return  str
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  }
+
   // const listes = post.content.raw.children;
   // console.log(listes)
 
 
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;}
+  // const getContentFragment = (index, text, obj, type) => {
+  //   let modifiedText = text;}
+
+  const getContent = (index, text, type) => {
+    let htext = text;
+
+      switch (type) {
+      default :
+      return  text
+ }
+
+}
+    
+  
 
   //   console.log(obj)
 
@@ -84,6 +106,18 @@ const PostDetail = ( {post} ) => {
           className='absolute object-cover h-full w-full'>
           </img>
         </div>
+
+        <div>{post.content.raw.children.map((typeObj, index) => {
+     if (typeObj.type === 'heading-three') {
+           const children = typeObj.children.map((item, indexItem) => {
+              return (getContent(indexItem, item.text, item))
+        })
+
+        return  <div><a  className="" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
+      }
+            })
+          }
+          </div>
         
 
         </div>
@@ -96,7 +130,7 @@ const PostDetail = ( {post} ) => {
             p: ({ children }) => <p className="mb-8">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="text-3xl font-semibold font-abril mb-6">{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary before:text-4xl text-3xl font-semibold font-abril mb-6 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 
@@ -130,7 +164,7 @@ const PostDetail = ( {post} ) => {
                 return (
                   <a
                     href={href}
-                    className="text-primary  hover:text-blue-700"
+                    className="text-primary  hover:text-blue-700 after:content-['_↗']"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel={rel || 'noopener noreferrer'}
                     {...rest}
