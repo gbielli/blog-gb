@@ -107,13 +107,15 @@ const PostDetail = ( {post} ) => {
           </img>
         </div>
 
-        <div>{post.content.raw.children.map((typeObj, index) => {
+        <div className='border-2 border-gray w-full px-6 py-6 rounded-md'>
+          <div className='font-abril pb-2'>SOMMAIRE</div>
+          {post.content.raw.children.map((typeObj, index) => {
      if (typeObj.type === 'heading-three') {
            const children = typeObj.children.map((item, indexItem) => {
               return (getContent(indexItem, item.text, item))
         })
 
-        return  <div><a  className="" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
+        return  <div className='mb-2'> <a  className="before:content-['\21AA'] before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
       }
             })
           }
