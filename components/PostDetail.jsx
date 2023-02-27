@@ -4,6 +4,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import Link  from 'next/link';
 
 
 
@@ -107,15 +108,15 @@ const PostDetail = ( {post} ) => {
           </img>
         </div>
 
-        <div className='border-2 border-gray w-full px-6 py-6 rounded-md'>
-          <div className='font-abril pb-2'>SOMMAIRE</div>
+        <div className='border-2 border-gray w-full px-6 py-6 rounded-md max-w-3xl'>
+          <div className='font-abril pb-2 text-xl'>Sommaire</div>
           {post.content.raw.children.map((typeObj, index) => {
      if (typeObj.type === 'heading-three') {
            const children = typeObj.children.map((item, indexItem) => {
               return (getContent(indexItem, item.text, item))
         })
 
-        return  <div className='mb-2'> <a  className="before:content-['\21AA'] before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
+        return  <div className='mb-2'> <a  className="before:content-summary before:self-center before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
       }
             })
           }
@@ -166,7 +167,7 @@ const PostDetail = ( {post} ) => {
                 return (
                   <a
                     href={href}
-                    className="text-primary  hover:text-blue-700 after:content-['_↗']"
+                    className="text-primary hover:text-blue-700"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel={rel || 'noopener noreferrer'}
                     {...rest}
@@ -177,7 +178,7 @@ const PostDetail = ( {post} ) => {
               }
     
               return (
-                <Link href={href}>
+                <Link legacyBehavior href={href}>
                   <a {...rest}>{children}</a>
                 </Link>
               );
