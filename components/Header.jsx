@@ -21,7 +21,7 @@ const Header = ({click}) => {
   
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary fixed w-full z-10">
       <div className="container mx-auto px-6">
         <div className="container mx-auto border-blue-400 py-6 flex align-center">
           <div className="self-center">
@@ -42,12 +42,18 @@ const Header = ({click}) => {
               </Link>
               </div>
              : 
-             
+             <>
+             <Link className="self-center" href="/blog">
+                  <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
+                  blog
+                  </span>
+              </Link>
               <Link className="ml-8" key={categories.slug} href={`/blog/category/${categories.slug}`}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   {categories.name}
                   </span>
-              </Link>              
+              </Link>
+              </>              
             }
           </div>
           {/* <div className="nav__btns self-center">

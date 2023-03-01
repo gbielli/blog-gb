@@ -95,7 +95,7 @@ const PostDetail = ( {post} ) => {
     <div>
       <div className='relative overflow-hidden shadow-md mb-6'>
       </div>
-      <div className="">
+      <div className="mt-20">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
           <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
@@ -104,7 +104,7 @@ const PostDetail = ( {post} ) => {
           <img 
           src={post.featuredImage.url}
           alt={post.title}
-          className='absolute object-cover h-full w-full'>
+          className='absolute object-cover h-full w-full z-1'>
           </img>
         </div>
 
