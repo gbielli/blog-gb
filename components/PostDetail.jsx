@@ -140,10 +140,16 @@ const PostDetail = ( {post} ) => {
 
             code_block: ({ children }) => {
               return (
-                <pre className="line-numbers language-html w-full mb-8">
+                <pre className="line-numbers language-none w-full mb-8">
                   <code>{children}</code>
                 </pre>
               );
+            },
+
+            img : ({src, altText}) => {
+              return(
+              <img className='mb-8' src={src} alt={altText}>
+              </img>)
             },
 
             blockquote: ({children}) => {
