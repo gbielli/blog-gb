@@ -33,8 +33,7 @@ const Header = ({click}) => {
           <div className={`ml-auto flex align-center font-mulish text-lg gap-3`}>
             {router.pathname === '/' ?
             
-              <div className={`flex align-center gap-6 ${menu}`}>
-             {/* <a className="self-center" id="underline" href="" onClick={click} >mon ku·ri·ku·lom</a> */}
+              <div className={`flex align-center gap-6 nav__menu ${menu}`} onClick={handleToggle}>
              <Link className="self-center" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
@@ -42,25 +41,25 @@ const Header = ({click}) => {
               </Link>
               </div>
              : 
-             <>
+             <div className={`nav__menu ${menu}`} onClick={handleToggle}>
              <Link className="self-center" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>
               </Link>
-              <Link className="ml-8" key={categories.slug} href={`/blog/category/${categories.slug}`}>
+              <Link className="" key={categories.slug} href={`/blog/category/${categories.slug}`}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   {categories.name}
                   </span>
               </Link>
-              </>              
+              </div>              
             }
           </div>
-          {/* <div className="nav__btns self-center">
+          <div className="nav__btns self-center">
                 <div onClick={handleToggle} className={toggle ? 'nav__toggle active' : 'nav__toggle'} id="nav-toggle">
                     <span></span>
                 </div>
-                </div> */}
+                </div>
         </div>
       </div>
     </div>

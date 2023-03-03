@@ -70,7 +70,7 @@ article:hover h3 {
   visibility: hidden;
   width: 100%;
   background-color: white;
-  padding:2rem 1.5rem 4rem;
+  padding:2rem 1.5rem 2rem;
   z-index: 1;
   position:absolute;
   flex-direction: column;
@@ -79,8 +79,8 @@ article:hover h3 {
 
 .show-menu {
   
-  -webkit-animation: show-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: show-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: show-menu 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: show-menu 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   left:0;
   right: 0;
   visibility: visible;
