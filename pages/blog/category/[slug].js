@@ -9,7 +9,7 @@ const matomo = ({posts}) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <p>dede</p>;
+    return <p>Chargement...</p>;
   }
 
   return (
