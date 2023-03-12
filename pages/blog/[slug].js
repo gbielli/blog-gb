@@ -12,6 +12,7 @@ const PostDetails = ({ post }) => {
     <>
     <Head>
     <title>{post.title}</title>
+    <meta name="description" content={post.excerpt} />
     <link rel="icon" href="/image/gbico.ico" />
   </Head>
     <div className='container mx-auto px-4 md:px-6'>
