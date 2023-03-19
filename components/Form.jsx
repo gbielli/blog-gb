@@ -53,7 +53,7 @@ const Form = ({ close }) => {
   return (
     <>
     <div className='mx-auto fixed w-full h-full flex items-center z-50' id="form">
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-10 py-6  w-10/12 lg:w-6/12 mx-auto bg-white border border-black'>
+    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll'>
     
         {submitted ?
         <div className="pb-10">
