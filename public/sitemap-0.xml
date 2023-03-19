@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://guillaumebielli.fr</loc><lastmod>2023-03-01T23:03:06.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog</loc><lastmod>2023-03-01T23:03:06.982Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/comment-integrer-matomo-avec-google-tag-manager</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/comment-creer-un-bon-data-studio</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/comment-activer-le-mode-e-commerce</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/comment-utiliser-les-custom-reports-sur-matomo</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/matomo-vs-google-analytics-quelles-differences-et-comment-choisir</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://guillaumebielli.fr/blog/category/matomo</loc><lastmod>2023-03-01T23:03:06.983Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr</loc><lastmod>2023-03-19T11:58:37.939Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog</loc><lastmod>2023-03-19T11:58:37.939Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/category/matomo</loc><lastmod>2023-03-19T11:58:37.939Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/matomo-vs-google-analytics-quelles-differences-et-comment-choisir</loc><lastmod>2023-03-19T11:58:37.939Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://guillaumebielli.fr/blog/comment-parametrer-matomo-pour-tracker-sans-consentement</loc><lastmod>2023-03-19T11:58:37.939Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

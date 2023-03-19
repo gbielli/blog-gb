@@ -21,7 +21,7 @@ const HomeHeader = () => {
             </div>
           </div>
           <div className='home_img w-full row-start-1 col-start-2 h-[350px]  auto-cols-min self-center justify-self-center'>
-          <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb4.png' alt='linkedin' width="0" height="0" />
+          <Image className='w-full h-full object-contain' sizes='100vw' src='/image/gb4.png' alt='profil image' width="0" height="0" priority={true} />
           </div>
           <div className='col-start-3 row-start-1 w-[30px] home_social justify-self-end self-center'>
           <a target='_blank' href='https://www.linkedin.com/in/guillaume-bielli/' rel="noopener noreferrer">

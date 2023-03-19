@@ -16,7 +16,7 @@ const Header = ({click}) => {
 
   const handleToggle = () => {
     {toggle ? setToggle(false) : setToggle(true)}
-    {toggle ? setMenu('') : setMenu('show-menu')}
+    {toggle ? setMenu('') : setMenu('show-menu gap-2')}
   }
   
 
@@ -34,6 +34,8 @@ const Header = ({click}) => {
             {router.pathname === '/' ?
             
               <div className={`flex align-center gap-6 nav__menu ${menu}`} onClick={handleToggle}>
+              <a href="" onClick={click} >
+                <span id="underline">contact</span></a>
              <Link className="self-center" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
@@ -54,6 +56,7 @@ const Header = ({click}) => {
               </Link>
               </div>              
             }
+
           </div>
           <div className="nav__btns self-center">
                 <div onClick={handleToggle} className={toggle ? 'nav__toggle active' : 'nav__toggle'} id="nav-toggle">

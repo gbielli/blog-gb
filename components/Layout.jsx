@@ -15,9 +15,9 @@ const  Layout  = ({ children }) => {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative z-9999 bg-red'>
       {isOpen ? 
-    <div className='h-full w-screen mx-auto absolute'>
+    <div className='h-full w-screen mx-auto absolute z-9999 bg-red'>
       <Form close={handleClick} />
     </div> : 
     <></>}

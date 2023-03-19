@@ -2,8 +2,6 @@ import React, { use } from 'react'
 import ButtonBlock from './home/ButtonBlock'
 import { useState, useRef } from 'react';
 
-
-
 const Form = ({ close }) => {
 
   
@@ -16,6 +14,7 @@ const Form = ({ close }) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (e) => {
@@ -24,7 +23,8 @@ const Form = ({ close }) => {
 
         let data = {
             name,
-            email
+            email,
+            message
         }
 
         
@@ -39,20 +39,21 @@ const Form = ({ close }) => {
           })
           
           .then((res) => {
-            console.log('Response received')
             if(res.status === 200) {
               console.log('Response succeeded!')
+              console.log(data)
               setSubmitted(true)
               setName('')
               setEmail('')
+              setMessage('')
             }
           })
     }
 
   return (
     <>
-    <div className='mx-auto fixed w-full h-full flex items-center' id="form">
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form px-10 py-4 w-96 m-auto bg-white border border-black'>
+    <div className='mx-auto fixed w-full h-full flex items-center z-50' id="form">
+    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-10 py-6  w-10/12 lg:w-6/12 mx-auto bg-white border border-black'>
     
         {submitted ?
         <div className="pb-10">
@@ -66,21 +67,25 @@ const Form = ({ close }) => {
           style={{ width: "150px", height: "150px", margin:"auto", marginBottom:"20px"}}
         ></lottie-player>
             <h2 className='font-abril text-2xl text-center'>🚀 Bingo ! L'email a été envoyé.</h2>
-            <p className='text-center font-mulish'>Je viens de t'envoyer mon ku·ri·ku·lom par les internet, check l'onglet promotion ou indésirable si tu ne le vois pas ! </p>
+            <p className='text-center font-mulish'>Ton email a bien été envoyé <span id="underline">par les internets</span>, Je te réponds dès que possible ! </p>
         </div>     
          : 
         <> <div className='text-right cursor-pointer text-2xl' id="close-btn" onClick={close}>×</div>
-        <h2 className='text-2xl font-abril'>✋ Opopopopo ! Pas si vite ! </h2>
-        <p id="toto" className='font-mulish'>un bon marketeux ne peut pas te laisser partir comme ça ! <span className="underline">Laisse moi ton email</span> et je te transfert mon CV, promis ! </p>
+        <h2 className='text-2xl font-abril'>✋ Un message ? c'est par ici </h2>
+        <p id="toto" className='font-mulish'> <span id="underline">Laisse moi ton message</span> et je te contacterai dès que possible !</p>
         
         <div className='my-4 flex flex-col gap-3'>
             <div className="form-element flex flex-col">
             <label className='font-mulish' htmlFor="prenom">Prenom</label>
-            <input  onChange={(e) => setName(e.target.value)} className='py-3 border border-black rounded-sm font-mulish text-md px-2' type="text" id="prenom" name="prenom" placeholder="ton prenom" required />
+            <input  onChange={(e) => setName(e.target.value)} className='py-3 border border-black rounded-sm font-mulish text-md px-2' type="text" id="prenom" name="name" placeholder="ton prenom" required />
             </div>
             <div className="form-element flex flex-col">
                 <label className='font-mulish' htmlFor="email">Email</label>
                 <input onChange={(e) => setEmail(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
+            </div>
+            <div class="form-element flex flex-col">
+                <label className='font-mulish'htmlFor="text">Message</label>
+                <textarea onChange={(e) => setMessage(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="text" name="message" id="message" rows="5" cols="33" maxlength="1500"></textarea>
             </div>
         </div>
         
