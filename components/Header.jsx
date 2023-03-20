@@ -16,7 +16,7 @@ const Header = ({click}) => {
 
   const handleToggle = () => {
     {toggle ? setToggle(false) : setToggle(true)}
-    {toggle ? setMenu('') : setMenu('show-menu gap-2')}
+    {toggle ? setMenu('') : setMenu('show-menu')}
   }
   
 
