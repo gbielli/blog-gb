@@ -44,6 +44,8 @@ const Header = ({click}) => {
               </div>
              : 
              <div className={`nav__menu ${menu}`} onClick={handleToggle}>
+              <a href="" onClick={click} >
+                <span id="underline">contact</span></a>
              <Link className="self-center" href="/blog">
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
