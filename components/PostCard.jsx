@@ -24,10 +24,7 @@ const PostCard = ({post}) => {
         <h3 className='text-lg font-bold cursor-pointer font-mulish'>
             {post.title}       
         </h3>
-        <div className='mt-1'>
-        {/* <p className='border-2 w-fit px-2 py-1 rounded-md border-primary mr-3 font-mulish text-primary hover:no-underline text-sm'>{post.categories[0].name}</p> */}
-        </div>
-        {/* <p className='font-mulish'>{reducedExcerpt}...</p> */}
+     
 
       </div>
       

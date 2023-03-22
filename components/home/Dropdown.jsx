@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import SkillDetail from './SkillDetail'
 
 const items = [{}]
 
