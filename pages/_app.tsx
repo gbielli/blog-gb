@@ -5,9 +5,13 @@ import Script from 'next/script';
 import TagManager from 'react-gtm-module';
 import Head from 'next/head';
 
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
+
+import { Abril_Fatface } from 'next/font/google';
+
+
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,10 +20,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 }, []);
 
   return (
-    
-    <Layout>   
-      <Component {...pageProps} />
+    <>
+    <Layout>
+        <Component {...pageProps} />
     </Layout>
+    </>
   )
 }
 

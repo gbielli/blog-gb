@@ -12,7 +12,7 @@ module.exports = {
       },
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
-        abril: ['Abril Fatface', 'cursive']
+        abril: ['abril', 'cursive']
       },
       colors: {
         primary: '#3E7FF6',

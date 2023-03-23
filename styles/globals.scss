@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+
+@font-face {
+  font-family: "abril";
+  src: url("../public/fonts/AbrilFatface-Regular.ttf");
+}
 
 html,
 body {
@@ -12,11 +16,12 @@ body {
   margin: 0;
   margin:auto;
   line-height: normal;
-  font-family: 'abril', 'cursive';
   color:#232529;
   min-width: 300px;
   scroll-behavior: smooth;
+  font-display: swap;
 }
+
 
 h1 {
   font-size: var(--font-size-xl);
