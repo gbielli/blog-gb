@@ -7,12 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      content: {
-        'summary' : 'url("/image/rtn1.svg")',
-      },
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
-        abril: ['abril', 'cursive']
+        abril: ['var(--font-abril)']
       },
       colors: {
         primary: '#3E7FF6',

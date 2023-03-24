@@ -27,7 +27,7 @@ const Header = ({click}) => {
           <div className="self-center">
             <Link className="text-lg" href="/">
               <span className="text-secondary2">./</span>
-              <span className="font-abril" id="tests">Guillaume Bielli</span>
+              <span className="font-abril" id="abril">Guillaume Bielli</span>
             </Link>
           </div>
           <div className={`ml-auto flex align-center font-mulish text-lg gap-3`}>

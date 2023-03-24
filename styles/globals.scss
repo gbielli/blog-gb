@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
+// @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+
+@font-face {
+  font-family: "mulish";
+  src: url("../public/fonts/Mulish-VariableFont_wght.ttf");
+}
 
 @font-face {
   font-family: "abril";
@@ -19,7 +24,11 @@ body {
   color:#232529;
   min-width: 300px;
   scroll-behavior: smooth;
-  font-display: swap;
+  font-family:'mulish';
+}
+
+#abril {
+  font-family: 'abril';
 }
 
 
