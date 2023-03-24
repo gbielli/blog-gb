@@ -31,9 +31,12 @@ body {
   font-family: 'abril';
 }
 
+[data-font="abril"]  {
+  font-family: 'abril';
+}
 
-h1 {
-  font-size: var(--font-size-xl);
+h1, h2 {
+  font-family: 'abril';
 }
 
 .text-shadow{

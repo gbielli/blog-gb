@@ -97,7 +97,7 @@ const PostDetail = ( {post} ) => {
       </div>
       <div className="mt-20">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
-          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10'>{post.title}</h1>
+          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10' id='abril'>{post.title}</h1>
         <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
         <span className='mx-auto text-gray-500 font-mulish'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
         <div className='relative bg-black pb-sixty w-full'>
@@ -133,7 +133,7 @@ const PostDetail = ( {post} ) => {
             p: ({ children }) => <p className="mb-8">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary before:text-4xl text-3xl font-semibold font-abril my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary before:text-4xl text-3xl font-semibold my-10 before:content-['#']" data-font='abril' id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
             h4: ({ children }) => <h4 className="text-2xl font-semibold font-abril my-10">{children}</h4>,
 

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      content: {
+        'summary' : 'url("/image/rtn1.svg")',
+      },
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
         abril: ['var(--font-abril)']
