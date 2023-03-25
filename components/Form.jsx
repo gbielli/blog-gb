@@ -71,7 +71,7 @@ const Form = ({ close }) => {
         </div>     
          : 
         <> <div className='text-right cursor-pointer text-2xl' id="close-btn" onClick={close}>×</div>
-        <h2 className='text-2xl' data-font='abril'>✋ Un message ? c'est par ici </h2>
+        <h2 className='text-2xl' data-font='abril'>✋ Un message ? c'est par ici</h2>
         <p id="toto" className='font-mulish'> <span id="underline">Laisse moi ton message</span> et je te contacterai dès que possible !</p>
         
         <div className='my-4 flex flex-col gap-3'>
