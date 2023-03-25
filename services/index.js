@@ -50,10 +50,6 @@ export const getPostDetails = async (slug) => {
         }
         author{
           name
-          bio
-          photo {
-            url
-          }
         }
         createdAt
         slug

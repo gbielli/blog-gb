@@ -21,7 +21,7 @@ const PostCard = ({post}) => {
       <span className=' rounded-md border-primary mr-3 font-mulish text-primary hover:no-underline text-md'>{post.categories[0].name}</span>
 
       <span className='font-mulish text-sm'>{moment(post.createdAt).format('DD MMMM')}</span>
-        <h3 className='text-lg font-bold cursor-pointer font-mulish'>
+        <h3 className='text-lg font-semibold cursor-pointer font-mulish'>
             {post.title}       
         </h3>
      
