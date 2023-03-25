@@ -14,6 +14,7 @@ const PostDetails = ({ post }) => {
     <title>{post.title}</title>
     <meta name="description" content={post.excerpt} />
     <link rel="icon" href="/image/gbico.ico" />
+    <link rel='canonical' href={`https://guillaumebielli.fr${router.asPath}`} />
   </Head>
     <div className='container mx-auto px-4 md:px-6'>
       <div>
