@@ -12,7 +12,7 @@ module.exports = {
       },
       fontFamily: {
         mulish: ['var(--font-body)'],
-        abril: ['var(--font-abril)']
+        abril: ['var(--font-title)']
       },
       colors: {
         primary: 'var(--primary)',

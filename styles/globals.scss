@@ -41,14 +41,11 @@ body {
   margin: 0;
   margin:auto;
   line-height: normal;
-  color:#232529;
+  color:var(--title-color);
   min-width: 300px;
   scroll-behavior: smooth;
 }
 
-#abril {
-  font-family: 'abril';
-}
 
 [data-font="abril"]  {
   font-family: 'abril';
