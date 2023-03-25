@@ -133,9 +133,9 @@ const PostDetail = ( {post} ) => {
             p: ({ children }) => <p className="mb-8">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary before:text-4xl text-3xl font-semibold my-10 before:content-['#']" data-font='abril' id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary before:text-4xl text-3xl my-10 before:content-['#']" data-font='abril' id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
-            h4: ({ children }) => <h4 className="text-2xl font-semibold font-abril my-10">{children}</h4>,
+            h4: ({ children }) => <h4 className="text-2xl font-abril my-10" data-font='abril'>{children}</h4>,
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 

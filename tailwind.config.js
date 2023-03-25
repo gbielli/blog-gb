@@ -11,15 +11,14 @@ module.exports = {
         'summary' : 'url("/image/rtn1.svg")',
       },
       fontFamily: {
-        mulish: ['Mulish', 'sans-serif'],
+        mulish: ['var(--font-body)'],
         abril: ['var(--font-abril)']
       },
       colors: {
-        primary: '#3E7FF6',
-        secondary: '#E5EFFE',
-        titleColor:'#232529',
-        secondary2:'#A3C5FF',
-        black: '#232529'
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        titleColor:'var(--title-color)',
+        secondary2:'var(--third)',
     },
     container: {
       screens: {

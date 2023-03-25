@@ -27,7 +27,7 @@ const items = [
         text:"J'ai très vite compris que développer l'innovation digitale la plus aboutie sur le marché ne suffisait plus aujourd'hui, il faut sans cesse développer et optimiser son parcours client.",
     },
     {
-        title: "Marketing digital",
+        title: "Acquisition",
         tags: ['SEO/SEA','Automation','Communication'],
         text:"Mon expertise s'oriente sur le développement de la stratégie digitale avec un focus sur l'acquisition, le marketing automation, le no-code et la communication.",
     },
@@ -40,7 +40,7 @@ return (
             <div key={index} className='flex flex-col p-5 border border-1 gap-2 border-black'>
                 <div className='flex items-center gap-2'>
                     {svgIcon}
-                    <h3 className='font-mulish font-bold text-2xl'>{item.title}</h3>
+                    <h3 className='font-mulish font-semibold text-2xl'>{item.title}</h3>
                 </div>
                 <div className='flex flex-wrap gap-3'>
                 

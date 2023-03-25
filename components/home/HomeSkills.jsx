@@ -19,7 +19,7 @@ const HomeSkills = () => {
         <DropdownItem  src="/image/Matomo.svg" title="Matomo" percentage="95%" />
         </Dropdown>
 
-        <Dropdown  title="Marketing digital" subtitle="Plus de 4ans">
+        <Dropdown  title="Acquisition" subtitle="Plus de 4ans">
         <DropdownItem  src="/image/semrush.png" title="SEO" percentage="95%" />
         <DropdownItem  src="/image/Ads.svg" title="SEA" percentage="85%"  />
         <DropdownItem  src="/image/hubspot.svg" title="CRM" percentage="90%" />
