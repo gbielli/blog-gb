@@ -10,7 +10,7 @@ const Footer = () => {
                     <p className='font-mulish self-center text-md'>Tu veux boire un café, discuter d'un projet, m'envoyer un mail sans raison particulière ? tu peux me contacter à l'adresse email <span id='underline'>hello@guillaumebielli.fr</span></p>
                 </div>
             </div>
-            <div className='container mx-auto px-6 py-3'>© Guillaume Bielli - 2023</div>
+            <div className='container mx-auto px-6 py-3'>©Guillaume Bielli - 2023</div>
         </div>
         
     </footer>
