@@ -26,8 +26,10 @@ const Header = ({click}) => {
         <div className="container mx-auto border-blue-400 py-6 flex align-center">
           <div className="self-center">
             <Link className="text-lg" href="/">
+              <a>
               <span className="text-secondary2">./</span>
               <span className="font-abril" id="abril">Guillaume Bielli</span>
+              </a>
             </Link>
           </div>
           <div className={`ml-auto flex align-center font-mulish text-lg gap-3`}>
@@ -36,25 +38,31 @@ const Header = ({click}) => {
               <div className={`flex align-center gap-6 nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center" href="/blog" passHref={true}>
+             <Link className="self-center" href="/blog">
+                <a>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>
+                </a>
               </Link>
               </div>
              : 
              <div className={`nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center" href="/blog" passHref={true}>
+             <Link className="self-center" href="/blog">
+                <a>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>
+                </a>
               </Link>
-              <Link className="" key={categories.slug} href={`/blog/category/${categories.slug}`} passHref={true}>
+              <Link className="" key={categories.slug} href={`/blog/category/${categories.slug}`}>
+                <a>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   {categories.name}
                   </span>
+                </a>
               </Link>
               </div>              
             }

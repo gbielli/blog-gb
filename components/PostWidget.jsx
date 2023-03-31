@@ -25,32 +25,34 @@ useEffect(
         {slug ? 'Les articles similaires' : "L'article à la une" }
       </h3>
       <div className='grid grid-cols-1 gap-6'>
-      {relatedPosts.map((relatedPost) => (
+        {relatedPosts.map((relatedPost) => (
         
-                    <Link href={`/blog/${relatedPost.slug}`} key={relatedPost.title} passHref={true}>
-        <article key={relatedPost.title} className='relative flex flex-col items center w-full'>
-          <div className='h-[500px] w-full bg-black'>
-            <img 
-            alt={relatedPost.title}
-            className='align-middle object-cover h-full w-full bg-blend-darken opacity-60'
-            src={relatedPost.featuredImage.url}
-            id='gradient'
-            ></img>
-          </div>
-          <div className='pt-4 absolute bottom-6 px-6'>
-          {relatedPost.categories.map((category, index) => (
-            <span key={index} className='w-fit font-mulish text-white rounded-lg text-primary hover:no-underline'>{category.name} </span>
-          ))}
-            <span className='text-white font-mulish'>• {moment(relatedPost.createdAt).format('DD MMMM')}</span>
-            
-              <h3 className="font-mulish font-bold text-3xl text-white">{relatedPost.title}</h3>
-              <p className='text-white font-mulish md:w-4/5'>{relatedPost.excerpt.substring(0, 180)}...</p>
-            
-          </div>
-          </article>
-          </Link>
+          <Link href={`/blog/${relatedPost.slug}`} key={relatedPost.title}>
+            <a>
+              <article key={relatedPost.title} className='relative flex flex-col items center w-full'>
+                <div className='h-[500px] w-full bg-black'>
+                  <img 
+                  alt={relatedPost.title}
+                  className='align-middle object-cover h-full w-full bg-blend-darken opacity-60'
+                  src={relatedPost.featuredImage.url}
+                  id='gradient'
+                  ></img>
+                </div>
+                <div className='pt-4 absolute bottom-6 px-6'>
+                {relatedPost.categories.map((category, index) => (
+                  <span key={index} className='w-fit font-mulish text-white rounded-lg text-primary hover:no-underline'>{category.name} </span>
+                ))}
+                  <span className='text-white font-mulish'>• {moment(relatedPost.createdAt).format('DD MMMM')}</span>
+                  
+                    <h3 className="font-mulish font-bold text-3xl text-white">{relatedPost.title}</h3>
+                    <p className='text-white font-mulish md:w-4/5'>{relatedPost.excerpt.substring(0, 180)}...</p>
+                  
+                </div>
+                </article>
+            </a>
+            </Link>
       ))}
-    </div>
+      </div>
     </div>
 
 

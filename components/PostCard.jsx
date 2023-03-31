@@ -9,8 +9,8 @@ const PostCard = ({post}) => {
 
 
   return (
-    <Link href={`/blog/${post.slug}`} className="font-mulish" passHref={true}>
-
+    <Link href={`/blog/${post.slug}`} className="font-mulish">
+      <a>
     <article className='grid grid-cols-1 sm:grid-cols-1 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
       <div className='overflow-hidden h-[250px]'>
         <img src={post.featuredImage.url}
@@ -29,6 +29,7 @@ const PostCard = ({post}) => {
       </div>
       
     </article>
+    </a>
     </Link> 
   )
 }

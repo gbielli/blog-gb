@@ -20,8 +20,10 @@ const SimilarPost = ({categories, slug}) => {
                     <div className='flex flex-col gap-3 justify-left'>
         {similarPosts.map((similarPost) => (
           <div className='max-w-3xl'>
-          <Link href={`/blog/${similarPost.slug}`} passHref={true}>
+          <Link href={`/blog/${similarPost.slug}`}>
+            <a>
             <p className='text-xl font-mulish text-primary underline hover:text-blue-600'>{similarPost.title}</p>
+            </a>
             </Link>
             </div>
         ) )}

@@ -186,7 +186,7 @@ const PostDetail = ( {post} ) => {
               }
     
               return (
-                <Link legacyBehavior href={href} passHref={true}>
+                <Link legacyBehavior href={href}>
                   <a {...rest}>{children}</a>
                 </Link>
               );
