@@ -36,7 +36,7 @@ const Header = ({click}) => {
               <div className={`flex align-center gap-6 nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center" href="/blog">
+             <Link className="self-center" href="/blog" passHref={true}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>
@@ -46,12 +46,12 @@ const Header = ({click}) => {
              <div className={`nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center" href="/blog">
+             <Link className="self-center" href="/blog" passHref={true}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   blog
                   </span>
               </Link>
-              <Link className="" key={categories.slug} href={`/blog/category/${categories.slug}`}>
+              <Link className="" key={categories.slug} href={`/blog/category/${categories.slug}`} passHref={true}>
                   <span id="underline" className="self-center md:float-right align-middle text-black cursor-pointer">
                   {categories.name}
                   </span>

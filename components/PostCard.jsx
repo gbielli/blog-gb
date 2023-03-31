@@ -9,7 +9,7 @@ const PostCard = ({post}) => {
 
 
   return (
-    <Link href={`/blog/${post.slug}`} className="font-mulish" >
+    <Link href={`/blog/${post.slug}`} className="font-mulish" passHref={true}>
 
     <article className='grid grid-cols-1 sm:grid-cols-1 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
       <div className='overflow-hidden h-[250px]'>

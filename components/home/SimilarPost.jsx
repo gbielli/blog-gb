@@ -19,11 +19,11 @@ const SimilarPost = ({categories, slug}) => {
                     <h3 className='font-abril text-2xl mb-2'>sur le même thème</h3>
                     <div className='flex flex-col gap-3 justify-left'>
         {similarPosts.map((similarPost) => (
-          <Link href={`/blog/${similarPost.slug}`}>
-            <div className='max-w-3xl'>
+          <div className='max-w-3xl'>
+          <Link href={`/blog/${similarPost.slug}`} passHref={true}>
             <p className='text-xl font-mulish text-primary underline hover:text-blue-600'>{similarPost.title}</p>
-            </div>
             </Link>
+            </div>
         ) )}
     </div>
     </div>
