@@ -38,19 +38,25 @@ const Header = ({click}) => {
               <div className={`flex align-center gap-6 nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center md:float-right align-middle text-black cursor-pointer" href="/blog" id="underline">
-                  blog
+             <Link className="self-center md:float-right align-middle text-black cursor-pointer" href="/blog" id="underline" legacyBehavior>
+                <a>
+                  <span id="underline">blog</span>
+                </a>  
               </Link>
               </div>
              : 
              <div className={`nav__menu ${menu}`} onClick={handleToggle}>
               <a href="" onClick={click} >
                 <span id="underline">contact</span></a>
-             <Link className="self-center md:float-right align-middle text-black cursor-pointer" href="/blog" id="underline">
-                  blog
+             <Link className="self-center md:float-right align-middle text-black cursor-pointer" href="/blog" id="underline" legacyBehavior>
+              <a>
+                <span id="underline">blog</span>
+              </a>  
               </Link>
-              <Link className="self-center md:float-right align-middle text-black cursor-pointer" key={categories.slug} href={`/blog/category/${categories.slug}`} id="underline">
-                  {categories.name}
+              <Link className="self-center md:float-right align-middle text-black cursor-pointer" key={categories.slug} href={`/blog/category/${categories.slug}`} id="underline" legacyBehavior>
+              <a>
+                  <span id="underline">{categories.name}</span>
+                </a>
               </Link>
               </div>              
             }
