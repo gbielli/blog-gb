@@ -151,6 +151,15 @@ const PostDetail = ( {post} ) => {
               );
             },
 
+            code: ({ children }) => {
+              return (
+                  <code className='bg-secondary px-2 py-1 rounded-lg text-primary font-body text-lg'>{children}</code>
+              );
+            },
+
+
+            
+
 
             img : ({src, altText}) => {
               return(
