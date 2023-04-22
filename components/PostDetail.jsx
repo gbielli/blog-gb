@@ -139,6 +139,9 @@ const PostDetail = ( {post} ) => {
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 
+            li: ({ children }) => <li className="before:content-['_•'] before:mr-4 pb-4 ml-6">{children}</li>,
+
+
 
             code_block: ({ children }) => {
               return (
@@ -147,6 +150,7 @@ const PostDetail = ( {post} ) => {
                 </pre>
               );
             },
+
 
             img : ({src, altText}) => {
               return(
