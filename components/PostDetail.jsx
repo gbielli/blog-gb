@@ -130,7 +130,7 @@ const PostDetail = ( {post} ) => {
           {<RichText content={post.content.raw.children}
           
            renderers={{
-            p: ({ children }) => <p className="mb-8">{children}</p>,
+            p: ({ children }) => <p className="mb-8 break-words w-full">{children}</p>,
 
 
             h3: ({ children }) => <h3 className="before:mr-3 before:text-primary font-bold before:text-4xl text-3xl my-10 before:content-['#']" data-font='abril' id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
