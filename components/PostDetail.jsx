@@ -163,7 +163,7 @@ const PostDetail = ( {post} ) => {
 
             img : ({src, altText}) => {
               return(
-              <img className='mb-8' src={src} alt={altText}>
+              <img className='mb-8 border border-slate-200 rounded' src={src} alt={altText}>
               </img>)
             },
 
