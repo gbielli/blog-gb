@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 
 
 const categories = { name:'Matomo', slug:'matomo'}
-const menu = [{name: 'mon ku·ri·ku·lom'}, { name:'get in touch'}]
 
 
 
