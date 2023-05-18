@@ -5,9 +5,6 @@ import Link from 'next/link'
 
 const HomeHeader = () => {
 
-  const redirect = () => {
-    <Link href='#title' />
-  }
 
   return (
       <section className="home_container bg-secondary">
