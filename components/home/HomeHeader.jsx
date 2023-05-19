@@ -1,7 +1,6 @@
 import React from 'react'
 import ButtonFit from './ButtonFit'
 import Image from 'next/image'
-import Link from 'next/link'
 
 const HomeHeader = () => {
 
