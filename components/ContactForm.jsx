@@ -52,7 +52,7 @@ const ContactForm = ({ close }) => {
 
   return (
     <div className='py-40'>
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll '>
+    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black'>
     
         {submitted ?
         <div className="pb-10">
