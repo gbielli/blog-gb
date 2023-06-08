@@ -60,6 +60,41 @@ h1, h2 {
   font-family: 'abril';
 }
 
+.devis::before {
+  content:none !important;
+}
+
+.devis {
+background-color: #E5EFFE;
+border-radius: 0.375rem;
+padding: 20px 20px;
+width: 100%;
+
+h4 {
+  font-family: var(--font-body);
+  font-size: 1.33rem;
+  margin-bottom:1rem;
+  margin-top:0;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  background-color: #3E7FF6;
+  display: inline;
+  padding: 10px 20px;
+  font-size: 18px;
+  color:white;
+}
+
+a:hover {
+  color:white;
+}
+}
+
 .text-shadow{
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }

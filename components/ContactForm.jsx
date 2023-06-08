@@ -1,8 +1,8 @@
-import React, { use } from 'react'
-import ButtonBlock from './home/ButtonBlock'
+import React from 'react';
+import ButtonBlock from './home/ButtonBlock';
 import { useState, useRef } from 'react';
 
-const Form = ({ close }) => {
+const ContactForm = ({ close }) => {
 
   
 
@@ -51,13 +51,11 @@ const Form = ({ close }) => {
     }
 
   return (
-    <>
-    <div className='mx-auto w-full h-full flex items-center z-50' id="form">
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll'>
+    <div className='py-40'>
+    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll '>
     
         {submitted ?
         <div className="pb-10">
-            <div className='text-right cursor-pointer text-2xl' id="close-btn" onClick={close}>×</div>
             <lottie-player
           id="firstLottie"
           ref={ref}
@@ -83,7 +81,7 @@ const Form = ({ close }) => {
                 <label className='font-mulish' htmlFor="email">Email</label>
                 <input onChange={(e) => setEmail(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
             </div>
-            <div className="form-element flex flex-col">
+            <div class="form-element flex flex-col">
                 <label className='font-mulish'htmlFor="text">Message</label>
                 <textarea onChange={(e) => setMessage(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="text" name="message" id="message" rows="5" cols="33" maxlength="1500"></textarea>
             </div>
@@ -100,8 +98,7 @@ const Form = ({ close }) => {
 
                 </form>
                 </div>
-                </>
   )
 }
 
-export default Form
+export default ContactForm

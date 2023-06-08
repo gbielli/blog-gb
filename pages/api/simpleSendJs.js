@@ -17,7 +17,7 @@ export default function (req, res) {
       body : data
     };
 
-    const request = fetch(`https://hook.eu1.make.com/lv8o9bwzdh24aiv7eew9lj9yv0ku5ds8`, config);
+    const request = fetch(`https://hook.eu1.make.com/c57kxsdczfsm0g72rprpjermmm22xp2e`, config);
 
 request
 .then(function(response) {
