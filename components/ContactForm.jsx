@@ -38,14 +38,14 @@ const ContactForm = ({ close }) => {
           })
           
           .then((res) => {
-            if(res.status === 200) {
+            // if(res.status === 200) {
               console.log('Response succeeded!')
               console.log(data)
               setSubmitted(true)
               setName('')
               setEmail('')
               setMessage('')
-            }
+            // }
           })
     }
 
