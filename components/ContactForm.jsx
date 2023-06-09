@@ -29,7 +29,7 @@ const ContactForm = ({ close }) => {
 
         
 
-        fetch(`https://${NEXT_PUBLIC_VERCEL_URL}/api/simpleSendJs`, {
+        fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/simpleSendJs`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
