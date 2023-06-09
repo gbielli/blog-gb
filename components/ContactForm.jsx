@@ -27,7 +27,6 @@ const ContactForm = ({ close }) => {
             message
         }
 
-        
 
         fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/simpleSendJs`, {
             method: 'POST',

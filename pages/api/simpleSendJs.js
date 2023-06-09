@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 
 export default function (req, res) {
 
@@ -19,7 +20,7 @@ export default function (req, res) {
 
     const request = fetch(`https://hook.eu1.make.com/c57kxsdczfsm0g72rprpjermmm22xp2e`, config);
 
-request
+request 
 .then(function(response) {
   console.log(response.body);
 })
