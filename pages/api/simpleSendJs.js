@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-export default function (req, res) {
+const handler = async (req, res) => {
 
   const data = JSON.stringify({
     "Email": req.body.email,
@@ -18,7 +18,7 @@ export default function (req, res) {
       body : data
     };
 
-    const request = fetch(`https://hook.eu1.make.com/c57kxsdczfsm0g72rprpjermmm22xp2e`, config);
+    const request = await fetch(`https://hook.eu1.make.com/c57kxsdczfsm0g72rprpjermmm22xp2e`, config);
 
 request 
 .then(function(response) {
@@ -31,6 +31,8 @@ request
 res.send('success')
 
 };
+
+export default handler;
 
 
 
