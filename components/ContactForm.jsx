@@ -28,7 +28,7 @@ const ContactForm = ({ close }) => {
         }
 
 
-        fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/simpleSendJs`, {
+        fetch(`https://guillaumebielli.fr/api/simpleSendJs`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
