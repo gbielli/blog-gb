@@ -67,7 +67,7 @@ const ContactForm = ({ close }) => {
             <p className='text-center font-mulish'>Ton email a bien été envoyé <span id="underline">par les internets</span>, Je te réponds dès que possible ! </p>
         </div>     
          : 
-        <> <div className='text-right cursor-pointer text-2xl' id="close-btn" onClick={close}>×</div>
+        <>
         <h2 className='text-2xl' data-font='abril'>✋ Un message ? c'est par ici</h2>
         <p id="toto" className='font-mulish'> <span id="underline">Laisse moi ton message</span> et je te contacterai dès que possible !</p>
         
