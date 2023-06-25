@@ -17,9 +17,11 @@ const Form = ({ close }) => {
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
+
         console.log('sending');
+
 
         let data = {
             name,
@@ -27,33 +29,33 @@ const Form = ({ close }) => {
             message
         }
 
-        
+      const response = await fetch('/api/mailjet', {
+      method: 'POST',
+      headers: {
+        // 'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+            body: JSON.stringify(data),
+          })
 
-        fetch('/api/simpleSendJs', {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          })
-          
-          .then((res) => {
-            if(res.status === 200) {
-              console.log('Response succeeded!')
-              console.log(data)
-              setSubmitted(true)
-              setName('')
-              setEmail('')
-              setMessage('')
-            }
-          })
+      if (response.ok) {
+        console.log('success');
+        setSubmitted(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
+
+      if (!response.ok) {
+        console.log('message not send')
+      }
+
     }
 
   return (
     <>
     <div className='mx-auto w-full h-full flex items-center z-50' id="form">
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll'>
+    <form action="" method="" onSubmit={handleSubmit} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black overflow-scroll'>
     
         {submitted ?
         <div className="pb-10">

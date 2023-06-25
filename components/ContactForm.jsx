@@ -17,9 +17,11 @@ const ContactForm = ({ close }) => {
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
+
         console.log('sending');
+
 
         let data = {
             name,
@@ -27,26 +29,27 @@ const ContactForm = ({ close }) => {
             message
         }
 
+      const response = await fetch('/api/mailjet', {
+      method: 'POST',
+      headers: {
+        // 'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+            body: JSON.stringify(data),
+          })
 
-        fetch(`https://guillaumebielli.fr/api/simpleSendJs`, {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          })
-          
-          .then((res) => {
-            // if(res.status === 200) {
-              console.log('Response succeeded!')
-              console.log(data)
-              setSubmitted(true)
-              setName('')
-              setEmail('')
-              setMessage('')
-            // }
-          })
+      if (response.ok) {
+        console.log('success');
+        setSubmitted(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
+
+      if (!response.ok) {
+        console.log('message not send')
+      }
+
     }
 
   return (
