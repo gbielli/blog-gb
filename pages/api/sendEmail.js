@@ -31,7 +31,6 @@ export default function (req, res) {
     request
 	.then((result) => {
 			var obj = JSON.stringify(result.body);
-			console.log(obj)
 			var json =  JSON.parse(obj);
 			var messages = json['Messages'];
 
