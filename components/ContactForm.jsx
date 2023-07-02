@@ -16,10 +16,12 @@ const ContactForm = ({ close }) => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [loading, isLoading] = useState(false);
+    const [firstName, setFirstName] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
-
+        isLoading(true);
         console.log('sending');
 
 
@@ -41,6 +43,7 @@ const ContactForm = ({ close }) => {
       if (response.ok) {
         console.log('success');
         setSubmitted(true);
+        isLoading(false);
         setName('');
         setEmail('');
         setMessage('');
@@ -92,10 +95,9 @@ const ContactForm = ({ close }) => {
 
         <div className="">
             <input type="checkbox" id="checkbox" required/>
-            <label className='font-mulish' for="checkbox">Je consent consentir à recevoir par email le ku·ri·ku·lom de Guillaume Bielli </label>
+            <label className='font-mulish' htmlFor="checkbox">Je consent consentir à reçevoir un mail de Guillaume Bielli </label>
         </div>
-        {/* <button  className='h-12 w-12 bg-primary' type='submit'>submit</button> */}
-        <ButtonBlock  type='submit' text="Envoyer"/>
+        <ButtonBlock  type='submit' text="Envoyer" load={loading ? 'animate-spin' : ''}/>
         </>}      
 
                 </form>

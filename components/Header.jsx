@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 
@@ -7,20 +7,43 @@ const categories = { name:'Matomo', slug:'matomo'}
 
 
 
-const Header = ({click}) => {
+const Header = () => {
   const router = useRouter();
 
   const [toggle, setToggle] = useState(false);
-  const [menu, setMenu] = useState('')
+  const [menu, setMenu] = useState('');
+  const [navbar, setNavbar] = useState(false);
+  const [custom, setCustom] = useState('');
 
   const handleToggle = () => {
     {toggle ? setToggle(false) : setToggle(true)}
     {toggle ? setMenu('') : setMenu('show-menu')}
   }
+
+
+  useEffect(() => {
+
+    function checkScroll() {
+      if (window.scrollY >= 620) {
+        setNavbar(true);
+        setCustom('bg-white fixed')
+        console.log(window.scrollY)
+      }
+      else {
+        setNavbar(false)
+        setCustom('bg-secondary fixed')
+      }
+      console.log(navbar)
+    }
+
+      window.addEventListener('scroll', checkScroll);
+      return () => window.removeEventListener('scroll', checkScroll);
+      
+    },[]);
   
 
   return (
-    <div className="bg-secondary fixed w-full z-10">
+    <div className={`w-full z-10 fixed bg-secondary`}>
       <div className="container mx-auto px-6">
         <div className="container mx-auto border-blue-400 py-6 flex align-center">
           <div className="self-center">
