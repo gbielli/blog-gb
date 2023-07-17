@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.6.1",
+    "@hubspot/api-client": "^9.0.0",
     "@lottiefiles/lottie-player": "^1.6.3",
     "@next/font": "^13.2.5-canary.8",
     "@types/react-gtm-module": "^2.0.1",
