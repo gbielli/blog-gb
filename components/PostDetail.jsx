@@ -5,6 +5,8 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Link  from 'next/link';
+import CommentsForm from './CommentsForm';
+import Comments from './Comments';
 
 
 
@@ -214,6 +216,7 @@ const PostDetail = ( {post} ) => {
           return getContentFragment(index, children, typeObj, typeObj.type)
           
         })} */}
+       
 
        
 

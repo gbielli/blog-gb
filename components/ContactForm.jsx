@@ -17,7 +17,6 @@ const ContactForm = ({ close }) => {
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [loading, isLoading] = useState(false);
-    const [firstName, setFirstName] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
