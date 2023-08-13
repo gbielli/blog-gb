@@ -44,7 +44,7 @@ const CommentsForm = ({slug}) => {
 }
 
   return (
-    <div className='py-3 lg:py-6 mx-auto bg-white w-full flex gap-5 flex-col max-w-3xl border-t'>
+    <div className='py-3 lg:py-6 mx-auto bg-white w-full flex gap-5 flex-col max-w-3xl border-t mb-10'>
       <h3 className='font-abril text-2xl'>Publier un commentaire</h3>
       
       <div>

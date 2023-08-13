@@ -27,8 +27,8 @@ const PostDetails = ({ post }) => {
         <div>
             <div>
             <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
-            <CommentsForm slug={post.slug} />
-            <Comments slug={post.slug} />
+            {/* <CommentsForm slug={post.slug} />
+            <Comments slug={post.slug} /> */}
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
                 
             </div>
