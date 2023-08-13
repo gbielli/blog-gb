@@ -27,13 +27,11 @@ const Header = () => {
       if (window.scrollY >= 620) {
         setNavbar(true);
         setCustom('bg-white fixed')
-        console.log(window.scrollY)
       }
       else {
         setNavbar(false)
         setCustom('bg-secondary fixed')
       }
-      console.log(navbar)
     }
 
       window.addEventListener('scroll', checkScroll);

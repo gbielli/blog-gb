@@ -20,8 +20,6 @@ export default async (req, res) => {
     try {
         const apiResponse = await hubspotClient.crm.contacts.basicApi.create(SimplePublicObjectInputForCreate);
 
-        console.log(JSON.stringify(apiResponse, null, 2));
-
         return res.status(200).json({ success: true })
     
     } catch(e) {

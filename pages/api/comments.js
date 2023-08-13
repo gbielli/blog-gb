@@ -22,7 +22,6 @@ export default async function comments(req, res) {
         return res.status(200).send(result);
     }
     catch (e) {
-        console.log(e);
         return res.status(500).send(`An error occured while sending comment to GraphCMS ${e}`)
     }
     
