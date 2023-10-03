@@ -1,5 +1,7 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
-import { getCategories } from '../services'
+import { getCategories } from '../.././services'
 
 const Categories = () => {
   

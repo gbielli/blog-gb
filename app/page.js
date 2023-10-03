@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { HomeAbout, HomeHeader, HomePriority, HomeSkills } from "../components/home/";
+import { HomeAbout, HomeHeader, HomePriority, HomeSkills } from "../components/old/home/list1"
 import {Abril_Fatface} from 'next/font/google'
 
 

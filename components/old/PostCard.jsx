@@ -1,3 +1,5 @@
+'use client'
+
 import moment from 'moment';
 import 'moment/locale/fr'
 import Link from 'next/link';

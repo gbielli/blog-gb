@@ -1,9 +1,11 @@
+'use client'
+
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import parse from 'html-react-parser';
 import Image from 'next/image';
 
-import { getComments } from '../services';
+import { getComments } from '../../services';
 
 const Comments = ({ slug }) => {
   const [comments, setComments] = useState([]);

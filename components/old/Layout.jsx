@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header } from './';
-import { Footer } from './';
-import { useState } from 'react';
+import { Header } from './list';
+import { Footer } from './list';
 
 
 const  Layout  = ({ children }) => {

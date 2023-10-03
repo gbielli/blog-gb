@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import ButtonBlock from './home/ButtonBlock';
 import { useState, useRef } from 'react';

@@ -1,5 +1,5 @@
 import React from 'react'
-import PriorityItem from '../PriorityItem'
+import PriorityItem from '../../old/PriorityItem'
 import HomeTitle from './HomeTitle'
 
 const HomePriority = () => {

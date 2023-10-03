@@ -1,11 +1,23 @@
+
+
 import Head from 'next/head'
-import Image from 'next/image'
-import { Key } from 'react';
-import { PostCard, Categories, PostWidget, BlogTitle, FeaturedArticle } from '../../components/'
+import { PostCard, Categories, PostWidget, BlogTitle, FeaturedArticle } from '../../components/old/list'
 import { getPosts } from '../../services'
 
 
-export default function Home({ posts }) {
+
+
+
+export default async function Home() {
+
+ 
+    const posts = await getPosts() || [];
+
+  
+
+
+
+
   return (
     <div className="mx-auto mb-8">
       <Head>
@@ -22,9 +34,9 @@ export default function Home({ posts }) {
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 px-6 mb-60'>
       
-          {posts.map((post) =>  
+          {posts.map((post, index) =>  
           
-            <PostCard post={post.node} key={post.title} /> 
+            <PostCard post={post.node} key={index} /> 
            )}
       </div>
 
@@ -35,10 +47,10 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return {
-    props: { posts }
-  }
-}
+// export async function getStaticProps() {
+//   const posts = (await getPosts()) || [];
+//   return {
+//     props: { posts }
+//   }
+// }
 
