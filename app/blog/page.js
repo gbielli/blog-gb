@@ -1,9 +1,10 @@
 'use client'
 
 import Head from 'next/head'
-import { PostCard, Categories, PostWidget, BlogTitle, FeaturedArticle } from '../../components/old/list'
+import { PostCard, Categories, PostWidget, FeaturedArticle } from '../../components/old/list'
 import { getPosts } from '../../services'
 import ArticleList from './components/ArticleList'
+import BlogTitle from './components/BlogTitle'
 import { useEffect } from 'react'
 
 
