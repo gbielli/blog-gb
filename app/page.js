@@ -1,11 +1,30 @@
+'use client'
+
 import React from "react";
 import Head from "next/head";
-import { HomeAbout, HomeHeader, HomePriority, HomeSkills } from "../components/old/home/list1"
+import { HomeAbout, HomePriority, HomeSkills } from "../components/old/home/list1"
+import { useEffect } from "react";
+import Hero from '@/components/new/landing/Hero/page';
+import MaskText from '@/components/new/landing/Mask/page';
+import Slider from '@/components/new/landing/Slider/page';
+import Skill from '@/components/new/landing/Skill/page';
+
 
 
 
 
 export default function Home() {
+
+    useEffect( () => {
+        const initializeLocomotiveScroll = async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default;
+          const locomotiveScroll = new LocomotiveScroll();
+    
+        }
+        initializeLocomotiveScroll(); 
+      
+      }, [])
+
     return (
         <>
             <Head>
@@ -13,10 +32,10 @@ export default function Home() {
                 <link rel="icon" href="/image/gbico.ico" />
             </Head>
             <div>
-            <HomeHeader />
-            <HomeAbout />
-            <HomePriority />
-            <HomeSkills />
+            <Hero />
+            <MaskText />
+            <Slider />
+            <Skill />
             </div>
         </>
     )

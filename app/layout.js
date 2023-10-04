@@ -1,7 +1,8 @@
 import './globals.css'
-import Header from '../components/old/Header'
 import TagManager from 'react-gtm-module';
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
+import Header from '../components/new/landing/Header/page'
+import Footer from '../components/new/landing/Footer/page'
 
 
 const clashDisplay = localFont({
@@ -39,6 +40,7 @@ export default function RootLayout({children}) {
       <body>
       <Header />
       <main>{children}</main>
+      <Footer />
       </body>
     </html>
   )
