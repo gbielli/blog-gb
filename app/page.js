@@ -1,15 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import { HomeAbout, HomeHeader, HomePriority, HomeSkills } from "../components/old/home/list1"
-import {Abril_Fatface} from 'next/font/google'
 
 
 
-const abril = Abril_Fatface({
-    subsets: ['latin'],
-    weight:['400'],
-    variable:'--font-abril',
-  })
 
 export default function Home() {
     return (
@@ -18,7 +12,7 @@ export default function Home() {
                 <title>Guillaume Bielli | Growth Hacker & Frontend Lover</title>
                 <link rel="icon" href="/image/gbico.ico" />
             </Head>
-            <div className={`${abril.variable} font-abril`} >
+            <div>
             <HomeHeader />
             <HomeAbout />
             <HomePriority />

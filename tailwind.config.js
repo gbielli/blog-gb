@@ -10,10 +10,6 @@ module.exports = {
       content: {
         'summary' : 'url("/image/rtn1.svg")',
       },
-      fontFamily: {
-        mulish: ['var(--font-body)'],
-        abril: ['var(--font-title)']
-      },
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
@@ -38,6 +34,10 @@ module.exports = {
     },
     gridTemplateRows: {
       'articles': '250px min-content'
+    },
+    fontFamily: {
+      clash: ['var(--font-clash)'],
+      archivo: ['var(--font-archivo)']
     }
   },
   plugins: [],
