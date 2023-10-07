@@ -1,29 +1,18 @@
-'use client'
 
 import moment from 'moment';
 import 'moment/locale/fr'
 import Link from 'next/link';
 import SkeletonCard from "./SkeletonCard";
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import arrow from '@/public/image/arrow-top-right.svg'
 import Image from 'next/image';
 
 
 const PostCard = ({post}) => {
 
-const [loading, setLoading] = useState(true);
-
-
-
-useEffect(() => {
-    setLoading(false)
-}, [post])
 
   return (
     <>
-  {loading ? (
-    <SkeletonCard />
-  ) : (
     <Link href={`/blog/${post.slug}`} className="font-mulish" legacyBehavior>
       
     <article className='grid grid-cols-1 sm:grid-cols-1 lg:grid-rows-articles lg:grid-cols-1 gap-2'>
@@ -54,7 +43,7 @@ useEffect(() => {
       </div>
       
     </article>
-    </Link> )}
+    </Link> 
  </>
   )
 }

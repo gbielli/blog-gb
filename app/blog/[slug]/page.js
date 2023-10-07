@@ -3,8 +3,8 @@
 import Head from 'next/head';
 import PostDetail from '/components/old/PostDetail.jsx'
 import SimilarPost from '../../../components/old/home/SimilarPost';
-import { getPostDetails } from '@/services';
-import { request, gql } from 'graphql-request';
+import LocomotiveScroll from '../components/LocomotiveScroll';
+
 
 
 
@@ -62,6 +62,7 @@ const PostDetails = async ({ params }) => {
     <link rel="icon" href="/image/gbico.ico" />
     {/* <link rel='canonical' href={`https://guillaumebielli.fr${router.asPath}`} /> */}
   </Head>
+  <LocomotiveScroll>
     <div className='container mx-auto px-4 md:px-6'>
       <div>
         <div>
@@ -81,6 +82,7 @@ const PostDetails = async ({ params }) => {
         </div>
       </div>
     </div>
+    </LocomotiveScroll>
     </>
   )
 }
