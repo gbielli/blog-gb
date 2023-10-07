@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import {getPosts, getPostDetails } from '../../services'
-import { useRouter } from 'next/router';
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../components'
+import { PostDetail } from '../../components/old/PostDetail'
 import SimilarPost from '../../components/home/SimilarPost';
 
-const PostDetails = ({ post }) => {
-  const router = useRouter();
+const PostDetails = async ({ post }) => {
+
 
   return (
     <>
@@ -14,7 +13,7 @@ const PostDetails = ({ post }) => {
     <title>{post.title}</title>
     <meta name="description" content={post.excerpt} />
     <link rel="icon" href="/image/gbico.ico" />
-    <link rel='canonical' href={`https://guillaumebielli.fr${router.asPath}`} />
+    {/* <link rel='canonical' href={`https://guillaumebielli.fr${router.asPath}`} /> */}
   </Head>
     <div className='container mx-auto px-4 md:px-6'>
       <div>

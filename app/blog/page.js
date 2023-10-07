@@ -1,12 +1,9 @@
-'use client'
-
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget, FeaturedArticle } from '../../components/old/list'
 import { getPosts } from '../../services'
 import ArticleList from './components/ArticleList'
-import BlogTitle from './components/BlogTitle'
-import { useEffect } from 'react'
-
+import BlogTitle from './components/BlogTitle/BlogTitle'
+import LocomotiveScroll from './components/LocomotiveScroll'
 
 
 
@@ -14,19 +11,11 @@ import { useEffect } from 'react'
 export default function Home() {
 
 
-  useEffect( () => {
-    const initializeLocomotiveScroll = async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
-
-    }
-    initializeLocomotiveScroll(); 
-  
-  }, [])
   
 
 
   return (
+    <LocomotiveScroll>
     <div className="mx-auto mb-8">
       <Head>
         <title>Les actualités sur le web | Le blog </title>
@@ -35,9 +24,8 @@ export default function Home() {
 
       <BlogTitle />
 
-      <PostWidget />
 
-      <div className='container mx-auto'>
+      <div className='px-6 mx-auto'>
       <h3 className='text-3xl px-6 mb-6 mt-10' data-font='abril'>Les articles du moment</h3>
 
       <ArticleList />
@@ -46,6 +34,7 @@ export default function Home() {
       </div>
 
     </div>
+    </LocomotiveScroll>
   )
 }
 

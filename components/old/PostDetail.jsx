@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import moment from 'moment';
 import Prism from 'prismjs';
@@ -118,7 +120,7 @@ const PostDetail = ( {post} ) => {
               return (getContent(indexItem, item.text, item))
         })
 
-        return  <div className='mb-2'> <a  className="before:content-summary before:self-center before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
+        return  <div className='mb-2' key={index}> <a  className="before:content-summary before:self-center before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
       }
             })
           }

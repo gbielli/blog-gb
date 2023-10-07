@@ -1,5 +1,7 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
-import { getSimilarPosts } from '../../services'
+import { getSimilarPosts } from '@/services'
 import moment from 'moment';
 import Link from 'next/link';
 
