@@ -1,15 +1,17 @@
-import Head from 'next/head'
-import ArticleList from './components/ArticleList'
-import BlogTitle from './components/BlogTitle/BlogTitle'
-import LocomotiveScroll from './components/LocomotiveScroll'
+import Head from 'next/head';
+import ArticleList from './components/ArticleList';
+import BlogTitle from './components/BlogTitle/BlogTitle';
+import LocomotiveScroll from './components/LocomotiveScroll';
+import { getCategories } from '@/services';
+import SearchCategory from './components/SearchCategory';
 
 
 
 
-export default function Home() {
+export default async function Home() {
 
 
-  
+  const categories = await getCategories() || [];
 
 
   return (
@@ -21,7 +23,7 @@ export default function Home() {
       </Head>
 
       <BlogTitle />
-
+      <SearchCategory categories={categories} />
 
       <div className='px-6 mx-auto'>
 

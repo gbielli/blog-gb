@@ -10,6 +10,7 @@ import Image from 'next/image';
 
 const PostCard = ({post}) => {
 
+  
 
   return (
     <>

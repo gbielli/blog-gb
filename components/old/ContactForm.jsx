@@ -87,9 +87,9 @@ const ContactForm = ({ close }) => {
                 <label className='font-mulish' htmlFor="email">Email</label>
                 <input onChange={(e) => setEmail(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
             </div>
-            <div class="form-element flex flex-col">
+            <div className="form-element flex flex-col">
                 <label className='font-mulish'htmlFor="text">Message</label>
-                <textarea onChange={(e) => setMessage(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="text" name="message" id="message" rows="5" cols="33" maxlength="1500"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="text" name="message" id="message" rows="5" cols="33" maxLength="1500"></textarea>
             </div>
         </div>
         
