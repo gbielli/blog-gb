@@ -2,7 +2,7 @@
 import moment from 'moment';
 import 'moment/locale/fr'
 import Link from 'next/link';
-import SkeletonCard from "./SkeletonCard";
+import SkeletonCard from "../../../components/old/SkeletonCard";
 import { React } from 'react';
 import arrow from '@/public/image/arrow-top-right.svg'
 import Image from 'next/image';

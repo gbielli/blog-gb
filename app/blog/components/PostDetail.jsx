@@ -7,11 +7,13 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Link  from 'next/link';
-import CommentsForm from './CommentsForm';
-import Comments from './Comments';
+import CommentsForm from '../../../components/old/CommentsForm';
+import Comments from '../../../components/old/Comments';
 import Image from 'next/image';
 import Avatar from '@/public/image/gb-avatar.png'
-import ArrowLeft from '@/public/image/arrow-top-left.svg'
+import ArrowLeft from '@/public/image/arrow-top-left.svg';
+import { useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 const PostDetail = ( {post} ) => {
@@ -30,15 +32,7 @@ const PostDetail = ( {post} ) => {
     .replace(/^-+|-+$/g, '')
   }
 
-  // const listes = post.content.raw.children;
-  // console.log(listes)
-
-
-  // const getContentFragment = (index, text, obj, type) => {
-  //   let modifiedText = text;}
-
   const getContent = (index, text, type) => {
-    let htext = text;
 
       switch (type) {
       default :
@@ -46,65 +40,21 @@ const PostDetail = ( {post} ) => {
  }
 
 }
+
+const { scrollYProgress } = useScroll()
     
-  
 
-  //   console.log(obj)
-
-  //   if (obj) {
-  //     if (obj.bold) {
-  //       modifiedText = (<b key={index}>{text}</b>);
-  //     }
-
-  //     if (obj.italic) {
-  //       modifiedText = (<em key={index}>{text}</em>);
-  //     }
-
-  //     if (obj.underline) {
-  //       modifiedText = (<u key={index}>{text}</u>);
-  //     }
-
-  //   }
-  
-  //   switch (type) {
-  //     case 'heading-two':
-  //       return <h2 key={index} className="text-4xl font-semibold font-abril mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
-  //     case 'heading-three':
-  //       return <h3 key={index} className="text-3xl font-semibold font-abril mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
-  //     case 'paragraph':
-  //       return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-  //     case 'heading-four':
-  //       return <h4 key={index} className="text-md font-semibold mb-4 font-abril">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
-  //       case 'code-block':
-  //       return <pre key={index} className={`line-numbers language-${text.includes('</div>') ? "html" : "javascript"} w-full rounded-lg`} > {modifiedText.map((item, i) => <code key={i}>{item}</code>)}</pre>;
-  //       case 'link':
-  //       return <p>{<React.Fragment>tata</React.Fragment>}</p>;
-  //     case 'image': 
-  //       return (
-  //         <img
-  //           className='mb-8'
-  //           key={index}
-  //           alt={obj.title}
-  //           height={obj.height}
-  //           width={obj.width}
-  //           src={obj.src}
-  //         />
-  //       );
-        
-  //     default:
-  //       return modifiedText;
-  //   }
-    
-  // };
 
   return (
     <div>
     
       <div className="">
+      <motion.div className='bg-black fixed  top-0 left-0 h-[9px] w-full' style={{  transformOrigin: 'left', scaleX: scrollYProgress }} />
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
+        
         <div className='mt-10 w-full flex gap-2'>
         <Image src={ArrowLeft} width={20} />
-        <a className='text-left text-gray-400' href='/blog'>Retour sur les articles</a>
+        <a className='text-left text-gray-500' href='/blog'>Retour sur les articles</a>
       </div>
           <h1 className='text-left font-bold text-5xl leading-tight text-stroke-8 text-fill-black font-abril pt-2 font-clash' >{post.title}</h1>
         <h2 className='text-2xl text-left font-archivo line-clamp-3'>{post.excerpt}</h2>
@@ -114,7 +64,7 @@ const PostDetail = ( {post} ) => {
           </div>
           <div className=''>
           <h2 className=''> {post.author.name}</h2>
-          <p className='block text-gray-500'>le {moment(post.createdAt).format('DD MMM YYYY')} </p>
+          <p className='block text-gray-500'>le {moment(post.createdAt).format('DD MMMM YYYY')} </p>
 
           </div>
         </div>
@@ -128,14 +78,14 @@ const PostDetail = ( {post} ) => {
         </div>
 
         <div className='border-2 border-gray w-full px-6 py-6 rounded-md max-w-3xl'>
-          <div className='font-abril pb-2 text-xl'>Sommaire</div>
+          <div className='font-abril pb-2 text-2xl'>Sommaire</div>
           {post.content.raw.children.map((typeObj, index) => {
      if (typeObj.type === 'heading-three') {
            const children = typeObj.children.map((item, indexItem) => {
               return (getContent(indexItem, item.text, item))
         })
 
-        return  <div className='mb-2' key={index}> <a  className="before:content-summary before:self-center before:text-primary before:mr-2 font-mulish hover:text-primary" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
+        return  <div className='mb-2' key={index}> <a  className="before:content-summary  before:self-center before:text-primary before:mr-2 font-mulish hover:underline text-lg" href={`/blog/${post.slug}#${slugify(getContent(index, children))}`} key={index}>{getContent(index, children, typeObj)}</a></div>
       }
             })
           }
@@ -152,7 +102,7 @@ const PostDetail = ( {post} ) => {
             p: ({ children }) => <p className="mb-8 break-words w-full">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-4xl text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
             h4: ({ children }) => <h4 className="text-2xl my-10 font-clash">{children}</h4>,
 

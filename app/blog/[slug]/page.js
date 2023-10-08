@@ -1,7 +1,7 @@
 
 
 import Head from 'next/head';
-import PostDetail from '/components/old/PostDetail.jsx'
+import PostDetail from '../components/PostDetail'
 import SimilarPost from '../../../components/old/home/SimilarPost';
 import LocomotiveScroll from '../components/LocomotiveScroll';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import Avatar from '@/public/image/avatar.png'
 
 
 
-const getPostsTest = async (post) => {
+const getPost = async (post) => {
     const response = await fetch('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clc6isprz1f8p01uvh99y3g8d/master', {
         method: 'POST',
         headers: {
@@ -54,8 +54,7 @@ const getPostsTest = async (post) => {
 
 const PostDetails = async ({ params }) => {
 
-    const post = await getPostsTest(params)
- 
+    const post = await getPost(params)
 
   return (
     <>
@@ -76,7 +75,7 @@ const PostDetails = async ({ params }) => {
         </div>
         <div>
             <div>
-            {/* <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/> */}
+            <SimilarPost slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
             {/* <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} /> */}
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import {getPosts, getPostDetails } from '../../services'
-import { PostDetail } from '../../components/old/PostDetail'
+import { PostDetail } from './components/PostDetail'
 import SimilarPost from '../../components/home/SimilarPost';
 
 const PostDetails = async ({ post }) => {
