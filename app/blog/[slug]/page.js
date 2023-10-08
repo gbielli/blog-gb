@@ -4,6 +4,8 @@ import Head from 'next/head';
 import PostDetail from '/components/old/PostDetail.jsx'
 import SimilarPost from '../../../components/old/home/SimilarPost';
 import LocomotiveScroll from '../components/LocomotiveScroll';
+import Image from 'next/image';
+import Avatar from '@/public/image/avatar.png'
 
 
 
@@ -53,6 +55,7 @@ const getPostsTest = async (post) => {
 const PostDetails = async ({ params }) => {
 
     const post = await getPostsTest(params)
+ 
 
   return (
     <>

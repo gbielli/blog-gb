@@ -9,7 +9,9 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 import Link  from 'next/link';
 import CommentsForm from './CommentsForm';
 import Comments from './Comments';
-
+import Image from 'next/image';
+import Avatar from '@/public/image/gb-avatar.png'
+import ArrowLeft from '@/public/image/arrow-top-left.svg'
 
 
 const PostDetail = ( {post} ) => {
@@ -97,13 +99,26 @@ const PostDetail = ( {post} ) => {
 
   return (
     <div>
-      <div className='relative overflow-hidden shadow-md mb-6'>
-      </div>
-      <div className="mt-20">
+    
+      <div className="">
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
-          <h1 className='text-center font-bold text-4xl text-stroke-8 text-fill-black font-abril pt-10' id='abril'>{post.title}</h1>
-        <h2 className='text-xl text-center font-mulish'>{post.excerpt}</h2>
-        <span className='mx-auto text-gray-500 font-mulish'> {post.author.name} / {moment(post.createdAt).format('DD MMM YYYY')}</span>
+        <div className='mt-10 w-full flex gap-2'>
+        <Image src={ArrowLeft} width={20} />
+        <a className='text-left text-gray-400' href='/blog'>Retour sur les articles</a>
+      </div>
+          <h1 className='text-left font-bold text-5xl leading-tight text-stroke-8 text-fill-black font-abril pt-2 font-clash' >{post.title}</h1>
+        <h2 className='text-2xl text-left font-archivo line-clamp-3'>{post.excerpt}</h2>
+        <div className=" flex gap-3 relative self-start items-center">
+          <div className='image'>
+          <Image className='object-cover w-[60px] md:w-[50px]' src={Avatar} alt="Avatar" width={50} height={50} />
+          </div>
+          <div className=''>
+          <h2 className=''> {post.author.name}</h2>
+          <p className='block text-gray-500'>le {moment(post.createdAt).format('DD MMM YYYY')} </p>
+
+          </div>
+        </div>
+        <div className='mt-5 border-t border-blue-[#d4d4d4] h-8 w-full'></div>
         <div className='relative bg-black pb-sixty w-full'>
           <img 
           src={post.featuredImage.url}
@@ -137,9 +152,9 @@ const PostDetail = ( {post} ) => {
             p: ({ children }) => <p className="mb-8 break-words w-full">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-primary font-bold before:text-4xl text-3xl my-10 before:content-['#']" data-font='abril' id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-4xl text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
-            h4: ({ children }) => <h4 className="text-2xl my-10" data-font='abril'>{children}</h4>,
+            h4: ({ children }) => <h4 className="text-2xl my-10 font-clash">{children}</h4>,
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 
@@ -192,7 +207,7 @@ const PostDetail = ( {post} ) => {
                 return (
                   <a
                     href={href}
-                    className="text-primary hover:text-blue-700"
+                    className="text-blue-500 hover:text-blue-700"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel={rel || 'noopener noreferrer'}
                     {...rest}
