@@ -8,7 +8,7 @@ import Footer from '../components/new/landing/Footer/page'
 const clashDisplay = localFont({
   src: [
     {
-      path: '..//public/fonts/ClashDisplay-Semibold.woff2',
+      path: '../public/fonts/ClashDisplay-Semibold.woff2',
     },
   ],
   variable: '--font-clash'
@@ -18,6 +18,11 @@ const archivo = localFont({
   src: [
     {
       path: '../public/fonts/Archivo-Regular.woff2',
+      style:'normal'
+    },
+    {
+      path: '../public/fonts/Archivo-Semibold.woff2',
+      weight: '500',
     },
   ],
   variable: '--font-archivo'

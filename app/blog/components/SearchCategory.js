@@ -31,8 +31,9 @@ const navItems = [
 
 const SearchCategory = ({ categories }) => {
 
-    const [isActive, setIsActive] = useState({isHover: true, index:0})
-    console.log(categories)
+    const [isActive, setIsActive] = useState({isHover: true, index:-1})
+    
+    
 
 
 
