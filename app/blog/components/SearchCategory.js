@@ -3,7 +3,6 @@ import React from 'react';
 
 const SearchCategory = ({ categories, isActive, setIsActive }) => {
 
-    
 
   return (
     <div className='button text-black flex flex-wrap gap-5 mb-10 md:mb-10 mt-10 px-6'>
