@@ -8,6 +8,7 @@ import Hero from '@/components/new/landing/Hero/page';
 import MaskText from '@/components/new/landing/Mask/page';
 import Slider from '@/components/new/landing/Slider/page';
 import Skill from '@/components/new/landing/Skill/page';
+import LocomotiveScroll from "locomotive-scroll";
 
 
 
@@ -15,15 +16,17 @@ import Skill from '@/components/new/landing/Skill/page';
 
 export default function Home() {
 
-    useEffect( () => {
-        const initializeLocomotiveScroll = async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default;
-          const locomotiveScroll = new LocomotiveScroll();
+    // useEffect( () => {
+    //     const initializeLocomotiveScroll = async () => {
+    //       const LocomotiveScroll = (await import('locomotive-scroll')).default;
+    //       const locomotiveScroll = new LocomotiveScroll();
     
-        }
-        initializeLocomotiveScroll(); 
+    //     }
+    //     initializeLocomotiveScroll(); 
       
-      }, [])
+    //   }, [])
+
+    const locomotiveScroll = new LocomotiveScroll();
 
     return (
         <>
