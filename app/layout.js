@@ -21,7 +21,7 @@ const archivo = localFont({
       style:'normal'
     },
     {
-      path: '../public/fonts/Archivo-Semibold.woff2',
+      path: '../public/fonts/Archivo-SemiBold.woff2',
       weight: '500',
     },
   ],
