@@ -25,19 +25,28 @@ export default function Home() {
       
     //   }, [])
 
-    useEffect(() => {
-        let scroll
-        import("locomotive-scroll").then((locomotiveModule) => {
-          scroll = new locomotiveModule.default();
-        });
+    // useEffect(() => {
+    //     let scroll
+    //     import("locomotive-scroll").then((locomotiveModule) => {
+    //       scroll = new locomotiveModule.default();
+    //     });
     
-       // cleanup phase
-        return () => {
-          if (scroll) scroll.destroy();
-        };
-      });
+    //    // cleanup phase
+    //     return () => {
+    //       if (scroll) scroll.destroy();
+    //     };
+    //   },[]);
 
-        // const locomotiveScroll = new ocomotiveScroll();
+
+      useEffect(() => {
+        (
+       async () => {
+        const LocomotiveScroll = ((await import('locomotive-scroll')).default)
+        const locomotiveScroll = new LocomotiveScroll()
+       }
+       )()
+      },[]);
+
 
 
 
