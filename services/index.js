@@ -77,14 +77,7 @@ export const getSimilarPosts = async (categories, slug) => {
         last: 3
       ) {
         title
-        featuredImage {
-          url
-        }
-        createdAt
         slug
-        categories {
-          name
-        }
       }
     }
   `;

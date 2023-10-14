@@ -10,7 +10,13 @@ import Image from 'next/image';
 
 const PostCard = ({post}) => {
 
-  
+const reduceExcerpt = (text, n) => {
+  if (text.length <= n) {
+    return text
+  } else {
+    return text.slice(0, n) + '...' ; 
+  }
+}
 
   return (
     <>
@@ -33,7 +39,7 @@ const PostCard = ({post}) => {
         <Image className='self-start pt-1' src={arrow} />
 
       </div>
-        <p className='mt-1'>Depuis la mise en demeure de Google analytics par la CNIL, des alternatives fleurissent dans le monde du web analytics, comme par exemple Matomo, l&apos;outil RGPD compliant par excellence.</p>
+        <p className='mt-1'>{reduceExcerpt(post.excerpt, 180)}</p>
 
         <div className="tag mt-3 inline-flex gap-2">
           

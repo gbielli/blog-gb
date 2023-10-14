@@ -18,6 +18,9 @@ const SimilarPost = ({categories, slug}) => {
         }, [slug]
     )
 
+   
+
+
   return (
     <div className='max-w-3xl mx-auto pb-12 border-2 px-10 py-10 rounded-md mb-20'>
                     <h3 className='font-clash text-3xl mb-2'>Les articles similaires</h3>

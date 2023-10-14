@@ -4,8 +4,7 @@ import Head from 'next/head';
 import PostDetail from '../components/PostDetail'
 import SimilarPost from '../../../components/old/home/SimilarPost';
 import LocomotiveScroll from '../components/LocomotiveScroll';
-import Image from 'next/image';
-import Avatar from '@/public/image/avatar.png'
+
 
 
 
@@ -90,20 +89,3 @@ const PostDetails = async ({ params }) => {
 }
 
 export default PostDetails
-
-// export async function getStaticProps({ params }) {
-//   const data = await getPostDetails(params.slug);
-
-//   return {
-//     props: {post: data }
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const posts = await getPosts();
-
-//   return {
-//     paths: posts.map(({node : {slug}}) => ( {params : { slug }})),
-//     fallback:false,
-//   }
-// }

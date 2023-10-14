@@ -1,31 +1,42 @@
-import 'server-only'
-import React from 'react';  
-import { getPosts } from '@/services';
+'use client'
+
+import React, { useState } from 'react';  
 import PostCard from './PostCard';
 import SearchCategory from './SearchCategory';
 
 
 
 
-const ArticleList = async () => {
 
+const ArticleList = ({ posts, categories } ) => {
 
-    const posts = await getPosts() || [];
+    const [isActive, setIsActive] = useState({isHover: true, index:-1, title:"" })
 
+   const filteredpost = (posts) => {
+    if (isActive.index != -1 ) {
+        return posts.filter( post => post.node.categories.some((category) => category.name.toLowerCase().includes(isActive.title.toLowerCase())))
+    }
+    return posts;
+
+   }
 
     
 
   return (
     <>
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 mb-60'>
+     <SearchCategory isActive={isActive} setIsActive={setIsActive} categories={categories} />
+
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-60'>
       
       
       
-          {posts.map((post, index) => {
+          {filteredpost(posts).map((post, index) => {
+
 
               return (
                 
                   <PostCard post={post.node} key={index} /> 
+                  
 
               )
           } 

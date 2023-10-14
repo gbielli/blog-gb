@@ -2,8 +2,7 @@ import Head from 'next/head';
 import ArticleList from './components/ArticleList';
 import BlogTitle from './components/BlogTitle/BlogTitle';
 import LocomotiveScroll from './components/LocomotiveScroll';
-import { getCategories } from '@/services';
-import SearchCategory from './components/SearchCategory';
+import { getCategories, getPosts } from '@/services';
 
 
 
@@ -11,6 +10,7 @@ import SearchCategory from './components/SearchCategory';
 export default async function Home() {
 
 
+  const posts = await getPosts() || [];
   const categories = await getCategories() || [];
 
 
@@ -23,11 +23,10 @@ export default async function Home() {
       </Head>
 
       <BlogTitle />
-      <SearchCategory categories={categories} />
 
       <div className='px-6 mx-auto'>
 
-      <ArticleList />
+      <ArticleList posts={posts} categories={categories} />
 
         
       </div>
