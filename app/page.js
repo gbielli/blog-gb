@@ -44,7 +44,7 @@ export default function Home() {
         const LocomotiveScroll = ((await import('locomotive-scroll')).default)
         const locomotiveScroll = new LocomotiveScroll({
             smooth: true,
-            mobile: {
+            smartphone: {
               breakpoint: 0, 
               smooth: true,
             }
