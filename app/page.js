@@ -45,7 +45,6 @@ export default function Home() {
         const locomotiveScroll = new LocomotiveScroll({
             smooth: true,
             smartphone: {
-              breakpoint: 0, 
               smooth: true,
             }
         })
@@ -66,7 +65,7 @@ export default function Home() {
             <div>
             <Hero />
             <MaskText />
-            <Slider />
+            {/* <Slider /> */}
             <Skill />
             </div>
         </>
