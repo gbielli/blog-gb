@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 
+@media (min-width: 767px) {
+
+  body {
+    overflow: hidden; 
+  }
+
+}
 
 body{
   margin: 0px;
-  overflow: hidden; 
   box-sizing: border-box;
   font-family: var(--font-archivo);
   background-color: #f8f8f8;

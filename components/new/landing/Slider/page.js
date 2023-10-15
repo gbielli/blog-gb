@@ -65,6 +65,7 @@ const Slider = () => {
                                     fill={true}
                                     alt={`image ${index}`}
                                     src={`/image/${project.src}`}
+                                    sizes="100vw"
                                     className='object-cover'/>
                                 </div>
                             </div>
@@ -80,6 +81,7 @@ const Slider = () => {
                                     fill={true}
                                     alt={`image ${index}`}
                                     src={`/image/${project.src}`}
+                                    sizes="100vw"
                                     className='object-cover'/>
                                 </div>
                             </div>

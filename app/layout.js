@@ -5,6 +5,7 @@ import Header from '../components/new/landing/Header/page'
 import Footer from '../components/new/landing/Footer/page'
 
 
+
 const clashDisplay = localFont({
   src: [
     {
