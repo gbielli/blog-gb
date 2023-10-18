@@ -54,7 +54,7 @@ const Slider = () => {
     const x2 = useTransform(scrollYProgress, [0, 1], [0, -150])
 
     return (
-        <div ref={container} className='w-full md:flex flex-col gap-10 relative pt-40 bg-grey overflow-hidden'>
+        <div ref={container} className='w-full md:flex flex-col gap-10 relative pt-40 bg-grey hidden overflow-hidden'>
             <motion.div style={{x: x1}} className='flex relative gap-10 left-[-10vw] w-[150vw]'>
                     {
                         slider1.map( (project, index) => {

@@ -38,7 +38,7 @@ const Header = () => {
     <>
 <div ref={container} className='menu flex justify-between w-full px-6 py-6 z-4'>
       <div className='logo'>
-          <span>© Guillaume Bielli</span>
+          <a href='/'>© Guillaume Bielli</a>
       </div>
       <div className='links flex gap-10 cursor-pointer'>
         <a className="relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:rounded-full after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left">About</a>

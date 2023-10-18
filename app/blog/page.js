@@ -7,6 +7,12 @@ import { getCategories, getPosts } from '@/services';
 
 
 
+export const metadata = {
+  title: 'Mes articles de blog et mes tutoriels',
+  description: "Passionné par le web depuis longtemps, J'explore et je vous partage mes expériences sur l'Acquisition, le Web Analytics et l'Automation."
+}
+
+
 export default async function Home() {
 
 

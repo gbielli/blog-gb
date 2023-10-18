@@ -2,6 +2,7 @@
 
 import React from 'react';
 import moment from 'moment';
+import 'moment/locale/fr';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
@@ -14,6 +15,8 @@ import Avatar from '@/public/image/gb-avatar.png'
 import ArrowLeft from '@/public/image/arrow-top-left.svg';
 import { useScroll } from 'framer-motion';
 import { motion } from 'framer-motion';
+
+
 
 
 const PostDetail = ( {post} ) => {
@@ -42,7 +45,7 @@ const PostDetail = ( {post} ) => {
 }
 
 const { scrollYProgress } = useScroll()
-    
+
 
 
   return (
@@ -138,8 +141,8 @@ const { scrollYProgress } = useScroll()
 
             blockquote: ({children}) => {
               return (
-                <blockquote class="sm:ml-4 border-l-4 pl-4 sm:pl-6 border-primary mb-8">
-                  <p class="text-2xl text-gray-600 ">
+                <blockquote className="sm:ml-4 border-l-4 pl-4 sm:pl-6 border-primary mb-8">
+                  <p className="text-2xl text-gray-600 ">
                   {children}
                   </p>
                 </blockquote>

@@ -61,8 +61,8 @@ const Footer = () => {
           <a href="">©2023 - Guillaume Bielli</a>
           </div>
           <div className='flex gap-5'>
-          <a href="">Linkedin</a>
-        <a href="">Github</a>
+          <a className="relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:rounded-full after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left" href="https://www.linkedin.com/in/guillaume-bielli/">Linkedin</a>
+        <a className="relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:rounded-full after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left" href="https://github.com/gbielli?tab=repositories">Github</a>
           </div>
         </div>
         
