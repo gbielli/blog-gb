@@ -8,14 +8,16 @@ import LocomotiveScroll from '../components/LocomotiveScroll';
 
 
 
-// export async function generateMetaData() {
-// const { slug } = params;
-// const blog = await getPost(slug)
-// return console.log(blog)
 
-// }
+export async function generateMetadata({ params }) {
+  const slug = params;
+  const post = await getPost(slug);
+  return {
+    title:post.title,
+    description:post.excerpt,
+  }
 
-
+}
 
 const getPost = async (post) => {
     const response = await fetch('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clc6isprz1f8p01uvh99y3g8d/master', {
@@ -57,6 +59,8 @@ const getPost = async (post) => {
 
     return data.post
 }
+
+
 
 
 const PostDetails = async ({ params }) => {

@@ -23,12 +23,11 @@ export default async function Home() {
   return (
     <LocomotiveScroll>
     <div className="mx-auto mb-8">
-      <Head>
-        <title>Les actualités sur le web | Le blog </title>
-        <link rel="icon" href="/image/gbico.ico" />
-      </Head>
-
-      <BlogTitle />
+      <BlogTitle
+      Title1="Mes articles"
+      Title2="& tutoriels"
+      Subtitle="Passionné par le web depuis longtemps, J'explore et je vous partage mes expériences sur l'Acquisition, le Web Analytics et l'Automation."
+      />
 
       <div className='px-6 mx-auto'>
 
