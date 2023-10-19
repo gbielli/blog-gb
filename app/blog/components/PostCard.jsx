@@ -26,7 +26,7 @@ const reduceExcerpt = (text, n) => {
       <div className='overflow-hidden h-[250px]'>
         <img src={post.featuredImage.url}
           alt={post.title}
-          className='w-full h-full object-cover rounded-sm'/>
+          className='w-full h-full object-cover rounded-sm cursor-pointer'/>
       </div>
       <div>
       {/* <span className=' rounded-md border-primary mr-3 font-mulish text-primary hover:no-underline text-md'>{post.categories[0].name}</span>
@@ -36,10 +36,10 @@ const reduceExcerpt = (text, n) => {
         <h3 className='font-clash text-xl font-semibold cursor-pointer'>
             {post.title}       
         </h3>
-        <Image className='self-start pt-1' src={arrow} />
+        <Image className='self-start pt-1 cursor-pointer' src={arrow} />
 
       </div>
-        <p className='mt-1'>{reduceExcerpt(post.excerpt, 180)}</p>
+        <p className='mt-1 cursor-pointer'>{reduceExcerpt(post.excerpt, 180)}</p>
 
         <div className="tag mt-3 inline-flex gap-2">
           
