@@ -69,7 +69,7 @@ const { scrollYProgress } = useScroll()
           <Image className='object-cover w-[60px] md:w-[50px]' src={Avatar} alt="Avatar" width={50} height={50} />
           </div>
           <div className=''>
-          <h2 className=''> {post.author.name}</h2>
+          <p className=''> {post.author.name}</p>
           <p className='block text-gray-500'>le {moment(post.createdAt).format('DD MMMM YYYY')} </p>
 
           </div>

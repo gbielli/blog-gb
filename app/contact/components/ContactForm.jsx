@@ -91,7 +91,7 @@ const ContactForm = () => {
           </div>
             <div className="form-element flex flex-col">
                 <label className='font-mulish'htmlFor="text">Message</label>
-                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='py-6 border-b border-[#1b1b1b] font-mulish px-2 bg-[#f8f8f8] focus:outline-none' type="text" name="message" id="message" rows="5" cols="33" maxLength="1500"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='py-6 border-b border-[#1b1b1b] font-mulish px-2 bg-[#f8f8f8] focus:outline-none' type="text" name="message" placeholder="Un michel vaut mieux que deux tu l'auras" id="message" rows="5" cols="33" maxLength="1500"></textarea>
             </div>
         </div>
         
