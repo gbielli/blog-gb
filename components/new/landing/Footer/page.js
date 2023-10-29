@@ -37,12 +37,14 @@ const Footer = () => {
         </div>
       
         <div className='button text-white flex flex-wrap gap-5 mb-20 md:mb-40'>
-          <button className='flex gap-3 border border-white px-10 py-5 rounded-full'>
+          <a className='flex gap-3 border border-white px-10 py-5 rounded-full'
+          href='mailto:guillaume.bielli@gmail.com'>
           <Image src={Message} alt="icone message" />
-          <span>guillaume.bielli@gmail.com</span></button>
-          <button className='flex gap-3 border border-white px-10 py-5 rounded-full'>
+          <span>guillaume.bielli@gmail.com</span></a>
+          <a className='flex gap-3 border border-white px-10 py-5 rounded-full'
+          href='tel:0622895608'>
           <Image src={Phone} alt="icone téléphone" />
-          <span>0622895608</span></button>
+          <span>0622895608</span></a>
         </div>
         </div>
         <div className="link w-full text-white flex-col justify-between">
@@ -58,7 +60,7 @@ const Footer = () => {
 
         <div className='flex justify-between'>
         <div>
-          <a href="">©2023 - Guillaume Bielli</a>
+          <p href="">©2023 - Guillaume Bielli</p>
           </div>
           <div className='flex gap-5'>
           <a className="relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:rounded-full after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left" href="https://www.linkedin.com/in/guillaume-bielli/">Linkedin</a>
