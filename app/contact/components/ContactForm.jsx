@@ -78,7 +78,7 @@ const ContactForm = () => {
         <>
         
         <div className='my-4 flex flex-col gap-20'>
-          <div className='flex gap-20'>
+          <div className='flex gap-20 flex-wrap'>
             <div className="form-element flex flex-col w-full">
             <label className='font-mulish' htmlFor="prenom">Prenom</label>
             <input  onChange={(e) => setName(e.target.value)} value={name} className='py-6 border-b border-[#1b1b1b] font-mulish text-md px-2 bg-[#f8f8f8] focus:outline-none' type="text" id="prenom" name="name" placeholder="Michel" required />

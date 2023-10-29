@@ -6,8 +6,8 @@ import Nav from '../Nav/page';
 
 const navItems = [
     {
-        title: "À propos",
-        href: "/apropos"
+        title: "Home",
+        href: "/"
     },
     {
         title: "Blog",
