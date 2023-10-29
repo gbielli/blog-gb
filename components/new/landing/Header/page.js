@@ -24,7 +24,7 @@ const Header = () => {
         scrollTrigger: {
             trigger: document.documentElement,
             start: 0,
-            end: "15%",
+            end: "5%",
             onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
             onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"},setIsActive(false))}
         }
