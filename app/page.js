@@ -29,10 +29,6 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>Guillaume Bielli | Growth Hacker & Frontend Lover</title>
-                <link rel="icon" href="/image/gbico.ico" />
-            </Head>
             <div>
             <Hero />
             <MaskText />

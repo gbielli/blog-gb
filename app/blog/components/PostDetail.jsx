@@ -21,6 +21,8 @@ import { motion } from 'framer-motion';
 
 const PostDetail = ( {post} ) => {
 
+  
+
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -49,6 +51,7 @@ const { scrollYProgress } = useScroll()
 
 
   return (
+    
     <div>
     
       <div className="">
@@ -56,7 +59,7 @@ const { scrollYProgress } = useScroll()
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
         
         <div className='mt-10 w-full flex gap-2'>
-        <Image src={ArrowLeft} width={20} />
+        <Image src={ArrowLeft} alt='flèche pour revenir sur les articles' width={20} />
         <a className='text-left text-gray-500' href='/blog'>Retour sur les articles</a>
       </div>
           <h1 className='text-left font-bold text-5xl leading-tight text-stroke-8 text-fill-black font-abril pt-2 font-clash' >{post.title}</h1>

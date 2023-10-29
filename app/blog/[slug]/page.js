@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import PostDetail from '../components/PostDetail'
 import SimilarPost from '../../../components/old/home/SimilarPost';
-import LocomotiveScroll from '../components/LocomotiveScroll';
+import LocomotiveScroll from '../../utils/LocomotiveScroll';
 
 
 

@@ -1,11 +1,8 @@
 import * as mailjet from 'node-mailjet';
 
-export default async (req, res) => {
-//   if (req.method !== 'POST') {
-//     return res.status(405).json({ error: 'Method Not Allowed' });
-//   }
+export async function POST(request)  {
 
-  const { name, email, message } = req.body;
+    const { name, email, message } = await request.json();
 
   // Votre clé d'API et secret de Mailjet
   const mailjetApiKey = process.env.MJ_APIKEY_PUBLIC;
@@ -13,7 +10,7 @@ export default async (req, res) => {
 
   const mailjetClient = mailjet.apiConnect(mailjetApiKey, mailjetApiSecret);
 
-  const request = mailjetClient.post('send', { version: 'v3.1' }).request({
+  const sendEmail = mailjetClient.post('send', { version: 'v3.1' }).request({
     Messages: [
       {
         From: {
@@ -33,11 +30,11 @@ export default async (req, res) => {
   });
 
   try {
-    const response = await request;
+    const response = await sendEmail;
     console.log(response.body);
-    return res.status(200).json({ success: true });
+    return Response.json({ success: true});
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: 'An error occurred while sending the email.' });
+    return Response.json({ error: 'An error occurred while sending the email.' });
   }
-};
+}; 

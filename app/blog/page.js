@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import ArticleList from './components/ArticleList';
 import BlogTitle from './components/BlogTitle/BlogTitle';
-import LocomotiveScroll from './components/LocomotiveScroll';
+import LocomotiveScroll from '../utils/LocomotiveScroll';
 import { getCategories, getPosts } from '@/services';
 
 

@@ -82,22 +82,14 @@ const Skill = () => {
             
             </div>
             <div className='mt-20 text-center' >
+                
             <button className={`border border-black px-20 py-5 rounded-full text-center relative overflow-hidden`}
               onMouseEnter={() => setIsActive(true)}
               onMouseLeave={() => setIsActive(false)}>
             <span className=' text-black'>En savoir plus</span>
             <div className='overflow-hidden flex justify-center items-center'>
             <motion.span  variants={buttonSlide} initial="initial" animate={isActive ? "enter" : "initial"} className='bg-black absolute py-5 bottom-0 w-full rounded-full text-white'>Lets go !</motion.span>
-
-            
-            {/* <motion.span
-            data-name={arrowRight}
-            animate={isHover ? {y:-32, transition:{duration: 0.5, ease: [0.76, 0, 0.24, 1]}} : {y:0, transition:{duration: 0.5, ease: [0.76, 0, 0.24, 1]}}}
-            aria-hidden
-            className='inline-block mx-auto relative h-8 after:w-8 leading-8 after:absolute after:left-10 after:top-full after:leading-8 after:h-8 after:content-arrowIcon'
-            >En savoir plus</motion.span> */}
             </div>
-        
           </button>
 
           </div>

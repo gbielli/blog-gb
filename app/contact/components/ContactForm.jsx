@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react';
-import ButtonBlock from './home/ButtonBlock';
+import ButtonBlock from '../../../components/old/home/ButtonBlock';
 import { useState, useRef } from 'react';
 
-const ContactForm = ({ close }) => {
+const ContactForm = () => {
 
   
 
@@ -35,7 +35,7 @@ const ContactForm = ({ close }) => {
       const response = await fetch('/api/mailjet', {
       method: 'POST',
       headers: {
-        // 'Accept': 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
             body: JSON.stringify(data),
@@ -43,11 +43,12 @@ const ContactForm = ({ close }) => {
 
       if (response.ok) {
         console.log('success');
+        console.log(JSON.stringify(data))
         setSubmitted(true);
         isLoading(false);
-        setName('');
-        setEmail('');
-        setMessage('');
+        setEmail('')
+        setMessage('')
+        setName('')
       }
 
       if (!response.ok) {
@@ -57,8 +58,8 @@ const ContactForm = ({ close }) => {
     }
 
   return (
-    <div className='py-40'>
-    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form box-border px-4 lg:px-10  py-3 lg:py-6  w-11/12 lg:w-6/12 mx-auto bg-white border border-black'>
+    <div className='py-20'>
+    <form action="" method="" onSubmit={(e) => handleSubmit(e)} className='form px-10'>
     
         {submitted ?
         <div className="pb-10">
@@ -75,30 +76,33 @@ const ContactForm = ({ close }) => {
         </div>     
          : 
         <>
-        <h2 className='text-2xl' data-font='abril'>✋ Un message ? c'est par ici</h2>
-        <p id="toto" className='font-mulish'> <span id="underline">Laisse moi ton message</span> et je te contacterai dès que possible !</p>
         
-        <div className='my-4 flex flex-col gap-3'>
-            <div className="form-element flex flex-col">
+        <div className='my-4 flex flex-col gap-20'>
+          <div className='flex gap-20'>
+            <div className="form-element flex flex-col w-full">
             <label className='font-mulish' htmlFor="prenom">Prenom</label>
-            <input  onChange={(e) => setName(e.target.value)} className='py-3 border border-black rounded-sm font-mulish text-md px-2' type="text" id="prenom" name="name" placeholder="ton prenom" required />
+            <input  onChange={(e) => setName(e.target.value)} value={name} className='py-6 border-b border-[#1b1b1b] font-mulish text-md px-2 bg-[#f8f8f8] focus:outline-none' type="text" id="prenom" name="name" placeholder="Michel" required />
             </div>
-            <div className="form-element flex flex-col">
+            <div className="form-element flex flex-col w-full">
                 <label className='font-mulish' htmlFor="email">Email</label>
-                <input onChange={(e) => setEmail(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="email" id="email" name="email" placeholder="ton email" required />
+                <input onChange={(e) => setEmail(e.target.value)} value={email} className='py-6 border-b border-[#1b1b1b]  font-mulish px-2 bg-[#f8f8f8] focus:outline-none' type="email" id="email" name="email" placeholder="michel@gmail.com" required />
             </div>
+
+          </div>
             <div className="form-element flex flex-col">
                 <label className='font-mulish'htmlFor="text">Message</label>
-                <textarea onChange={(e) => setMessage(e.target.value)} className='py-3 border border-black rounded-sm font-mulish px-2' type="text" name="message" id="message" rows="5" cols="33" maxLength="1500"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='py-6 border-b border-[#1b1b1b] font-mulish px-2 bg-[#f8f8f8] focus:outline-none' type="text" name="message" id="message" rows="5" cols="33" maxLength="1500"></textarea>
             </div>
         </div>
         
 
-        <div className="">
+        {/* <div className="">
             <input type="checkbox" id="checkbox" required/>
             <label className='font-mulish' htmlFor="checkbox">Je consent consentir à reçevoir un mail de Guillaume Bielli </label>
-        </div>
-        <ButtonBlock  type='submit' text="Envoyer" load={loading ? 'animate-spin' : ''}/>
+        </div> */}
+        <button type='submit' className="border border-black px-20 py-5 rounded-full text-center relative overflow-hidden mt-10">
+        Envoyer
+        </button>
         </>}      
 
                 </form>

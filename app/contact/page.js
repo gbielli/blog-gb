@@ -1,20 +1,25 @@
 import React from "react";
-import ContactForm from "../../components/old/ContactForm";
-import BlogTitle from '@/app/blog/components/BlogTitle/BlogTitle'
+import ContactForm from "./components/ContactForm";
+import BlogTitle from '@/app/blog/components/BlogTitle/BlogTitle';
+import LocomotiveScroll from "../utils/LocomotiveScroll";
 
 
 export const metadata = {
     title: 'Guillaume Bielli | Formulaire de contact',
-    description: "..."
+    description: "Vous avez une question ou souhaitez simplement échanger avec moi ? remplissez ce formulaire et je vous répondrai rapidement."
   }
 
 export default function Contact() {
     return (
-        <>
+        <LocomotiveScroll>
             <div>
-            <BlogTitle />
+            <BlogTitle 
+            Title1={"On échange ?"}
+            Title2={"c'est par ici"}
+            Subtitle={"Vous avez une question ou souhaitez simplement échanger avec moi ? remplissez ce formulaire et je vous répondrai rapidement."}
+             />
             <ContactForm />
             </div>
-        </>
+        </LocomotiveScroll>
     )
 }
