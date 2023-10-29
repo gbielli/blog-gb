@@ -1,9 +1,9 @@
 'use client'
 
 import React, {useState} from 'react';
-import arrowRight from '@/public/image/arrow-top-right.svg';
-import {AnimatePresence, motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { buttonSlide } from './anim';
+import Link from 'next/link';
 
 
 const Skill = () => {
@@ -82,7 +82,8 @@ const Skill = () => {
             
             </div>
             <div className='mt-20 text-center' >
-                
+
+            <Link href="/contact">
             <button className={`border border-black px-20 py-5 rounded-full text-center relative overflow-hidden`}
               onMouseEnter={() => setIsActive(true)}
               onMouseLeave={() => setIsActive(false)}>
@@ -91,6 +92,7 @@ const Skill = () => {
             <motion.span  variants={buttonSlide} initial="initial" animate={isActive ? "enter" : "initial"} className='bg-black absolute py-5 bottom-0 w-full rounded-full text-white'>Lets go !</motion.span>
             </div>
           </button>
+          </Link>    
 
           </div>
         </div>

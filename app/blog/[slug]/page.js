@@ -4,6 +4,7 @@ import Head from 'next/head';
 import PostDetail from '../components/PostDetail'
 import SimilarPost from '../../../components/old/home/SimilarPost';
 import LocomotiveScroll from '../../utils/LocomotiveScroll';
+import { notFound } from "next/navigation"
 
 
 
@@ -12,6 +13,11 @@ import LocomotiveScroll from '../../utils/LocomotiveScroll';
 export async function generateMetadata({ params }) {
   const slug = params;
   const post = await getPost(slug);
+
+  if (!post) {
+    return notFound()
+  }
+  
   return {
     title:post.title,
     description:post.excerpt,
@@ -20,6 +26,9 @@ export async function generateMetadata({ params }) {
 }
 
 const getPost = async (post) => {
+
+  
+
     const response = await fetch('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clc6isprz1f8p01uvh99y3g8d/master', {
         method: 'POST',
         headers: {
@@ -58,6 +67,8 @@ const getPost = async (post) => {
     const {data} = await response.json()
 
     return data.post
+
+
 }
 
 
@@ -65,16 +76,14 @@ const getPost = async (post) => {
 
 const PostDetails = async ({ params }) => {
 
+
+
     const post = await getPost(params)
+
+   
 
   return (
     <>
-    <Head>
-    <title>{post.title}</title>
-    <meta name="description" content={post.excerpt} />
-    <link rel="icon" href="/image/gbico.ico" />
-    {/* <link rel='canonical' href={`https://guillaumebielli.fr${router.asPath}`} /> */}
-  </Head>
   <LocomotiveScroll>
     <div className='container mx-auto px-4 md:px-6'>
       <div>
