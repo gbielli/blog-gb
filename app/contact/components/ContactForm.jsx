@@ -100,7 +100,7 @@ const ContactForm = () => {
             <input type="checkbox" id="checkbox" required/>
             <label className='font-mulish' htmlFor="checkbox">Je consent consentir à reçevoir un mail de Guillaume Bielli </label>
         </div> */}
-        <button type='submit' className="border border-black px-20 py-5 rounded-full text-center relative overflow-hidden mt-10">
+        <button type='submit' disabled={loading} className="disabled:opacity-50 border border-black px-20 py-5 rounded-full text-center relative overflow-hidden mt-10">
         Envoyer
         </button>
         </>}      
