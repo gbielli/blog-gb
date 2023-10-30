@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import ArticleList from './components/ArticleList';
 import BlogTitle from './components/BlogTitle/BlogTitle';
 import LocomotiveScroll from '../utils/LocomotiveScroll';
@@ -17,6 +17,7 @@ export default async function Home() {
 
 
   const posts = await getPosts() || [];
+ 
   const categories = await getCategories() || [];
 
 

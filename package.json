@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start"
   },
   "dependencies": {
@@ -20,7 +19,6 @@
     "locomotive-scroll": "^5.0.0-beta.8",
     "moment": "^2.29.4",
     "next": "latest",
-    "next-sitemap": "^3.1.52",
     "node-fetch": "^3.3.1",
     "node-mailjet": "^6.0.1",
     "prismjs": "^1.29.0",

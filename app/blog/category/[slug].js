@@ -3,7 +3,6 @@ import { getCategoryPost, getCategories } from '../../../services'
 import { useRouter } from 'next/router';
 import { Categories, PostCard, PostWidget } from '../../../components';
 import CategoryTitle from '../../../components/home/CategoryTitle';
-import Head from 'next/head';
 
 const matomo = ({posts}) => {
   const router = useRouter();
@@ -14,11 +13,6 @@ const matomo = ({posts}) => {
 
   return (
     <>
-    <Head>
-    <title>
-    {`Les articles sur ${router.query.slug} - Blog`}
-    </title>
-    </Head>
 
     <CategoryTitle categoryName={router.query.slug} />
     <div className='container mx-auto mt-20 mb-20'>
