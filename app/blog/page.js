@@ -17,6 +17,7 @@ export default async function Home() {
 
 
   const posts = await getPosts() || [];
+ 
   const categories = await getCategories() || [];
 
 
