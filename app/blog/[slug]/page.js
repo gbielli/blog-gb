@@ -11,14 +11,19 @@ import { notFound } from "next/navigation"
 export async function generateMetadata({ params }) {
   const slug = params;
   const post = await getPost(slug);
+  
 
   if (!post) {
     return notFound()
   }
   
   return {
+    metadataBase: new URL('https://guillaumebielli.fr'),
     title:post.title,
     description:post.excerpt,
+    alternates: {
+      canonical: `/${post.slug}`
+    }
   }
 
 }
