@@ -1,6 +1,6 @@
 
 import PostDetail from '../components/PostDetail'
-import SimilarPost from '../../../components/old/home/SimilarPost';
+import SimilarPost from '../components/SimilarPost';
 import LocomotiveScroll from '../../utils/LocomotiveScroll';
 import { notFound } from "next/navigation"
 

@@ -62,8 +62,8 @@ const { scrollYProgress } = useScroll()
         <Image src={ArrowLeft} alt='flèche pour revenir sur les articles' width={20} />
         <a className='text-left text-gray-500' href='/blog'>Retour sur les articles</a>
       </div>
-          <h1 className='text-left font-bold text-5xl leading-tight text-stroke-8 text-fill-black font-abril pt-2 font-clash' >{post.title}</h1>
-        <h2 className='text-2xl text-left font-archivo line-clamp-3'>{post.excerpt}</h2>
+          <h1 className='text-left font-bold text-3xl md:text-5xl leading-tight text-stroke-8 text-fill-black font-abril pt-2 font-clash' >{post.title}</h1>
+        <h2 className='text-xl md:text-2xl text-left font-archivo '>{post.excerpt}</h2>
         <div className=" flex gap-3 relative self-start items-center">
           <div className='image'>
           <Image className='object-cover w-[60px] md:w-[50px]' src={Avatar} alt="Avatar" width={50} height={50} />
@@ -100,7 +100,7 @@ const { scrollYProgress } = useScroll()
 
         </div>
 
-        <div className="flex flex-col items-start mx-auto mb-8 max-w-3xl text-xl font-mulish leading-8">
+        <div className="flex flex-col items-start mx-auto mb-8 max-w-3xl text-lg md:text-xl font-mulish leading-8">
 
           {<RichText content={post.content.raw.children}
           
@@ -108,9 +108,9 @@ const { scrollYProgress } = useScroll()
             p: ({ children }) => <p className="mb-8 break-words w-full">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-2xl md:text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
-            h4: ({ children }) => <h4 className="text-2xl my-10 font-clash">{children}</h4>,
+            h4: ({ children }) => <h4 className="text-xl md:text-2xl my-10 font-clash">{children}</h4>,
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 
