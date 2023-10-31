@@ -43,7 +43,9 @@ const reduceExcerpt = (text, n) => {
 
         <div className="tag mt-3 inline-flex gap-2">
           
-            <p className='border border-black px-3 py-1 rounded-full'>{post.categories[0].name}</p>
+           {post.categories.map((categorie, index) => {
+              return  <p className='border border-black px-3 py-1 rounded-full' key={index}>{categorie.name}</p>
+            })}
           </div>
      
 
