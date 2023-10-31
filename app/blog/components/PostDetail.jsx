@@ -105,7 +105,7 @@ const { scrollYProgress } = useScroll()
           {<RichText content={post.content.raw.children}
           
            renderers={{
-            p: ({ children }) => <p className="mb-8 break-words w-full">{children}</p>,
+            p: ({ children }) => <p className="mb-6 break-words w-full leading-9">{children}</p>,
 
 
             h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-2xl md:text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
@@ -114,7 +114,7 @@ const { scrollYProgress } = useScroll()
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 
-            li: ({ children }) => <li className="before:content-['_•'] before:mr-4 pb-4 ml-6">{children}</li>,
+            li: ({ children }) => <li className="before:content-['_•'] before:mr-4 pb-3 ml-6">{children}</li>,
 
 
 
