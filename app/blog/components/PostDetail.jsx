@@ -108,9 +108,9 @@ const { scrollYProgress } = useScroll()
             p: ({ children }) => <p className="mb-6 break-words w-full leading-9">{children}</p>,
 
 
-            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-2xl md:text-3xl my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
+            h3: ({ children }) => <h3 className="before:mr-3 before:text-blue-500 font-bold font-clash before:text-2xl text-2xl md:text-3xl my-6 md:my-10 before:content-['#']" id={slugify(children.props.content.map((item) => item.text))}>{children}</h3>,
 
-            h4: ({ children }) => <h4 className="text-xl md:text-2xl my-10 font-clash">{children}</h4>,
+            h4: ({ children }) => <h4 className="text-xl md:text-2xl my-4 md:my-6 font-clash">{children}</h4>,
 
             bold: ({ children }) => <strong className=''>{children}</strong>,
 

@@ -25,3 +25,22 @@ body{
 .font-skills {
   font-size: clamp(1.875rem, 1.25rem + 2.5vw, 3.4375rem);
 }
+
+  /* .devis {
+    background-image: url('/image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    opacity: .88;
+  }
+
+  .devis:hover {
+    opacity: 1;
+  }
+
+  .devis h4 {
+    font-size: 20px;
+    font-family: var(--font-archivo);
+    font-weight: bold;
+    margin-left: 2rem;
+  } */
