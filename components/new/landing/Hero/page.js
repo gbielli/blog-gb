@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <>
 
-      <div className='flex items-center bg-grey'>
+      <div className='flex items-center bg-grey' data-scroll-container >
 
         <div className='px-6 mt-10 w-full text-gray-200 flex flex-col items-center flex-1 gap-20' >
 

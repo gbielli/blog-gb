@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import moment from 'moment';
+import moment, { duration } from 'moment';
 import 'moment/locale/fr';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
@@ -75,7 +75,8 @@ const { scrollYProgress } = useScroll()
           </div>
         </div>
         <div className='mt-5 border-t border-blue-[#d4d4d4] h-8 w-full'></div>
-        <div className='relative bg-black pb-sixty w-full'>
+        <div 
+        className='relative pb-sixty w-full overflow-hidden'>
           <img 
           src={post.featuredImage.url}
           alt={post.title}

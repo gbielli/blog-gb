@@ -1,35 +1,26 @@
 'use client'
 
-import React, { useRef, useEffect} from 'react'
-import {motion, useTransform, useScroll} from 'framer-motion'
+import React from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Message from '../../../../public/image/message.svg';
 import Phone from '../../../../public/image/phone.svg'
 import Avatar from '../../../../public/image/gb-avatar.png'
+import {animation} from './animation'
 
 const Footer = () => {
 
-//   const container = useRef(null);
-
-//   const { scrollYProgress } = useScroll({
-//     target: container,
-//     offset: ["start end", "end end"]
-// })
-
-
-// const y = useTransform(scrollYProgress, [0, 1], [-100, 0]);
-
-
 
   return (
-    <motion.div  className=' bg-black rounded-t-3xl relative '>
+    <div  className=' bg-black rounded-t-3xl relative'>
       <div className="bloc flex flex-col gap-5  px-10 py-5 mx-auto h-full justify-between">
 
         <div className='flex flex-col gap-10 pt-20'>
         <div className="title-footer flex gap-3 relative">
-          <div className='image absolute md:top-0'>
+          <div className='image absolute md:top-0' >
           <Image className='object-cover w-[60px] md:w-[80px]' src={Avatar} alt="Avatar" width={80} height={80} />
           </div>
+
           <div className='indent-[70px] md:indent-[100px]'>
           <h2 className='footer-text font-clash text-white lg:w-3/4 xl:w-3/5  lg:leading-[72px]'>Et si on prenait le temps de se connaître ou de partager un café ?</h2>
 
@@ -73,7 +64,7 @@ const Footer = () => {
 
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
