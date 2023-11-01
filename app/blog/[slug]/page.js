@@ -1,8 +1,6 @@
 
-
-import Head from 'next/head';
 import PostDetail from '../components/PostDetail'
-import SimilarPost from '../../../components/old/home/SimilarPost';
+import SimilarPost from '../components/SimilarPost';
 import LocomotiveScroll from '../../utils/LocomotiveScroll';
 import { notFound } from "next/navigation"
 
@@ -13,14 +11,19 @@ import { notFound } from "next/navigation"
 export async function generateMetadata({ params }) {
   const slug = params;
   const post = await getPost(slug);
+  
 
   if (!post) {
     return notFound()
   }
   
   return {
+    metadataBase: new URL('https://guillaumebielli.fr'),
     title:post.title,
     description:post.excerpt,
+    alternates: {
+      canonical: `/${post.slug}`
+    }
   }
 
 }

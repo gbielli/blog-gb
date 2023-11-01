@@ -16,7 +16,7 @@ export default function Contact() {
             <BlogTitle 
             Title1={"On échange ?"}
             Title2={"c'est par ici"}
-            Subtitle={"Vous avez une question ou souhaitez simplement échanger avec moi ? remplissez ce formulaire et je vous répondrai rapidement."}
+            Subtitle={"Vous avez une question ou souhaitez simplement échanger avec moi ? Remplissez ce formulaire et je vous répondrai rapidement."}
              />
             <ContactForm />
             </div>

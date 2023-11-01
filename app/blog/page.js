@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import ArticleList from './components/ArticleList';
 import BlogTitle from './components/BlogTitle/BlogTitle';
 import LocomotiveScroll from '../utils/LocomotiveScroll';
@@ -9,7 +9,7 @@ import { getCategories, getPosts } from '@/services';
 
 export const metadata = {
   title: 'Mes articles de blog et mes tutoriels',
-  description: "Passionné par le web depuis longtemps, J'explore et je vous partage mes expériences sur l'Acquisition, le Web Analytics et l'Automation."
+  description: "Passionné par le web depuis longtemps, j'explore et je vous partage mes expériences sur l'Acquisition, le Web Analytics et l'Automation."
 }
 
 
