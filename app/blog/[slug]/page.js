@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   }
   
   return {
-    metadataBase: new URL('https://guillaumebielli.fr'),
+    metadataBase: new URL('https://guillaumebielli.fr/blog'),
     title:post.title,
     description:post.excerpt,
     alternates: {

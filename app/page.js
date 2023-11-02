@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useEffect, useState } from "react";
+import React, {useEffect} from "react";
 import Hero from '@/components/new/landing/Hero/page';
 import MaskText from '@/components/new/landing/Mask/page';
 import Slider from '@/components/new/landing/Slider/page';
