@@ -51,6 +51,7 @@ const getPost = async (post) => {
                   }
                   createdAt
                   slug
+                  updatedAt
                   content {
                     raw
                   }
@@ -82,7 +83,7 @@ const PostDetails = async ({ params }) => {
 
 
     const post = await getPost(params)
-
+    console.log(post)
    
 
   return (
