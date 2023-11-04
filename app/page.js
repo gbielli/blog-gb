@@ -5,6 +5,7 @@ import Hero from '@/components/new/landing/Hero/page';
 import MaskText from '@/components/new/landing/Mask/page';
 import Slider from '@/components/new/landing/Slider/page';
 import Skill from '@/components/new/landing/Skill/page';
+import Testimonials from '@/components/new/landing/Testimonials/page'
 
 
 
@@ -32,6 +33,7 @@ export default function Home() {
             <Hero />
             <MaskText />
             <Slider />
+            <Testimonials />
             <Skill />
             </div>
         </>

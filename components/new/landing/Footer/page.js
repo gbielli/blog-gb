@@ -12,7 +12,7 @@ const Footer = () => {
 
 
   return (
-    <div  className=' bg-black rounded-t-3xl relative'>
+    <div  className=' bg-black rounded-3xl relative md:mx-5 md:my-5'>
       <div className="bloc flex flex-col gap-5  px-10 py-5 mx-auto h-full justify-between">
 
         <div className='flex flex-col gap-10 pt-20'>
