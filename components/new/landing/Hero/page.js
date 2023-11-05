@@ -5,7 +5,6 @@ import ReactCurvedText from 'react-curved-text';
 import Image from 'next/image';
 import arrow from '@/public/image/arrow.svg'
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { ScrollTrigger } from 'gsap/all';
 import {animation, fadeIn} from './animation';
 import { gsap } from 'gsap';
@@ -37,12 +36,6 @@ const Hero = () => {
     xPercent += 0.1 * direction;
   }
 
-
-
-  const { ref, inView, entry } = useInView({
-    threshold: 0.75,
-      
-  });
 
   const text = "Digital worker";
 
@@ -84,16 +77,16 @@ const Hero = () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 mx-auto gap-10'>
 
-          <h1 ref={ref} className="col-span-2 w-full">
+          <h1 className="col-span-2 w-full">
       {
       text.split(" ").map((word, index) => {
-    return <span className='overflow-hidden relative inline-flex leading-[17vw]' key={index}><motion.span className="text-[24vw] md:text-[17vw] font-clash text-black md:leading-[17vw] leading-[24vw]" custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""} style={{ display: "inline-block" }}>{word}</motion.span></span>
+    return <span className='overflow-hidden relative inline-flex leading-[17vw]' key={index}><motion.span className="text-[24vw] md:text-[17vw] font-clash text-black md:leading-[17vw] leading-[24vw]" custom={index} variants={animation} initial="initial" whileInView={"enter"} viewport={{ once: true }} style={{ display: "inline-block" }}>{word}</motion.span></span>
             
         })
         }
     </h1>
             <div className='col col-span-1 self-end max-w-xs overflow-hidden relative'>
-              <motion.p className='text-[16px]  text-black pb-5 lg:pb-10' variants={fadeIn} initial="initial" animate={inView ? "enter" : ""}>J&apos;aide les entreprises à développer l&apos;acquisition client et à construire une expérience utilisateur hors norme.</motion.p>
+              <motion.p className='text-[16px]  text-black pb-5 lg:pb-10' variants={fadeIn} initial="initial" whileInView={"enter"} viewport={{ once: true }}>J&apos;aide les entreprises à développer l&apos;acquisition client et à construire une expérience utilisateur hors norme.</motion.p>
               </div>
           </div>
 
