@@ -7,7 +7,7 @@ import arrow from '@/public/image/arrow.svg'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ScrollTrigger } from 'gsap/all';
-import {animation} from './animation';
+import {animation, fadeIn} from './animation';
 import { gsap } from 'gsap';
 
 const Hero = () => {
@@ -41,7 +41,7 @@ const Hero = () => {
 
   const { ref, inView, entry } = useInView({
     threshold: 0.75,
-    triggerOnce: true
+      
   });
 
   const text = "Digital worker";
@@ -93,7 +93,7 @@ const Hero = () => {
         }
     </h1>
             <div className='col col-span-1 self-end max-w-xs overflow-hidden relative'>
-              <motion.p className='text-[16px]  text-black pb-5 lg:pb-10' variants={animation} initial="initial" animate={inView ? "enter" : ""}>J&apos;aide les entreprises à développer l&apos;acquisition client et à construire une expérience utilisateur hors norme.</motion.p>
+              <motion.p className='text-[16px]  text-black pb-5 lg:pb-10' variants={fadeIn} initial="initial" animate={inView ? "enter" : ""}>J&apos;aide les entreprises à développer l&apos;acquisition client et à construire une expérience utilisateur hors norme.</motion.p>
               </div>
           </div>
 

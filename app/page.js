@@ -33,8 +33,8 @@ export default function Home() {
             <Hero />
             <MaskText />
             <Slider />
-            <Testimonials />
             <Skill />
+            <Testimonials />
             </div>
         </>
     )
