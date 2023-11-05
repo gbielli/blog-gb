@@ -25,7 +25,7 @@ const Hero = () => {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        onUpdate: e => direction = e.direction * -7
+        onUpdate: e => direction = e.direction * -5
       }})
     requestAnimationFrame(animate);
   })
