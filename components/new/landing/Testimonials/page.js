@@ -34,7 +34,7 @@ const testimonial = [
 
 const Testimonials = () => {
   return (
-    <div className='px-10 mb-40 h-full' >
+    <div className='px-5 md:px-10 mb-40 h-full' >
     <div className=" font-clash text-4xl mb-20">
         <h2>On a travaillé ensemble</h2>
     </div>
