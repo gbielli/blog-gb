@@ -74,56 +74,6 @@ const Skill = () => {
                     )
                 })}
 
-            {/* <div ref={ref} className="border-b border-t border-[#d4d4d4]"
-            >
-                
-                <div  className='item font-archivo flex items-center justify-between my-[3.5rem] overflow-hidden w-full'>
-                <motion.div variants={animation} initial="initial" animate={inView ? "enter" : ""} className='flex items-center md:gap-10 h-full flex-col md:flex-row md:text-left w-full'>
-                    <div className="title flex w-full" >
-                    <h3 className='font-skills text-[55px] font-clash pb-4 relative'>Acquisition client</h3>
-                    <div className='font-archivo text-[#c3c4c9] text-sm font-normal ml-1 translate-y-3'>01</div>
-                    </div>
-                    <p className='md:w-2/3'>Je développe votre stratégie SEO et SEA avec une logique data-driven.</p>
-                    </motion.div>
-                </div>
-            </div>
-
-                <div className="border-b border-t border-[#d4d4d4]" >
-                <div className='item font-archivo flex items-center justify-between py-[3.5rem]'>
-                    <div className='flex items-center md:gap-10 h-full flex-col md:flex-row md:text-left w-full'>
-                    <div className="title flex w-full">
-                    <h3 className='font-skills text-[55px] font-clash pb-4 relative'>User experience</h3>
-                    <div className='font-archivo text-[#c3c4c9] text-sm font-normal ml-1 translate-y-3'>02</div>
-                    </div>
-                    <p className='md:w-2/3'>Je vous accompagne sur le plan créatif et technique pour développer une expérience utilisateur mémorable.</p>
-                    </div>
-                </div>
-                </div>
-
-                <div className="border-b border-t border-[#d4d4d4]">
-                <div className='item font-archivo flex items-center justify-between py-[3.5rem] '>
-                    <div className='flex items-center md:gap-10 h-full flex-col md:flex-row md:text-left w-full'>
-                        <div className="title flex w-full">
-                    <h3 className='font-skills text-[55px] font-clash pb-4 relative'>Web Analytics</h3>
-                    <div className='font-archivo text-[#c3c4c9] text-sm font-normal ml-1 translate-y-3'>03</div>
-                    </div>
-                    <p className='md:w-2/3 '>Je mets en place un suivi utilisateurs first party avec des outils RGPD compliant comme Matomo ou Piwik Pro.</p>
-                    </div>
-                </div>
-            </div>
-
-                <div className="border-b border-t border-[#d4d4d4]">
-                <div className='item font-archivo flex items-center justify-between py-[3.5rem] '>
-                    <div className='flex items-center md:gap-10 h-full flex-col md:flex-row md:text-left w-full'>
-                    <div className="title flex w-full">
-                    <h3 className='font-skills text-[55px] font-clash pb-4 relative'>Automation</h3>
-                    <div className='font-archivo text-[#c3c4c9] text-sm font-normal ml-1 translate-y-3'>04</div>
-                    </div>
-                    <p className='md:w-2/3'>J&apos;automatise des tâches et je connecte vos outils pour maximiser le ROI.</p>
-                    </div>
-                </div>
-                </div> */}
-
                
 
             
