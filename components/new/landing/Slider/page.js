@@ -35,7 +35,7 @@ const slider2 = [
   },
   {
       color: "#d7d4cf",
-      src: "decathlon-projet.jpg"
+      src: "mypangee-ux.jpg"
   },
   {
       color: "#e1dad6",
@@ -76,7 +76,7 @@ const Slider = () => {
                     {
                         slider2.map( (project, index) => {
                             return <div key={index} className='w-[40vw] h-[20vw] flex items-center justify-center' style={{backgroundColor: project.color}} >
-                                <div key={index} className='relative w-3/4 h-3/4'>
+                                <div key={index} className='relative w-3/4 h-[80%]'>
                                     <Image 
                                     fill={true}
                                     alt={`image ${index}`}

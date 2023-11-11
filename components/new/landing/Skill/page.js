@@ -31,23 +31,7 @@ const skillItem = [
 const Skill = () => {
 
     const [isHover, setIsHover] = useState(false);
-    const [isActive, setIsActive] = useState(false);    
-
-    const { ref, inView } = useInView({
-        threshold: 0.75,
-        triggerOnce: true,
-        amount:0,
-      });
-
-    const handleHover = () => {
-        setIsHover(true)
-    }
-
-    const handleLeave = () => {
-        setIsHover(false)
-    }
-
-
+    const [isActive, setIsActive] = useState(false);   
 
   return (
     <section className='py-40 px-2 md:px-20 z-1 relative'  >
