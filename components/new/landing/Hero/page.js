@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import ReactCurvedText from 'react-curved-text';
 import Image from 'next/image';
 import arrow from '@/public/image/arrow.svg'

@@ -20,7 +20,37 @@ const page = () => {
 
                 <div className="text mt-20 flex px-2">
                     <div className='flex-1'>
-                        <p className='text-center text-[#808080] text-lg'>{`(Contexte)`}</p>
+                        <p className='text-center text-[#808080] text-lg'>{`(Phase de discovery)`}</p>
+                    </div>
+                    <div className='flex-1'>
+                    <p className='text-2xl text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deleniti doloribus blanditiis officia dolore sunt ipsum dolorem illo, facilis eum repellendus eaque eligendi, vitae eius architecto quas enim libero qui.</p>
+                    </div>
+                    
+                </div>
+
+                <div className="text mt-20 flex px-2">
+                    <div className='flex-1'>
+                        <p className='text-center text-[#808080] text-lg'>{`(Wireframes et Maquettes)`}</p>
+                    </div>
+                    <div className='flex-1'>
+                    <p className='text-2xl text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deleniti doloribus blanditiis officia dolore sunt ipsum dolorem illo, facilis eum repellendus eaque eligendi, vitae eius architecto quas enim libero qui.</p>
+                    </div>
+                    
+                </div>
+
+                <div className="text mt-20 flex px-2">
+                    <div className='flex-1'>
+                        <p className='text-center text-[#808080] text-lg'>{`(Test utilisateur)`}</p>
+                    </div>
+                    <div className='flex-1'>
+                    <p className='text-2xl text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deleniti doloribus blanditiis officia dolore sunt ipsum dolorem illo, facilis eum repellendus eaque eligendi, vitae eius architecto quas enim libero qui.</p>
+                    </div>
+                    
+                </div>
+
+                <div className="text mt-20 flex px-2">
+                    <div className='flex-1'>
+                        <p className='text-center text-[#808080] text-lg'>{`(Mise en production)`}</p>
                     </div>
                     <div className='flex-1'>
                     <p className='text-2xl text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deleniti doloribus blanditiis officia dolore sunt ipsum dolorem illo, facilis eum repellendus eaque eligendi, vitae eius architecto quas enim libero qui.</p>
