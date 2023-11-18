@@ -154,6 +154,11 @@ const { scrollYProgress } = useScroll()
             },
 
             class: ({ children, className }) => {
+              if (className == "info") {
+                return (
+                  <div className='bg-blue-50 px-5 pt-6 mb-6 rounded-md border-2 border-blue-200'>{children}</div>
+                )
+              }
               return (
                 <div className={className}>{children} </div>
               )

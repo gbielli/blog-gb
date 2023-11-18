@@ -32,7 +32,7 @@ const reduceExcerpt = (text, n) => {
       {/* <span className=' rounded-md border-primary mr-3 font-mulish text-primary hover:no-underline text-md'>{post.categories[0].name}</span>
 
       <span className='font-mulish text-sm'>{moment(post.createdAt).format('DD MMMM')}</span> */}
-      <div className='flex gap-5'>
+      <div className='flex gap-5 justify-between'>
         <h3 className='font-clash text-xl font-semibold cursor-pointer'>
             {post.title}       
         </h3>

@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';  
 import PostCard from './PostCard';
-import SearchCategory from './SearchCategory';
+import SearchCategory from './SearchCategory'
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 
 
@@ -10,7 +11,7 @@ import SearchCategory from './SearchCategory';
 
 const ArticleList = ({ posts, categories } ) => {
 
-    const [isActive, setIsActive] = useState({isHover: true, index:-1, title:"" })
+    const [isActive, setIsActive] = useState({isHover: true, index:-1, title:"" });
 
    const filteredpost = (posts) => {
     if (isActive.index != -1 ) {

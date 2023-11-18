@@ -80,7 +80,7 @@ const Hero = () => {
           <h1 className="col-span-2 w-full">
       {
       text.map((word, index) => {
-    return <span className='overflow-hidden relative inline-flex leading-[17vw]' key={index}><motion.span className="text-[24vw] md:text-[17vw] font-clash text-black md:leading-[17vw] leading-[24vw]" custom={index} variants={animation} initial="initial" whileInView={"enter"} viewport={{ once: true }} style={{ display: "inline-block" }}>{word}</motion.span></span>
+    return <span className='overflow-hidden relative inline-flex leading-[17vw]' key={index}><motion.span className="text-[24vw] md:text-[17vw] font-clash text-black md:leading-[17vw] leading-[24vw]" custom={index} variants={animation} initial="initial" animate='enter' viewport={{ once: true }} style={{ display: "inline-block" }}>{word}</motion.span></span>
             
         })
         }

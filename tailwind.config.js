@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       content: {
         'summary' : 'url("/image/rtn1.svg")',
+        
       },
       colors: {
         primary: 'var(--primary)',
