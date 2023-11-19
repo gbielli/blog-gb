@@ -1,6 +1,8 @@
 
 import PostDetail from '../components/PostDetail'
 import SimilarPost from '../components/SimilarPost';
+import Comments from '@/app/blog/components/Comments';
+import CommentsForm from '@/app/blog/components/CommentsForm';
 import LocomotiveScroll from '../../utils/LocomotiveScroll';
 import { notFound } from "next/navigation"
 
@@ -83,7 +85,7 @@ const PostDetails = async ({ params }) => {
 
 
     const post = await getPost(params)
-    console.log(post)
+
    
 
   return (
@@ -103,8 +105,10 @@ const PostDetails = async ({ params }) => {
             {/* <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} /> */}
                 {/* <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug )}/> */}
-                
+            <CommentsForm slug={post.slug} />
+            <Comments slug={post.slug} />
             </div>
+
         </div>
       </div>
     </div>

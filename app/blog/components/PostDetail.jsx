@@ -8,8 +8,6 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import Link  from 'next/link';
-import CommentsForm from '../../../components/old/CommentsForm';
-import Comments from '../../../components/old/Comments';
 import Image from 'next/image';
 import Avatar from '@/public/image/gb-avatar.png'
 import ArrowLeft from '@/public/image/arrow-top-left.svg';
@@ -55,7 +53,7 @@ const { scrollYProgress } = useScroll()
     <div>
     
       <div className="">
-      <motion.div className='bg-black fixed  top-0 left-0 h-[9px] w-full' style={{  transformOrigin: 'left', scaleX: scrollYProgress }} />
+      <motion.div className='bg-black fixed  top-0 left-0 h-[9px] w-full z-10' style={{  transformOrigin: 'left', scaleX: scrollYProgress }} />
         <div className="flex flex-col items-center mx-auto mb-8 max-w-4xl gap-8">
         
         <div className='mt-10 w-full flex gap-2'>
