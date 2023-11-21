@@ -65,12 +65,12 @@ const Skill = () => {
             <div className='mt-20 text-center' >
 
             <Link href="/contact">
-            <button className={`border border-black px-20 py-5 rounded-full text-center relative overflow-hidden`}
+            <button className={`border border-black px-20 py-5 rounded-full text-center relative overflow-hidden` }
               onMouseEnter={() => setIsActive(true)}
               onMouseLeave={() => setIsActive(false)}>
             <span className=' text-black'>En savoir plus</span>
-            <div className='overflow-hidden flex justify-center items-center'>
-            <motion.span  variants={buttonSlide} initial="initial" animate={isActive ? "enter" : "initial"} className='bg-black absolute py-5 bottom-0 w-full rounded-full text-white'>Lets go !</motion.span>
+            <div className=' flex justify-center items-center'>
+            <motion.span  variants={buttonSlide} initial="initial" animate={isActive ? "enter" : "initial"} className='bg-[#306bfd] z-2 absolute py-5 bottom-0 w-full rounded-full text-white z-3 h-full'>Lets go !</motion.span>
             </div>
           </button>
           </Link>    

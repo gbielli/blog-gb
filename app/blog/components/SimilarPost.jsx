@@ -22,7 +22,7 @@ const SimilarPost = ({categories, slug}) => {
 
 
   return (
-    <div className='max-w-3xl mx-auto pb-12 border-2 px-10 py-10 rounded-md mb-20'>
+    <div className='max-w-3xl mx-auto pb-12 border-2 px-10 py-10 rounded-md mb-10'>
                     <h3 className='font-clash text-2xl md:text-3xl mb-2'>Les articles similaires</h3>
                     <div className='flex flex-col gap-3 justify-left mt-7'>
         {similarPosts.map((similarPost, index) => (

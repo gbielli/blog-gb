@@ -20,7 +20,7 @@ const Comments = ({ slug }) => {
     <>
       {comments.length > 0 && (
         <div className=" lg:py-6 mx-auto w-full max-w-3xl lg:pb-20">
-          <h3 className="mb-8 text-2xl border-b pb-4">
+          <h3 className="mb-8 text-2xl border-b pb-6">
             {comments.length}
             {' '}
             commentaires
