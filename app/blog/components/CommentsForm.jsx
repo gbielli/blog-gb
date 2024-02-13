@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(true);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [comment, setComment] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -95,7 +95,7 @@ const CommentsForm = ({ slug }) => {
         {error && (
           <div className="fixed bottom-5 w-full right-0 z-10">
             <p className="text-red-500 bg-red-100 p-8 rounded-md mx-5">
-              Veuillez remplir tous les champs
+              Veuillez remplir tous les champs manquants
             </p>
           </div>
         )}
@@ -110,7 +110,7 @@ const CommentsForm = ({ slug }) => {
               <div className="flex gap-3 items-center">
                 <svg
                   aria-hidden="true"
-                  className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-black"
+                  className="inline w-6 h-6 text-gray-200 animate-spin dark:text-gray-600 fill-black"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,11 +127,24 @@ const CommentsForm = ({ slug }) => {
                 <span>en cours</span>
               </div>
             ) : showSuccessMessage ? (
-              <>
-                <span className="h-3 w-3 animate-ping absolute bg-green-500 rounded-md"></span>
-                <span className="h-3 w-3 relative bg-green-500 rounded-md"></span>
+              <div className="flex gap-3 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+
                 <span>C'est envoyé !</span>
-              </>
+              </div>
             ) : (
               "Envoyer"
             )}
